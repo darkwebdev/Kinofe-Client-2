@@ -1,0 +1,32 @@
+{
+  "name": "kinofe",
+  "version": "0.1.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-load-plugins": "latest",
+    "gulp-requirejs": "latest",
+    "gulp-sass": "latest",
+    "gulp-bower": "latest",
+    "jshint-stylish": "latest",
+    "gulp-clean": "latest",
+    "gulp-htmlhint": "0.0.7"
+  },
+  "devDependencies": {
+    "gulp-cache": "latest",
+    "gulp-jshint": "latest",
+    "gulp-watch": "latest",
+    "gulp-plumber": "latest",
+    "gulp-reload": "latest",
+    "gulp-if": "latest",
+    "map-stream": "~0.1.0",
+    "gulp-notify": "~1.2.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "darkwebdev@gmail.com",
+  "license": "BSD-2-Clause"
+}

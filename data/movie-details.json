@@ -1,0 +1,64 @@
+{
+    "janre": [
+        {
+            "pk": 6,
+            "name": "drama",
+            "get_url": "/top/drama/"
+        },
+        {
+            "pk": 5,
+            "name": "comedy",
+            "get_url": "/top/comedy/"
+        },
+        {
+            "pk": 11,
+            "name": "romance",
+            "get_url": "/top/romance/"
+        }
+    ],
+    "get_runtime": "1:34",
+    "name": "Moonrise Kingdom",
+    "actor": [
+        {
+            "pk": 99,
+            "get_char": "Sam",
+            "name": "Jared Gilman",
+            "get_url": "/who/99"
+        },
+        {
+            "pk": 100,
+            "get_char": "Suzy",
+            "name": "Kara Hayward",
+            "get_url": "/who/100"
+        },
+        {
+            "pk": 101,
+            "get_char": "Captain Sharp / Old Joe / Martin / John McClane",
+            "name": "Bruce Willis",
+            "get_url": "/who/101"
+        },
+        {
+            "pk": 102,
+            "get_char": "Walt Bishop / FDR / Saul",
+            "name": "Bill Murray",
+            "get_url": "/who/102"
+        }
+    ],
+    "imdb_id": "1748122",
+    "director": [
+        {
+            "pk": 98,
+            "name": "Wes Anderson",
+            "get_url": "/who/98"
+        }
+    ],
+    "imdb_rating": "8",
+    "imdb_votes": "57102",
+    "theater_date": "2012-05-25",
+    "year": "2012",
+    "pk": 20,
+    "desc": "A pair of young lovers flee their New England town, which causes a local search party to fan out and find them.",
+    "image_l": "http://content9.flixster.com/movie/11/16/67/11166787_det.jpg",
+    "image_o": "http://content9.flixster.com/movie/11/16/67/11166787_ori.jpg",
+    "dvd_date": "2012-10-16"
+}

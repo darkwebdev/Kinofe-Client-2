@@ -1,0 +1,267 @@
+[
+    {
+        "janre": [
+            {
+                "pk": 6,
+                "name": "drama",
+                "get_url": "/top/drama/"
+            },
+            {
+                "pk": 10,
+                "name": "thriller",
+                "get_url": "/top/thriller/"
+            },
+            {
+                "pk": 16,
+                "name": "history",
+                "get_url": "/top/history/"
+            }
+        ],
+        "imdb_rating": "8",
+        "name": "Argo",
+        "year": "2012",
+        "pk": 120,
+        "image": "http://content7.flixster.com/movie/11/16/91/11169181_mob.jpg",
+        "get_url": "/what/120",
+        "imdb_id": "1024648"
+    },
+    {
+        "janre": [
+            {
+                "pk": 5,
+                "name": "comedy",
+                "get_url": "/top/comedy/"
+            },
+            {
+                "pk": 2,
+                "name": "adventure",
+                "get_url": "/top/adventure/"
+            },
+            {
+                "pk": 3,
+                "name": "fantasy",
+                "get_url": "/top/fantasy/"
+            },
+            {
+                "pk": 7,
+                "name": "family",
+                "get_url": "/top/family/"
+            },
+            {
+                "pk": 4,
+                "name": "animation",
+                "get_url": "/top/animation/"
+            }
+        ],
+        "imdb_rating": "8",
+        "name": "Monsters, Inc.",
+        "year": "2001",
+        "pk": 121,
+        "image": "http://content6.flixster.com/movie/11/16/65/11166524_mob.jpg",
+        "get_url": "/what/121",
+        "imdb_id": "0198781"
+    },
+    {
+        "janre": [
+            {
+                "pk": 1,
+                "name": "action",
+                "get_url": "/top/action/"
+            },
+            {
+                "pk": 2,
+                "name": "adventure",
+                "get_url": "/top/adventure/"
+            },
+            {
+                "pk": 12,
+                "name": "sci-fi",
+                "get_url": "/top/sci-fi/"
+            }
+        ],
+        "imdb_rating": "8",
+        "name": "Star Trek Into Darkness",
+        "year": "2013",
+        "pk": 278,
+        "image": "http://content7.flixster.com/movie/11/17/30/11173001_mob.jpg",
+        "get_url": "/what/278",
+        "imdb_id": "1408101"
+    },
+    {
+        "janre": [
+            {
+                "pk": 5,
+                "name": "comedy",
+                "get_url": "/top/comedy/"
+            },
+            {
+                "pk": 2,
+                "name": "adventure",
+                "get_url": "/top/adventure/"
+            },
+            {
+                "pk": 7,
+                "name": "family",
+                "get_url": "/top/family/"
+            },
+            {
+                "pk": 4,
+                "name": "animation",
+                "get_url": "/top/animation/"
+            }
+        ],
+        "imdb_rating": "7.9",
+        "name": "Wreck-It Ralph",
+        "year": "2012",
+        "pk": 133,
+        "image": "http://content7.flixster.com/movie/11/16/66/11166645_mob.jpg",
+        "get_url": "/what/133",
+        "imdb_id": "1772341"
+    },
+    {
+        "janre": [
+            {
+                "pk": 6,
+                "name": "drama",
+                "get_url": "/top/drama/"
+            },
+            {
+                "pk": 5,
+                "name": "comedy",
+                "get_url": "/top/comedy/"
+            },
+            {
+                "pk": 11,
+                "name": "romance",
+                "get_url": "/top/romance/"
+            }
+        ],
+        "imdb_rating": "7.9",
+        "name": "Silver Linings Playbook",
+        "year": "2012",
+        "pk": 181,
+        "image": "http://content9.flixster.com/movie/11/17/06/11170611_mob.jpg",
+        "get_url": "/what/181",
+        "imdb_id": "1045658"
+    },
+    {
+        "janre": [
+            {
+                "pk": 10,
+                "name": "thriller",
+                "get_url": "/top/thriller/"
+            },
+            {
+                "pk": 1,
+                "name": "action",
+                "get_url": "/top/action/"
+            },
+            {
+                "pk": 14,
+                "name": "crime",
+                "get_url": "/top/crime/"
+            },
+            {
+                "pk": 2,
+                "name": "adventure",
+                "get_url": "/top/adventure/"
+            }
+        ],
+        "imdb_rating": "7.8",
+        "name": "Skyfall",
+        "year": "2012",
+        "pk": 144,
+        "image": "http://content9.flixster.com/movie/11/16/82/11168295_mob.jpg",
+        "get_url": "/what/144",
+        "imdb_id": "1074638"
+    },
+    {
+        "janre": [
+            {
+                "pk": 6,
+                "name": "drama",
+                "get_url": "/top/drama/"
+            },
+            {
+                "pk": 11,
+                "name": "romance",
+                "get_url": "/top/romance/"
+            },
+            {
+                "pk": 18,
+                "name": "musical",
+                "get_url": "/top/musical/"
+            }
+        ],
+        "imdb_rating": "7.8",
+        "name": "Les Mis\u00e9rables",
+        "year": "2012",
+        "pk": 145,
+        "image": "http://content8.flixster.com/movie/11/17/01/11170178_mob.jpg",
+        "get_url": "/what/145",
+        "imdb_id": "1707386"
+    },
+    {
+        "janre": [
+            {
+                "pk": 13,
+                "name": "documentary",
+                "get_url": "/top/documentary/"
+            }
+        ],
+        "imdb_rating": "7.8",
+        "name": "Stories We Tell",
+        "year": "2012",
+        "pk": 274,
+        "image": "http://content9.flixster.com/movie/11/17/07/11170747_mob.jpg",
+        "get_url": "/what/274",
+        "imdb_id": "2366450"
+    },
+    {
+        "janre": [
+            {
+                "pk": 6,
+                "name": "drama",
+                "get_url": "/top/drama/"
+            }
+        ],
+        "imdb_rating": "7.7",
+        "name": "Detachment",
+        "year": "2011",
+        "pk": 38,
+        "image": "http://content6.flixster.com/movie/11/16/30/11163060_mob.jpg",
+        "get_url": "/what/38",
+        "imdb_id": "1683526"
+    },
+    {
+        "janre": [
+            {
+                "pk": 10,
+                "name": "thriller",
+                "get_url": "/top/thriller/"
+            },
+            {
+                "pk": 1,
+                "name": "action",
+                "get_url": "/top/action/"
+            },
+            {
+                "pk": 14,
+                "name": "crime",
+                "get_url": "/top/crime/"
+            },
+            {
+                "pk": 12,
+                "name": "sci-fi",
+                "get_url": "/top/sci-fi/"
+            }
+        ],
+        "imdb_rating": "7.7",
+        "name": "Looper",
+        "year": "2012",
+        "pk": 87,
+        "image": "http://content6.flixster.com/movie/11/16/81/11168184_mob.jpg",
+        "get_url": "/what/87",
+        "imdb_id": "1276104"
+    }
+]
