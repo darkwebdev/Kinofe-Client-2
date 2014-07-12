@@ -15,6 +15,7 @@ define(['marionette'], function(Marionette) {
         },
 
         initialize: function() {
+//            console.log('MovieItemView:init', this.model);
             this.model.on('change:selected', this.highlight, this);
         },
 

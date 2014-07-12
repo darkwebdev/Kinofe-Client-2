@@ -8,11 +8,12 @@ define(['marionette', 'views/movie-item'], function(Marionette, MovieItemView) {
 
         initialize: function(options) {
             this.region = options.region;
-            if (!this.collection.length) {
+
+            /*if (!this.collection.length) {
                 this.collection.fetch();
             } else {
                 this.show();
-            }
+            }*/
         },
 
         collectionEvents: {
@@ -20,6 +21,7 @@ define(['marionette', 'views/movie-item'], function(Marionette, MovieItemView) {
         },
 
         show: function() {
+            console.log('CollectionView:show', this.collection);
             this.region.show(this);
         }
     });

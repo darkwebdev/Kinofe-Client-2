@@ -1,8 +1,13 @@
-define(['backbone'], function(Backbone) {
+define(['backbone', 'config'], function(Backbone, config) {
 
     var Model = Backbone.Model.extend({
         idAttribute: 'pk',
-        url: 'data/person-details.json',
+
+        url: function() {
+            return config.apiUrl + '/person/' + this.get('id');
+//        url: 'data/person-details.json',
+        },
+
         defaults: {
             imdb_link: ''
         },

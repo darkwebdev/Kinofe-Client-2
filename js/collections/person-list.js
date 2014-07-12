@@ -1,4 +1,4 @@
-define(['backbone', 'models/person', 'vent'], function(Backbone, Person, vent) {
+define(['backbone', 'models/person-item', 'vent'], function(Backbone, Person, vent) {
     var PersonList = Backbone.Collection.extend({
         model: Person,
 

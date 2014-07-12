@@ -11,6 +11,8 @@ define(['marionette', 'collections/movie-list', 'views/movie-list'],
                 region: options.region,
                 collection: this.collection
             });
+
+            this.collection.fetch();
         },
 
         selectMovie: function(id) {

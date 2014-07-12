@@ -21,6 +21,10 @@ main {
 	bottom: 0;
 	width: 50%;
 	background: #ddd;
+
+	img {
+		max-width: 80%;
+	}
 }
 
 .list-item {

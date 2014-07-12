@@ -1,10 +1,10 @@
-define(['backbone'], function(Backbone) {
+define(['backbone', 'config'], function(Backbone, config) {
 
     var Model = Backbone.Model.extend({
         idAttribute: 'pk',
 
         url: function() {
-            return 'http://127.0.0.1:8000/movie/' + this.get('id');
+            return config.apiUrl + '/movie/' + this.get('id');
 //        url: 'data/movie-details.json',
         },
 
