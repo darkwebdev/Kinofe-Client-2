@@ -26,39 +26,59 @@ require.config({
     }
 });
 
-require(['backbone', 'marionette', 'app', 'vent', 'router', 'controller', 'collections/movie-list', 'views/movie-list'],
-    function(Backbone, Marionette, app, vent, Router, Controller, MovieList, MovieListView) {
-
-        // Models
-
-//        var MovieDetails = Backbone.Model.extend({
-//            url: 'data/movie-details.json'
-//        });
-
+require(['backbone', 'marionette', 'app', 'vent',
+        'controllers/movie-list', 'controllers/movie-details', 'controllers/person-details'
+    ], function(Backbone, Marionette, app, vent,
+        MovieListController, MovieDetailsController, PersonDetailsController
+    ) {
 
         app.addInitializer(function() {
-            var movieList = new MovieList();
-            var movieListView = new MovieListView({
-                collection: movieList
+
+            // Movie list
+
+            var router = new Marionette.AppRouter({
+                controller: new MovieListController({
+                    region: app.movieListRegion,
+                    vent: vent
+                }),
+                appRoutes: {
+                    'movie/:id': 'selectMovie'
+                }
             });
 
-            var controller = new Controller({
-                collection: movieList,
-                region: app.mainRegion,
-                vent: vent
+            // Movie details
+
+            var movieDetailsController = new MovieDetailsController({
+                region: app.detailsRegion,
+                vent: vent,
+                router: router
             });
 
-            var router = new Router({
-                controller: controller
+            vent.on('movie:selected', function(id) {
+                console.log('vent:movie:selected', id);
+                movieDetailsController.show(id);
             });
 
-            vent.on('movie:selected', function(movie) {
-                console.log('vent:movie:selected', movie);
-//                controller.showMovieDetails(movie);
-                router.navigate('movie/' + movie.id);
+            // Person details
+
+            var personDetailsController = new PersonDetailsController({
+                region: app.detailsRegion,
+                vent: vent,
+                router: router
             });
 
-            app.mainRegion.show(movieListView);
+            new Marionette.AppRouter({
+                controller: personDetailsController,
+                appRoutes: {
+                    'person/:id': 'show'
+                }
+            });
+
+            vent.on('person:selected', function(id) {
+                console.log('vent:person:selected', id);
+                personDetailsController.show(id);
+            });
+
         });
 
         // Start

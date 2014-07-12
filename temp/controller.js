@@ -1,4 +1,4 @@
-define(['marionette'], function(Marionette) {
+define(['../bower_components/marionette/lib/backbone.marionette', 'vent'], function(Marionette, vent) {
     var Controller = Marionette.Controller.extend({
         initialize: function(options) {
             this.collection = options.collection;
@@ -9,7 +9,11 @@ define(['marionette'], function(Marionette) {
             console.log('controller:showMovieDetails', id);
             var movie = this.collection.get(id);
 
-            movie.select();
+            if (movie) {
+                movie.select();
+            }
+
+            vent.trigger('movie:selected', id);
         }
     });
 

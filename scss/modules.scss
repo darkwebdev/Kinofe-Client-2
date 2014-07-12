@@ -1,0 +1,51 @@
+@import "foundation/scss/normalize";
+
+.module-view {
+	position: absolute;
+	overflow: auto;
+	padding: 0;
+	top: 70px;
+	left: 300px;
+	right: 0;
+	bottom: 0;
+
+	li {
+		position: relative;
+		overflow: hidden;
+		margin: 10px;
+		padding: 10px 15px;
+		list-style: none;
+		background: #eee;
+	}
+
+	h1 {
+		margin: 0 300px 0 0;
+		font: 20px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+
+	.view {
+		margin-right: 300px;
+	}
+
+	.model {
+		float: right;
+		overflow: hidden;
+		padding: 5px;
+		width: 300px;
+	}
+	.json-markup {
+		font: 12px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+		word-break: break-word;
+	}
+}
+
+#mocha {
+	position: absolute;
+	overflow: auto;
+	margin: 0;
+	padding-right: 10px;
+	top: 0;
+	width: 300px;
+	left: 0;
+	bottom: 0;
+}

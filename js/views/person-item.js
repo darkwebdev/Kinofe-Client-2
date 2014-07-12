@@ -1,10 +1,11 @@
 define(['marionette'], function(Marionette) {
     var View = Marionette.ItemView.extend({
         tagName: 'li',
-        template: _.template('<img src="<%-image%>"> [<%-imdb_rating%>] <%-name%> (<%-year%>)'),
+        className: 'list-item',
+        template: _.template('<img src=""> <%-name%>'),
 
         events: {
-            'click': 'selectMovie'
+            'click': 'selectPerson'
         },
 
         initialize: function() {
@@ -15,8 +16,8 @@ define(['marionette'], function(Marionette) {
             $(this.el).toggleClass('active', selected).siblings().removeClass('active');
         },
 
-        selectMovie: function() {
-            console.log('view:selectMovie');
+        selectPerson: function() {
+            console.log('view:selectPerson');
             this.model.select();
         }
     });

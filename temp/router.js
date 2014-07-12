@@ -1,7 +1,7 @@
-define(['marionette'], function(Marionette) {
+define(['../bower_components/marionette/lib/backbone.marionette'], function(Marionette) {
     var Router = Marionette.AppRouter.extend({
         appRoutes: {
-//            '': 'showMovieList',
+            '': 'showMovieList',
             'movie/:id': 'showMovieDetails'
         }
     });

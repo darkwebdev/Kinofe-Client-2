@@ -1,11 +1,26 @@
-define(['marionette', 'views/movie'], function(Marionette, MovieView) {
-    var View = Marionette.CollectionView.extend({
-        tagName: 'ul',
-        itemView: MovieView,
+define(['marionette', 'views/movie-item'], function(Marionette, MovieItemView) {
 
-        initialize: function() {
-            this.listenTo(this.collection, 'reset', this.render);
-            this.collection.fetch();
+    var View = Marionette.CollectionView.extend({
+
+        tagName: 'ul',
+        className: 'movie-list',
+        itemView: MovieItemView,
+
+        initialize: function(options) {
+            this.region = options.region;
+            if (!this.collection.length) {
+                this.collection.fetch();
+            } else {
+                this.show();
+            }
+        },
+
+        collectionEvents: {
+            sync: 'show'
+        },
+
+        show: function() {
+            this.region.show(this);
         }
     });
 

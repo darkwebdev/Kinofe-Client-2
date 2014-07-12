@@ -1,0 +1,497 @@
+[
+    {
+        "id": 1,
+        "name": "Marc Webb",
+        "directed": [
+            {
+                "id": 1,
+                "name": "The Amazing Spider-Man",
+                "year": "2012",
+                "imdb_rating": "7.3",
+                "image": "http://content8.flixster.com/movie/11/16/74/11167406_mob.jpg",
+                "janre": ["action", "adventure", "fantasy"]
+            }
+        ],
+        "played": []
+    },
+    {
+        "id": 2,
+        "name": "Andrew Garfield",
+        "directed": [],
+        "played": [
+            {
+                "id": 1,
+                "name": "The Amazing Spider-Man",
+                "year": "2012",
+                "imdb_rating": "7.3",
+                "image": "http://content8.flixster.com/movie/11/16/74/11167406_mob.jpg",
+                "janre": ["action", "adventure", "fantasy"]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Emma Stone",
+        "directed": [],
+        "played": [
+            {
+                "id": 1,
+                "name": "The Amazing Spider-Man",
+                "year": "2012",
+                "imdb_rating": "7.3",
+                "image": "http://content8.flixster.com/movie/11/16/74/11167406_mob.jpg",
+                "janre": ["action", "adventure", "fantasy"]
+            },
+            {
+                "id": 287,
+                "name": "The Croods",
+                "year": "2013",
+                "imdb_rating": "7.3",
+                "image": "http://content8.flixster.com/movie/11/17/33/11173370_mob.jpg",
+                "janre": ["comedy", "adventure", "fantasy", "family", "animation"]
+            },
+            {
+                "id": 174,
+                "name": "Gangster Squad",
+                "year": "2013",
+                "imdb_rating": "6.9",
+                "image": "http://content8.flixster.com/movie/11/17/03/11170394_mob.jpg",
+                "janre": ["drama", "thriller", "action", "crime"]
+            },
+            {
+                "id": 215,
+                "name": "Movie 43",
+                "year": "2013",
+                "imdb_rating": "4.4",
+                "image": "http://content8.flixster.com/movie/11/16/75/11167574_mob.jpg",
+                "janre": ["comedy"]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Rhys Ifans",
+        "directed": [],
+        "played": [
+            {
+                "id": 1,
+                "name": "The Amazing Spider-Man",
+                "year": "2012",
+                "imdb_rating": "7.3",
+                "image": "http://content8.flixster.com/movie/11/16/74/11167406_mob.jpg",
+                "janre": ["action", "adventure", "fantasy"]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Irrfan Khan",
+        "directed": [],
+        "played": [
+            {
+                "id": 139,
+                "name": "Life of Pi",
+                "year": "2012",
+                "imdb_rating": "8.2",
+                "image": "http://content7.flixster.com/movie/11/16/60/11166061_mob.jpg",
+                "janre": ["drama", "adventure"]
+            },
+            {
+                "id": 1,
+                "name": "The Amazing Spider-Man",
+                "year": "2012",
+                "imdb_rating": "7.3",
+                "image": "http://content8.flixster.com/movie/11/16/74/11167406_mob.jpg",
+                "janre": ["action", "adventure", "fantasy"]
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Sarah Smith",
+        "directed": [
+            {
+                "id": 2,
+                "name": "Arthur Christmas",
+                "year": "2011",
+                "imdb_rating": "7",
+                "image": "http://content6.flixster.com/movie/11/16/74/11167404_mob.jpg",
+                "janre": ["drama", "comedy", "family", "animation"]
+            }
+        ],
+        "played": []
+    },
+    {
+        "id": 7,
+        "name": "Barry Cook",
+        "directed": [
+            {
+                "id": 2,
+                "name": "Arthur Christmas",
+                "year": "2011",
+                "imdb_rating": "7",
+                "image": "http://content6.flixster.com/movie/11/16/74/11167404_mob.jpg",
+                "janre": ["drama", "comedy", "family", "animation"]
+            }
+        ],
+        "played": []
+    },
+    {
+        "id": 8,
+        "name": "James McAvoy",
+        "directed": [],
+        "played": [
+            {
+                "id": 2,
+                "name": "Arthur Christmas",
+                "year": "2011",
+                "imdb_rating": "7",
+                "image": "http://content6.flixster.com/movie/11/16/74/11167404_mob.jpg",
+                "janre": ["drama", "comedy", "family", "animation"]
+            },
+            {
+                "id": 244,
+                "name": "Trance",
+                "year": "2013",
+                "imdb_rating": "7",
+                "image": "http://content7.flixster.com/movie/11/17/20/11172061_mob.jpg",
+                "janre": ["drama", "thriller", "crime", "mystery"]
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Jim Broadbent",
+        "directed": [],
+        "played": [
+            {
+                "id": 2,
+                "name": "Arthur Christmas",
+                "year": "2011",
+                "imdb_rating": "7",
+                "image": "http://content6.flixster.com/movie/11/16/74/11167404_mob.jpg",
+                "janre": ["drama", "comedy", "family", "animation"]
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Bill Nighy",
+        "directed": [],
+        "played": [
+            {
+                "id": 35,
+                "name": "The Best Exotic Marigold Hotel",
+                "year": "2011",
+                "imdb_rating": "7.3",
+                "image": "http://content8.flixster.com/movie/11/16/30/11163058_mob.jpg",
+                "janre": ["drama", "comedy"]
+            },
+            {
+                "id": 2,
+                "name": "Arthur Christmas",
+                "year": "2011",
+                "imdb_rating": "7",
+                "image": "http://content6.flixster.com/movie/11/16/74/11167404_mob.jpg",
+                "janre": ["drama", "comedy", "family", "animation"]
+            },
+            {
+                "id": 213,
+                "name": "Jack the Giant Slayer",
+                "year": "2013",
+                "imdb_rating": "6.4",
+                "image": "http://content8.flixster.com/movie/11/16/98/11169862_mob.jpg",
+                "janre": ["adventure", "fantasy"]
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Hugh Laurie",
+        "directed": [],
+        "played": [
+            {
+                "id": 2,
+                "name": "Arthur Christmas",
+                "year": "2011",
+                "imdb_rating": "7",
+                "image": "http://content6.flixster.com/movie/11/16/74/11167404_mob.jpg",
+                "janre": ["drama", "comedy", "family", "animation"]
+            },
+            {
+                "id": 187,
+                "name": "The Oranges",
+                "year": "2011",
+                "imdb_rating": "5.7",
+                "image": "http://content6.flixster.com/movie/11/17/11/11171116_mob.jpg",
+                "janre": ["drama", "comedy", "romance"]
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Lynn Shelton",
+        "directed": [
+            {
+                "id": 3,
+                "name": "Your Sister's Sister",
+                "year": "2011",
+                "imdb_rating": "6.7",
+                "image": "http://content9.flixster.com/movie/11/16/44/11164491_mob.jpg",
+                "janre": ["drama", "comedy"]
+            }
+        ],
+        "played": []
+    },
+    {
+        "id": 13,
+        "name": "Mark Duplass",
+        "directed": [],
+        "played": [
+            {
+                "id": 7,
+                "name": "Safety Not Guaranteed",
+                "year": "2012",
+                "imdb_rating": "7.2",
+                "image": "http://content9.flixster.com/movie/11/16/73/11167331_mob.jpg",
+                "janre": ["comedy", "romance", "sci-fi"]
+            },
+            {
+                "id": 3,
+                "name": "Your Sister's Sister",
+                "year": "2011",
+                "imdb_rating": "6.7",
+                "image": "http://content9.flixster.com/movie/11/16/44/11164491_mob.jpg",
+                "janre": ["drama", "comedy"]
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Emily Blunt",
+        "directed": [],
+        "played": [
+            {
+                "id": 87,
+                "name": "Looper",
+                "year": "2012",
+                "imdb_rating": "7.7",
+                "image": "http://content6.flixster.com/movie/11/16/81/11168184_mob.jpg",
+                "janre": ["thriller", "action", "crime", "sci-fi"]
+            },
+            {
+                "id": 3,
+                "name": "Your Sister's Sister",
+                "year": "2011",
+                "imdb_rating": "6.7",
+                "image": "http://content9.flixster.com/movie/11/16/44/11164491_mob.jpg",
+                "janre": ["drama", "comedy"]
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Rosemarie DeWitt",
+        "directed": [],
+        "played": [
+            {
+                "id": 3,
+                "name": "Your Sister's Sister",
+                "year": "2011",
+                "imdb_rating": "6.7",
+                "image": "http://content9.flixster.com/movie/11/16/44/11164491_mob.jpg",
+                "janre": ["drama", "comedy"]
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Mike Birbiglia",
+        "directed": [
+            {
+                "id": 76,
+                "name": "Sleepwalk with Me",
+                "year": "2012",
+                "imdb_rating": "6.8",
+                "image": "http://content9.flixster.com/movie/11/16/58/11165803_mob.jpg",
+                "janre": ["comedy"]
+            }
+        ],
+        "played": [
+            {
+                "id": 76,
+                "name": "Sleepwalk with Me",
+                "year": "2012",
+                "imdb_rating": "6.8",
+                "image": "http://content9.flixster.com/movie/11/16/58/11165803_mob.jpg",
+                "janre": ["comedy"]
+            },
+            {
+                "id": 3,
+                "name": "Your Sister's Sister",
+                "year": "2011",
+                "imdb_rating": "6.7",
+                "image": "http://content9.flixster.com/movie/11/16/44/11164491_mob.jpg",
+                "janre": ["drama", "comedy"]
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Nicholas McCarthy",
+        "directed": [
+            {
+                "id": 4,
+                "name": "The Pact",
+                "year": "2012",
+                "imdb_rating": "5.6",
+                "image": "http://content7.flixster.com/movie/11/16/53/11165385_mob.jpg",
+                "janre": ["thriller", "horror", "mystery"]
+            }
+        ],
+        "played": []
+    },
+    {
+        "id": 18,
+        "name": "Caity Lotz",
+        "directed": [],
+        "played": [
+            {
+                "id": 4,
+                "name": "The Pact",
+                "year": "2012",
+                "imdb_rating": "5.6",
+                "image": "http://content7.flixster.com/movie/11/16/53/11165385_mob.jpg",
+                "janre": ["thriller", "horror", "mystery"]
+            },
+            {
+                "id": 322,
+                "name": "Battle of the Year",
+                "year": "2013",
+                "imdb_rating": "4.2",
+                "image": "http://content7.flixster.com/movie/11/17/53/11175337_mob.jpg",
+                "janre": ["music"]
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Casper Van Dien",
+        "directed": [],
+        "played": [
+            {
+                "id": 4,
+                "name": "The Pact",
+                "year": "2012",
+                "imdb_rating": "5.6",
+                "image": "http://content7.flixster.com/movie/11/16/53/11165385_mob.jpg",
+                "janre": ["thriller", "horror", "mystery"]
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Mark Steger",
+        "directed": [],
+        "played": [
+            {
+                "id": 4,
+                "name": "The Pact",
+                "year": "2012",
+                "imdb_rating": "5.6",
+                "image": "http://content7.flixster.com/movie/11/16/53/11165385_mob.jpg",
+                "janre": ["thriller", "horror", "mystery"]
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "name": "Agnes Bruckner",
+        "directed": [],
+        "played": [
+            {
+                "id": 4,
+                "name": "The Pact",
+                "year": "2012",
+                "imdb_rating": "5.6",
+                "image": "http://content7.flixster.com/movie/11/16/53/11165385_mob.jpg",
+                "janre": ["thriller", "horror", "mystery"]
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "name": "Paco Plaza",
+        "directed": [
+            {
+                "id": 5,
+                "name": "[REC]\u00b3 G\u00e9nesis",
+                "year": "2012",
+                "imdb_rating": "5.2",
+                "image": "http://content6.flixster.com/movie/11/16/45/11164528_mob.png",
+                "janre": ["thriller", "horror"]
+            }
+        ],
+        "played": []
+    },
+    {
+        "id": 23,
+        "name": "Leticia Dolera",
+        "directed": [],
+        "played": [
+            {
+                "id": 5,
+                "name": "[REC]\u00b3 G\u00e9nesis",
+                "year": "2012",
+                "imdb_rating": "5.2",
+                "image": "http://content6.flixster.com/movie/11/16/45/11164528_mob.png",
+                "janre": ["thriller", "horror"]
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "name": "Diego Mart\u00edn",
+        "directed": [],
+        "played": [
+            {
+                "id": 5,
+                "name": "[REC]\u00b3 G\u00e9nesis",
+                "year": "2012",
+                "imdb_rating": "5.2",
+                "image": "http://content6.flixster.com/movie/11/16/45/11164528_mob.png",
+                "janre": ["thriller", "horror"]
+            }
+        ]
+    },
+    {
+        "id": 25,
+        "name": "Javier Botet",
+        "directed": [],
+        "played": [
+            {
+                "id": 5,
+                "name": "[REC]\u00b3 G\u00e9nesis",
+                "year": "2012",
+                "imdb_rating": "5.2",
+                "image": "http://content6.flixster.com/movie/11/16/45/11164528_mob.png",
+                "janre": ["thriller", "horror"]
+            }
+        ]
+    },
+    {
+        "id": 26,
+        "name": "\u00c0lex Monner",
+        "directed": [],
+        "played": [
+            {
+                "id": 5,
+                "name": "[REC]\u00b3 G\u00e9nesis",
+                "year": "2012",
+                "imdb_rating": "5.2",
+                "image": "http://content6.flixster.com/movie/11/16/45/11164528_mob.png",
+                "janre": ["thriller", "horror"]
+            }
+        ]
+    }
+]

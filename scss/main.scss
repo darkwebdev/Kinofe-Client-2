@@ -1,1 +1,36 @@
 @import "foundation/scss/normalize";
+
+header {
+	height: 100px;
+	background: #eee;
+}
+main {
+	position: absolute;
+	overflow: auto;
+	top: 100px;
+	left: 0;
+	bottom: 0;
+	width: 50%;
+	background: #ccc;
+}
+.details-region {
+	position: absolute;
+	overflow: auto;
+	top: 100px;
+	right: 0;
+	bottom: 0;
+	width: 50%;
+	background: #ddd;
+}
+
+.list-item {
+	cursor: pointer;
+	background: #fff;
+}
+
+.movie-list-region {
+}
+
+.director-list,
+.actor-list {
+}

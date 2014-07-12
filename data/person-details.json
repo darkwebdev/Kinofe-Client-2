@@ -1,0 +1,66 @@
+{
+    "id": 3,
+    "name": "Emma Stone",
+    "imdb_id": "0634240",
+    "image": "http://ia.media-imdb.com/images/M/MV5BNjE3NDQyOTYyMV5BMl5BanBnXkFtZTcwODcyODU2Mw@@._V1_.jpg",
+    "directed": [
+        {
+            "id": 35,
+            "name": "The Best Exotic Marigold Hotel",
+            "year": "2011",
+            "imdb_rating": "7.3",
+            "image": "http://content8.flixster.com/movie/11/16/30/11163058_mob.jpg",
+            "janre": ["drama", "comedy"]
+        },
+        {
+            "id": 2,
+            "name": "Arthur Christmas",
+            "year": "2011",
+            "imdb_rating": "7",
+            "image": "http://content6.flixster.com/movie/11/16/74/11167404_mob.jpg",
+            "janre": ["drama", "comedy", "family", "animation"]
+        },
+        {
+            "id": 213,
+            "name": "Jack the Giant Slayer",
+            "year": "2013",
+            "imdb_rating": "6.4",
+            "image": "http://content8.flixster.com/movie/11/16/98/11169862_mob.jpg",
+            "janre": ["adventure", "fantasy"]
+        }
+    ],
+    "played": [
+        {
+            "id": 1,
+            "name": "The Amazing Spider-Man",
+            "year": "2012",
+            "imdb_rating": "7.3",
+            "image": "http://content8.flixster.com/movie/11/16/74/11167406_mob.jpg",
+            "janre": ["action", "adventure", "fantasy"]
+        },
+        {
+            "id": 287,
+            "name": "The Croods",
+            "year": "2013",
+            "imdb_rating": "7.3",
+            "image": "http://content8.flixster.com/movie/11/17/33/11173370_mob.jpg",
+            "janre": ["comedy", "adventure", "fantasy", "family", "animation"]
+        },
+        {
+            "id": 174,
+            "name": "Gangster Squad",
+            "year": "2013",
+            "imdb_rating": "6.9",
+            "image": "http://content8.flixster.com/movie/11/17/03/11170394_mob.jpg",
+            "janre": ["drama", "thriller", "action", "crime"]
+        },
+        {
+            "id": 215,
+            "name": "Movie 43",
+            "year": "2013",
+            "imdb_rating": "4.4",
+            "image": "http://content8.flixster.com/movie/11/16/75/11167574_mob.jpg",
+            "janre": ["comedy"]
+        }
+    ]
+}
