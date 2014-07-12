@@ -1,14 +1,10 @@
-define(['marionette'], function(Marionette) {
+define(['marionette', 'handlebars', 'text!templates/movie-item.hbs'], function(Marionette, Handlebars, html) {
 
     var View = Marionette.ItemView.extend({
 
         tagName: 'li',
         className: 'list-item',
-        template: _.template(
-            '<img src="<%- image %>">' +
-            '[<%- imdb_rating %>] <%- name %> (<%- year %>)' +
-            '(<% _.each(janre, function(janreName) { %><%- janreName %> <% }); %>)'
-        ),
+        template: Handlebars.compile(html),
 
         events: {
             'click': 'selectMovie'
@@ -16,6 +12,7 @@ define(['marionette'], function(Marionette) {
 
         initialize: function() {
 //            console.log('MovieItemView:init', this.model);
+//            this.getContext();
             this.model.on('change:selected', this.highlight, this);
         },
 

@@ -1,14 +1,16 @@
-define(['marionette', 'collections/movie-list', 'views/movie-list'],
-    function(Marionette, MovieList, MovieListView) {
+define(['marionette', 'handlebars', 'text!templates/person-details.hbs', 'collections/movie-list', 'views/movie-list'],
+    function(Marionette, Handlebars, html, MovieList, MovieListView) {
 
         var View = Marionette.Layout.extend({
+            template: Handlebars.compile(html),
+
             regions: {
                 playedRegion: '.details-played-list',
                 directedRegion: '.details-directed-list'
             },
 
             modelEvents: {
-                change: 'show'
+                sync: 'show'
             },
 
             initialize: function(options) {
@@ -17,29 +19,21 @@ define(['marionette', 'collections/movie-list', 'views/movie-list'],
             },
 
             show: function() {
-                this.template = _.template(
-                    '<h2><%- name %></h2>' +
-                    '<img src="<%- image %>">' +
-                    '<p><a href="<%- imdb_link %>">Full info on IMDB</a></p>' +
-                    '<h3>Directed</h3>' +
-                    '<ul class="details-directed-list"></ul>' +
-                    '<h3>Played</h3>' +
-                    '<ul class="details-played-list"></ul>'
-                );
-
+                console.log('PersonDetailsView:show', this);
                 this.region.show(this);
 
-                new MovieListView({
+                (new MovieListView({
                     region: this.directedRegion,
                     collection: new MovieList(this.model.get('directed'))
-                });
+                })).show();
 
-                new MovieListView({
+                (new MovieListView({
                     region: this.playedRegion,
                     collection: new MovieList(this.model.get('played'))
-                });
+                })).show();
             }
         });
 
         return View;
-    });
+    }
+);

@@ -1,26 +1,29 @@
-define(['marionette'], function(Marionette) {
-    var View = Marionette.ItemView.extend({
-        tagName: 'li',
-        className: 'list-item',
-        template: _.template('<img src=""> <%-name%>'),
+define(['marionette', 'handlebars', 'text!templates/person-item.hbs'],
+    function(Marionette, Handlebars, html) {
 
-        events: {
-            'click': 'selectPerson'
-        },
+        var View = Marionette.ItemView.extend({
+            tagName: 'li',
+            className: 'list-item',
+            template: Handlebars.compile(html),
 
-        initialize: function() {
-            this.model.on('change:selected', this.highlight, this);
-        },
+            events: {
+                'click': 'selectPerson'
+            },
 
-        highlight: function(model, selected) {
-            $(this.el).toggleClass('active', selected).siblings().removeClass('active');
-        },
+            initialize: function() {
+                this.model.on('change:selected', this.highlight, this);
+            },
 
-        selectPerson: function() {
-            console.log('view:selectPerson');
-            this.model.select();
-        }
-    });
+            highlight: function(model, selected) {
+                $(this.el).toggleClass('active', selected).siblings().removeClass('active');
+            },
 
-    return View;
-});
+            selectPerson: function() {
+                console.log('view:selectPerson');
+                this.model.select();
+            }
+        });
+
+        return View;
+    }
+);

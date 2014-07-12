@@ -1,0 +1,17 @@
+<h2>{{ name }}</h2>
+<img src="{{ image_l }}"> [{{ imdb_rating }}] ({{ year }})
+
+<h3>Janres</h3>
+(<ul>
+	{{#each janre }}
+		<li>{{ this }}</li>
+	{{/each}}
+</ul>)
+
+<p>{{ desc }}</p>
+
+<h3>Directors</h3>
+<ul class="details-director-list"></ul>
+
+<h3>Actors</h3>
+<ul class="details-actor-list"></ul>
