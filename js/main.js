@@ -23,17 +23,14 @@ require.config({
         },
         handlebars: {
             exports: 'Handlebars'
-        },
-        common: {
-            deps: ['marionette']
         }
     }
 });
 
 require(['backbone', 'marionette', 'app', 'vent',
-        'controllers/movie-list', 'controllers/movie-details', 'controllers/person-details'
+        'controllers/movie-list', 'controllers/movie-details', 'controllers/person-details', 'controllers/user-details'
     ], function(Backbone, Marionette, app, vent,
-        MovieListController, MovieDetailsController, PersonDetailsController
+        MovieListController, MovieDetailsController, PersonDetailsController, UserDetailsController
     ) {
 
         app.addInitializer(function() {
@@ -82,6 +79,22 @@ require(['backbone', 'marionette', 'app', 'vent',
                 console.log('vent:person:selected', id);
                 personDetailsController.show(id);
             });
+
+            // User details
+
+            var userDetailsController = new UserDetailsController({
+                region: app.userRegion,
+                vent: vent,
+                router: router
+            });
+
+            vent.on('user:requested', function() {
+                console.log('vent:user:requested');
+                userDetailsController.show();
+            });
+
+            userDetailsController.show();
+
 
         });
 

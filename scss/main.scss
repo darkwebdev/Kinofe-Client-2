@@ -10,21 +10,31 @@ main {
 	top: 100px;
 	left: 0;
 	bottom: 0;
-	width: 50%;
+	width: 33%;
 	background: #ccc;
 }
 .details-region {
 	position: absolute;
 	overflow: auto;
 	top: 100px;
-	right: 0;
+	left: 33%;
 	bottom: 0;
-	width: 50%;
+	width: 33%;
 	background: #ddd;
 
 	img {
 		max-width: 80%;
 	}
+}
+
+.user-region {
+	position: absolute;
+	overflow: auto;
+	top: 100px;
+	right: 0;
+	bottom: 0;
+	width: 33%;
+	background: #ddd;
 }
 
 .list-item {

@@ -8,7 +8,8 @@ define(['backbone', 'marionette'], function(Backbone, Marionette) {
 
     app.addRegions({
         movieListRegion: '.movie-list-region',
-        detailsRegion: '.details-region'
+        detailsRegion: '.details-region',
+        userRegion: '.user-region'
     });
 
     return app;
