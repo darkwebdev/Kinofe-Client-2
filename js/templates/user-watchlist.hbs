@@ -1,0 +1,17 @@
+<h3>Watchlist</h3>
+<ul>
+	{{#each watchlist }}
+		{{#each movie }}
+			<li class="list-item">
+				<a class="th" href="{{ image }}">
+					<img src="{{ image }}">
+				</a>
+				<div class="content">
+					[<span>{{ imdb_rating }}</span>]
+					<h4>{{ name }}</h4>
+					(<span>{{ year }}</span>)
+				</div>
+			</li>
+		{{/each}}
+	{{/each}}
+</ul>

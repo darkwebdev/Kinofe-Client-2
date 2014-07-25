@@ -4,8 +4,15 @@ define(['backbone'], function(Backbone) {
         idAttribute: 'pk',
 
         select: function() {
-            this.set({ selected: true });
-            this.collection.selectMovie(this);
+            this.set({ selected: true }).collection.selectMovie(this);
+        },
+
+        hide: function() {
+            this.set({ hidden: true }).collection.hideMovie(this);
+        },
+
+        watchlist: function() {
+            this.set({ watchlisted: true }).collection.watchlistMovie(this);
         }
     });
 

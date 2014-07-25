@@ -92,6 +92,14 @@ require(['backbone', 'marionette', 'app', 'vent',
                 console.log('vent:user:requested');
                 userDetailsController.show();
             });
+            vent.on('movie:hidden', function(id) {
+                console.log('vent:movie:hidden', id);
+                userDetailsController.ignoreMovie(id);
+            });
+            vent.on('movie:watchlisted', function(id) {
+                console.log('vent:movie:watchlisted', id);
+                userDetailsController.watchlistMovie(id);
+            });
 
             userDetailsController.show();
 

@@ -1,7 +1,15 @@
-<img src="{{ image }}">
-<div>[<span>{{ imdb_rating }}</span>] <span>{{ name }}</span> (<span>{{ year }}</span>)</div>
-(<ul>
-	{{#each janre }}
-		<li>{{ this }}</li>
-	{{/each}}
-</ul>)
+<a class="th" href="{{ image }}">
+	<img src="{{ image }}">
+</a>
+<div class="content">
+	<div>[<span>{{ imdb_rating }}</span>] <h4>{{ name }}</h4> (<span>{{ year }}</span>)</div>
+	<ul>
+		{{#each janre }}
+			<li><span class="label secondary round">{{ this }}</span></li>
+		{{/each}}
+	</ul>
+	<footer>
+		<span class="button tiny watchlist">add to watchlist</span>
+		<span class="button tiny hide">hide</span>
+	</footer>
+</div>

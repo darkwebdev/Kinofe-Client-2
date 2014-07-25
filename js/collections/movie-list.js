@@ -19,6 +19,16 @@ define(['backbone', 'config', '../models/movie-item', 'vent'], function(Backbone
         selectMovie: function(movie) {
             console.log('collection::movie:selected', movie.get('id'));
             vent.trigger('movie:selected', movie.get('id'));
+        },
+
+        hideMovie: function(movie) {
+            console.log('collection::movie:hidden', movie.get('id'));
+            vent.trigger('movie:hidden', movie.get('id'));
+        },
+
+        watchlistMovie: function(movie) {
+            console.log('collection::movie:watchlisted', movie.get('id'));
+            vent.trigger('movie:watchlisted', movie.get('id'));
         }
     });
 

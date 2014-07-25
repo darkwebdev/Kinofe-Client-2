@@ -1,13 +1,20 @@
-@import "foundation/scss/normalize";
+@import "normalize";
+@import "foundation/components/type";
+@import "foundation/components/buttons";
+@import "foundation/components/labels";
+@import "foundation/components/thumbs";
+
+@import "typo";
+
 
 header {
-	height: 100px;
+	height: 60px;
 	background: #eee;
 }
 main {
 	position: absolute;
 	overflow: auto;
-	top: 100px;
+	top: 60px;
 	left: 0;
 	bottom: 0;
 	width: 33%;
@@ -16,7 +23,7 @@ main {
 .details-region {
 	position: absolute;
 	overflow: auto;
-	top: 100px;
+	top: 60px;
 	left: 33%;
 	bottom: 0;
 	width: 33%;
@@ -30,7 +37,7 @@ main {
 .user-region {
 	position: absolute;
 	overflow: auto;
-	top: 100px;
+	top: 60px;
 	right: 0;
 	bottom: 0;
 	width: 33%;
@@ -38,8 +45,27 @@ main {
 }
 
 .list-item {
+	overflow: hidden;
+	display: block;
+	margin: 10px;
+	padding: 10px;
 	cursor: pointer;
 	background: #fff;
+
+	&.hidden {
+		display: none;
+	}
+	.th {
+		float: left;
+		max-width: 100px;
+		max-height: 150px;
+	}
+	.content {
+		margin-left: 110px;
+	}
+	footer {
+		margin-top: 20px;
+	}
 }
 
 .movie-list-region {

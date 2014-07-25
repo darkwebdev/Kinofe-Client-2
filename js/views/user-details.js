@@ -9,17 +9,26 @@ define(['marionette', 'handlebars', 'text!templates/user-details.hbs'],
                 ignoreRegion: '.details-ignore-list'
             },
 
+            events: {
+                'click .login': 'login',
+                'click .logout': 'logout'
+            },
+
             modelEvents: {
                 sync: 'show'
             },
 
             initialize: function(options) {
                 this.region = options.region;
-                this.model.fetch();
+                if (this.model) {
+                    this.model.fetch();
+                } else {
+                    this.show();
+                }
             },
 
             show: function() {
-                console.log('UserDetailsView:show', this);
+                console.log('UserDetailsView:show', this.model.toJSON());
                 this.region.show(this);
 
                 /*(new MovieListView({
@@ -31,7 +40,11 @@ define(['marionette', 'handlebars', 'text!templates/user-details.hbs'],
                     region: this.playedRegion,
                     collection: new MovieList(this.model.get('played'))
                 })).show();*/
-            }
+            },
+
+            login: function() {},
+
+            logout: function() {}
         });
 
         return View;

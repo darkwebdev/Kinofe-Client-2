@@ -1,0 +1,23 @@
+<h3>Ignorelist</h3>
+{{#each ignorelist }}
+	<ul>
+		{{#each janre }}
+			<li><span class="label secondary round">{{ this }}</span></li>
+		{{/each}}
+	</ul>
+
+	<ul>
+		{{#each movie }}
+			<li class="list-item">
+				<a class="th" href="{{ image }}">
+					<img src="{{ image }}">
+				</a>
+				<div class="content">
+					[<span>{{ imdb_rating }}</span>]
+					<h4>{{ name }}</h4>
+					(<span>{{ year }}</span>)
+				</div>
+			</li>
+		{{/each}}
+	</ul>
+{{/each}}

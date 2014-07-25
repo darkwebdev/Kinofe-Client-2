@@ -1,18 +1,16 @@
-<h2>{{ username }}</h2>
-<ul>
-	{{#each watchlist.movie }}
-		<li>{{ name }}</li>
-	{{/each}}
-</ul>
+{{#if username }}
 
-<ul>
-	{{#each ignorelist.janre }}
-		<li>{{ name }}</li>
-	{{/each}}
-</ul>
+	<h2>{{ username }}</h2>
+	<span class="button tiny logout">exit</span>
 
-<ul>
-	{{#each ignorelist.movie }}
-		<li>{{ name }}</li>
-	{{/each}}
-</ul>
+	<div>
+		<span class="button watchlist">Watchlist</span>
+		<span class="button ignorelist">Ignorelist</span>
+	</div>
+
+{{else}}
+
+	<h3>Login with</h3>
+	<span class="button disabled login">facebook</span>
+
+{{/if}}
