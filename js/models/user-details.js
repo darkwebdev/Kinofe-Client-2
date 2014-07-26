@@ -27,12 +27,17 @@ define(['backbone', 'config'], function(Backbone, config) {
 
         initialize: function() {
             console.log('user-details:model:init', this);
+            this.listenTo(this, 'change', this.updateProps);
+        },
+
+        updateProps: function() {
             this.watchlist = this.get('watchlist');
             this.ignorelist = this.get('ignorelist');
+            console.log('user-details:model:changed', this);
         },
 
         addToList: function(objName, listName, id) {
-            console.log('user model:addToList', objName, listName, id);
+            console.log('user model:addToList', objName, listName, id, this[listName][objName]);
             if (_.indexOf(this[listName][objName], id) == -1) {
                 this[listName][objName].push(id);
                 this.set(listName, this[listName]);
