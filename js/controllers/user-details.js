@@ -48,10 +48,10 @@ define(['marionette', 'models/user-details', 'views/user-details'],
                 }
             },
 
-            watchlistMovie: function(id) {
+            toggleWatchlistedMovie: function(id) {
                 if (this.user) {
-                    this.user.watchlistMovie(id);
-                    console.log('user controller:watchlist movie', id, this.user);
+                    this.user.toggleWatchlistedMovie(id);
+                    console.log('user controller:toggleWatchlistedMovie', id, this.user);
                     this.user.save(null, { patch: true });
                 }
             }

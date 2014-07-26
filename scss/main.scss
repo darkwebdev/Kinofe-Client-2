@@ -5,6 +5,7 @@
 @import "foundation/components/thumbs";
 
 @import "typo";
+@import "components";
 
 
 header {
@@ -49,7 +50,6 @@ main {
 	display: block;
 	margin: 10px;
 	padding: 10px;
-	cursor: pointer;
 	background: #fff;
 
 	&.hidden {
@@ -63,6 +63,16 @@ main {
 	.content {
 		margin-left: 110px;
 	}
+
+	.watchlist {
+		&:before {
+			content: '\2729'; // empty star
+		}
+	}
+	&.watchlisted .watchlist:before {
+		content: '\272D'; // filled star
+	}
+
 	footer {
 		margin-top: 20px;
 	}

@@ -1,9 +1,9 @@
-<a class="th" href="{{ image }}">
+<span class="th">
 	<img src="{{ image }}">
-</a>
+</span>
 <div class="content">
 	[<span>{{ imdb_rating }}</span>]
-	{{#if watchlisted }}<span class="unwatchlist">★</span>{{else}}<span class="watchlist">&star;</span>{{/if}}
+	<span class="watchlist"></span>
 	<h4>{{ name }}</h4> <span>{{ year }}</span>
 	<ul>
 		{{#each janre }}
@@ -11,6 +11,7 @@
 		{{/each}}
 	</ul>
 	<footer>
+		<a href="#movie/{{ id }}" class="button tiny select">details</a>
 		<span class="button tiny hide">hide</span>
 	</footer>
 </div>

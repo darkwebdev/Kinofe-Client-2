@@ -26,8 +26,8 @@ define(['backbone', 'config', '../models/movie-item', 'vent'], function(Backbone
             vent.trigger('movie:hidden', movie.get('id'));
         },
 
-        watchlistMovie: function(movie) {
-            console.log('collection::movie:watchlisted', movie.get('id'));
+        toggleWatchlistedMovie: function(movie) {
+            console.log('collection::movie:toggleWatchlistedMovie', movie.get('id'));
             vent.trigger('movie:watchlisted', movie.get('id'));
         }
     });

@@ -8,18 +8,19 @@ define(['marionette', 'handlebars', 'text!templates/movie-item.hbs'], function(M
 
         events: {
             'click .hide': 'hideMovie',
-            'click .watchlist': 'watchlistMovie',
-            'click': 'selectMovie'
+            'click .watchlist': 'toggleWatchlistedMovie',
+            'click .select': 'selectMovie'
         },
 
         modelEvents: {
             'change:selected': 'highlight',
             'change:hidden': 'hide',
-            'change:watchlisted': 'watchlist'
+            'change:watchlisted': 'checkWatchlisted'
         },
 
         initialize: function() {
 //            console.log('MovieItemView:init', this.model);
+            this.checkWatchlisted(); // set the proper watchlisted icon
         },
 
         highlight: function() {
@@ -30,15 +31,14 @@ define(['marionette', 'handlebars', 'text!templates/movie-item.hbs'], function(M
             $(this.el).addClass('hidden');
         },
 
-        watchlist: function() {
-            $(this.el).addClass('watchlisted');
+        checkWatchlisted: function() {
+//            console.log('movie item view:checkWatchlisted', this.model.get('id'), this.model.get('watchlisted'));
+            $(this.el).toggleClass('watchlisted', this.model.get('watchlisted'));
         },
 
         selectMovie: function() {
-            if (!this.model.get('hidden')) {
-                console.log('movie view:selectMovie');
-                this.model.select();
-            }
+            console.log('movie view:selectMovie');
+            this.model.select();
         },
 
         hideMovie: function() {
@@ -46,9 +46,9 @@ define(['marionette', 'handlebars', 'text!templates/movie-item.hbs'], function(M
             this.model.hide();
         },
 
-        watchlistMovie: function() {
-            console.log('movie view:watchlistMovie');
-            this.model.watchlist();
+        toggleWatchlistedMovie: function() {
+            console.log('movie view:toggleWatchlistedMovie');
+            this.model.toggleWatchlisted();
         }
     });
 

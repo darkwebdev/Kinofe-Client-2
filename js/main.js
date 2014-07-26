@@ -1,7 +1,7 @@
 require.config({
     paths: {
         jquery: '../bower_components/jquery/dist/jquery',
-        underscore: '../bower_components/underscore/underscore',
+        underscore: '../node_modules/lodash/dist/lodash',
         backbone: '../bower_components/backbone/backbone',
         marionette: '../bower_components/marionette/lib/backbone.marionette',
         'backbone.wreqr': '../bower_components/backbone.wreqr/lib/backbone.wreqr',
@@ -10,9 +10,6 @@ require.config({
     },
 
     shim: {
-        underscore: {
-            exports: '_'
-        },
         backbone: {
             deps: ['underscore', 'jquery'],
             exports: 'Backbone'
@@ -98,7 +95,7 @@ require(['backbone', 'marionette', 'app', 'vent',
             });
             vent.on('movie:watchlisted', function(id) {
                 console.log('vent:movie:watchlisted', id);
-                userDetailsController.watchlistMovie(id);
+                userDetailsController.toggleWatchlistedMovie(id);
             });
 
             userDetailsController.show();

@@ -1,4 +1,4 @@
-define(['backbone', 'config'], function(Backbone, config) {
+define(['underscore', 'backbone', 'config'], function(_, Backbone, config) {
 
     var Model = Backbone.Model.extend({
 //        idAttribute: 'pk',
@@ -36,24 +36,36 @@ define(['backbone', 'config'], function(Backbone, config) {
             console.log('user-details:model:changed', this);
         },
 
-        addToList: function(objName, listName, id) {
-            console.log('user model:addToList', objName, listName, id, this[listName][objName]);
-            if (_.indexOf(this[listName][objName], id) == -1) {
-                this[listName][objName].push(id);
-                this.set(listName, this[listName]);
+        _inList: function(listName, itemName, elem) {
+            return _.indexOf(this[listName][itemName], elem) > -1;
+        },
+
+        _addToList: function(listName, itemName, elem) {
+            console.log('user model:addToList', itemName, listName, elem, this[listName][itemName]);
+            this[listName][itemName].push(elem);
+            this.set(listName, this[listName]);
+        },
+
+        _removeFromList: function(listName, itemName, elem) {
+            console.log('user model:removeFromList', itemName, listName, elem, this[listName][itemName]);
+            _.pull(this[listName][itemName], elem);
+            this.set(listName, this[listName]);
+        },
+
+        toggleWatchlistedMovie: function(id) {
+            if (this._inList('watchlist', 'movie', id)) {
+                this._removeFromList('watchlist', 'movie', id);
+            } else {
+                this._addToList('watchlist', 'movie', id);
             }
         },
 
-        watchlistMovie: function(id) {
-            this.addToList('movie', 'watchlist', id);
-        },
-
         ignoreMovie: function(id) {
-            this.addToList('movie', 'ignorelist', id);
+            this._addToList('ignorelist', 'movie', id);
         },
 
         ignoreJanre: function(id) {
-            this.addToList('janre', 'ignorelist', id);
+            this._addToList('ignorelist', 'janre', id);
         }
 
     });
