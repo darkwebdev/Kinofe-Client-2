@@ -20,9 +20,10 @@ define(['marionette', 'handlebars', 'text!templates/movie-details.hbs', 'collect
             },
 
             show: function() {
-                console.log('view movie-details:show', this.model);
+                console.log('view movie-details:show', this.model, this.region);
 
                 this.region.show(this);
+                this.scrollTop();
 
                 var directorListView = new PersonListView({
                     collection: new PersonList(this.model.get('director'))
@@ -33,6 +34,10 @@ define(['marionette', 'handlebars', 'text!templates/movie-details.hbs', 'collect
                     collection: new PersonList(this.model.get('actor'))
                 });
                 this.actor.show(actorListView);
+            },
+
+            scrollTop: function() {
+                this.region.$el[0].scrollTop = 0;
             }
 
         });

@@ -23,6 +23,11 @@ define(['marionette', 'views/movie-item'], function(Marionette, MovieItemView) {
         show: function() {
             console.log('CollectionView:show', this.collection);
             this.region.show(this);
+            this.scrollTop();
+        },
+
+        scrollTop: function() {
+            this.region.$el[0].scrollTop = 0;
         }
     });
 
