@@ -10,6 +10,11 @@ define(['backbone', 'config'], function(Backbone, config) {
 
         initialize: function() {
             console.log('movie-details:model:init');
+            this.listenTo(this, 'sync', this.updateProps);
+        },
+
+        updateProps: function() {
+            this.set('imdb_link', 'http://imdb.com/title/tt' + this.get('imdb_id'));
         }
 
     });

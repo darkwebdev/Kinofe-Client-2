@@ -1,12 +1,6 @@
 define(['underscore', 'backbone', 'config'], function(_, Backbone, config) {
 
     var Model = Backbone.Model.extend({
-//        idAttribute: 'pk',
-        /*watchlist: [],
-        ignorelist: {
-            movie: [],
-            janre: []
-        },*/
 
         defaults: function() {
             return {
