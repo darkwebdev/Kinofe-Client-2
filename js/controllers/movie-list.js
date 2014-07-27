@@ -12,7 +12,7 @@ define(['marionette', 'collections/movie-list', 'views/movie-list'],
                 collection: this.collection
             });
 
-            this.collection.fetch();
+            this.show();
         },
 
         selectMovie: function(id) {
@@ -23,6 +23,14 @@ define(['marionette', 'collections/movie-list', 'views/movie-list'],
             }
 
             this.vent.trigger('movie:selected', id);
+        },
+
+        selectJanre: function(name) {
+            this.vent.trigger('janre:selected', name);
+        },
+
+        show: function(janre) {
+            this.collection.fetch(janre ? { janre: janre }: {});
         }
     });
 

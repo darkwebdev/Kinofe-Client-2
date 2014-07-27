@@ -3,14 +3,23 @@ define(['backbone', 'config', '../models/movie-item', 'vent'], function(Backbone
         total: null,
         model: Movie,
 
-        url: config.apiUrl + '/movies',
+        url: function() {
+            return config.apiUrl + '/movies' + (this.janre ? '/' + this.janre : '');
+        },
 //            url: 'data/movie-list.json',
 
-//        parse: function(data) {
-//            this.total = data.count;
-//
-//            return data.results;
-//        },
+        parse: function(data) {
+            this.total = data.count;
+
+            return data.results;
+        },
+
+        fetch: function(options) {
+            options = options || {};
+            this.janre = options.janre;
+
+            return Backbone.Collection.prototype.fetch.call(this, options);
+        },
 
         initialize: function() {
             console.log('movie-list collection:init');

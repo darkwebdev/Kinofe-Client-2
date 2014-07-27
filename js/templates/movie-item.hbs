@@ -7,7 +7,7 @@
 	<h4>{{ name }}</h4> <span>{{ year }}</span>
 	<ul>
 		{{#each janre }}
-			<li><span class="label secondary round">{{ this }}</span></li>
+			<li><a href="#janre/{{ this }}" class="label secondary round">{{ this }}</a></li>
 		{{/each}}
 	</ul>
 	<footer>

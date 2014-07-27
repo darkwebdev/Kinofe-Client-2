@@ -34,14 +34,21 @@ require(['backbone', 'marionette', 'app', 'vent',
 
             // Movie list
 
+            var movieListController = new MovieListController({
+                region: app.movieListRegion,
+                vent: vent
+            });
+
             var router = new Marionette.AppRouter({
-                controller: new MovieListController({
-                    region: app.movieListRegion,
-                    vent: vent
-                }),
+                controller: movieListController,
                 appRoutes: {
-                    'movie/:id': 'selectMovie'
+                    'movie/:id': 'selectMovie',
+                    'janre/:name': 'selectJanre'
                 }
+            });
+
+            vent.on('janre:selected', function(janre) {
+                movieListController.show(janre);
             });
 
             // Movie details
