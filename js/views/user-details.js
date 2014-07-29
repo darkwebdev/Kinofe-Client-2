@@ -5,8 +5,8 @@ define(['marionette', 'handlebars', 'text!templates/user-details.hbs'],
             template: Handlebars.compile(html),
 
             regions: {
-                watchRegion: '.details-watch-list',
-                ignoreRegion: '.details-ignore-list'
+                watchRegion: '.detailsWatchList',
+                ignoreRegion: '.detailsIgnoreList'
             },
 
             events: {

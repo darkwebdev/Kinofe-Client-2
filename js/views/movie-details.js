@@ -5,8 +5,8 @@ define(['marionette', 'handlebars', 'text!templates/movie-details.hbs', 'collect
             template: Handlebars.compile(html),
 
             regions: {
-                actor: '.details-actor-list',
-                director: '.details-director-list'
+                actor: '.details-actorList',
+                director: '.details-directorList'
             },
 
             modelEvents: {

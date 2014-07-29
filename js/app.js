@@ -7,9 +7,11 @@ define(['backbone', 'marionette'], function(Backbone, Marionette) {
     });
 
     app.addRegions({
-        movieListRegion: '.movie-list-region',
-        detailsRegion: '.details-region',
-        userRegion: '.user-region'
+        movieListRegion: '.movieList',
+        detailsRegion: '.details',
+        userRegion: '.user',
+        navRegion: '.mainNav',
+        sectionTitleRegion: '.sectionTitle'
     });
 
     return app;

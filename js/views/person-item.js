@@ -3,7 +3,7 @@ define(['marionette', 'handlebars', 'text!templates/person-item.hbs'],
 
         var View = Marionette.ItemView.extend({
             tagName: 'li',
-            className: 'list-item',
+            className: 'listItem',
             template: Handlebars.compile(html),
 
             events: {

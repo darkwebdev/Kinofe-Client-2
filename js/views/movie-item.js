@@ -3,7 +3,7 @@ define(['marionette', 'handlebars', 'text!templates/movie-item.hbs'], function(M
     var View = Marionette.ItemView.extend({
 
         tagName: 'li',
-        className: 'list-item',
+        className: 'listItem',
         template: Handlebars.compile(html),
 
         events: {

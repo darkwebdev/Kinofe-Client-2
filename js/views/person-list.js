@@ -1,7 +1,7 @@
 define(['marionette', 'views/person-item'], function(Marionette, PersonView) {
     var View = Marionette.CollectionView.extend({
         tagName: 'ul',
-        className: 'person-list',
+        className: 'personList',
         itemView: PersonView,
 
         initialize: function() {

@@ -5,8 +5,8 @@ define(['marionette', 'handlebars', 'text!templates/person-details.hbs', 'collec
             template: Handlebars.compile(html),
 
             regions: {
-                playedRegion: '.details-played-list',
-                directedRegion: '.details-directed-list'
+                playedRegion: '.details-playedList',
+                directedRegion: '.details-directedList'
             },
 
             modelEvents: {

@@ -4,83 +4,18 @@
 @import "foundation/components/labels";
 @import "foundation/components/thumbs";
 
-@import "typo";
-@import "components";
+@import "type";
+@import "components/button";
+@import "components/list-item";
 
+@import "modules/header";
+@import "modules/main";
+@import "modules/details";
+@import "modules/user";
 
-header {
-	height: 60px;
-	background: #eee;
-}
-main {
-	position: absolute;
-	overflow: auto;
-	top: 60px;
-	left: 0;
-	bottom: 0;
-	width: 33%;
-	background: #ccc;
-}
-.details-region {
-	position: absolute;
-	overflow: auto;
-	top: 60px;
-	left: 33%;
-	bottom: 0;
-	width: 33%;
-	background: #ddd;
-
-	img {
-		max-width: 80%;
-	}
+.movieList {
 }
 
-.user-region {
-	position: absolute;
-	overflow: auto;
-	top: 60px;
-	right: 0;
-	bottom: 0;
-	width: 33%;
-	background: #ddd;
-}
-
-.list-item {
-	overflow: hidden;
-	display: block;
-	margin: 10px;
-	padding: 10px;
-	background: #fff;
-
-	&.hidden {
-		display: none;
-	}
-	.th {
-		float: left;
-		max-width: 100px;
-		max-height: 150px;
-	}
-	.content {
-		margin-left: 110px;
-	}
-
-	.watchlist {
-		&:before {
-			content: '\2729'; // empty star
-		}
-	}
-	&.watchlisted .watchlist:before {
-		content: '\272D'; // filled star
-	}
-
-	footer {
-		margin-top: 20px;
-	}
-}
-
-.movie-list-region {
-}
-
-.director-list,
-.actor-list {
+.directorList,
+.actorList {
 }

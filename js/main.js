@@ -49,6 +49,7 @@ require(['backbone', 'marionette', 'app', 'vent',
 
             vent.on('janre:selected', function(janre) {
                 movieListController.show(janre);
+                app.sectionTitleRegion.show(janre);
             });
 
             // Movie details

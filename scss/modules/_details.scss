@@ -1,0 +1,13 @@
+.details {
+	position: absolute;
+	overflow: auto;
+	top: 60px;
+	left: 33%;
+	bottom: 0;
+	width: 33%;
+	background: #ddd;
+
+	&-img {
+		max-width: 80%;
+	}
+}

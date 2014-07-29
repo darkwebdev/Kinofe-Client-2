@@ -1,0 +1,32 @@
+.listItem {
+	overflow: hidden;
+	display: block;
+	margin: 10px;
+	padding: 10px;
+	background: #fff;
+
+	&.hidden {
+		display: none;
+	}
+	.th {
+		float: left;
+		max-width: 100px;
+		max-height: 150px;
+	}
+	.content {
+		margin-left: 110px;
+	}
+
+	.watchlist {
+		&:before {
+			content: '\2729'; // empty star
+		}
+	}
+	&.watchlisted .watchlist:before {
+		content: '\272D'; // filled star
+	}
+
+	&-footer {
+		margin-top: 20px;
+	}
+}

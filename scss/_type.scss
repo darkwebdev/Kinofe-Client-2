@@ -12,3 +12,11 @@ li {
 .th:focus {
 	box-shadow: none;
 }
+
+.sectionTitle {
+	position: absolute;
+	top: 0;
+	width: 33%;
+	text-align: center;
+	text-transform: capitalize;
+}

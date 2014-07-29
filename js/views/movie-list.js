@@ -3,7 +3,7 @@ define(['marionette', 'views/movie-item'], function(Marionette, MovieItemView) {
     var View = Marionette.CollectionView.extend({
 
         tagName: 'ul',
-        className: 'movie-list',
+        className: 'movieList',
         itemView: MovieItemView,
 
         initialize: function(options) {
