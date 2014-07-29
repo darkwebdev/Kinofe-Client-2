@@ -25,12 +25,21 @@ require.config({
 });
 
 require(['backbone', 'marionette', 'app', 'vent',
-        'controllers/movie-list', 'controllers/movie-details', 'controllers/person-details', 'controllers/user-details'
+        'controllers/movie-list', 'controllers/movie-details', 'controllers/person-details', 'controllers/user-details', 'controllers/header'
     ], function(Backbone, Marionette, app, vent,
-        MovieListController, MovieDetailsController, PersonDetailsController, UserDetailsController
+        MovieListController, MovieDetailsController, PersonDetailsController, UserDetailsController, HeaderController
     ) {
 
         app.addInitializer(function() {
+
+            // Header
+
+            var headerController = new HeaderController({
+                region: app.headerRegion,
+                vent: vent
+            });
+
+            headerController.show('Best Movies');
 
             // Movie list
 
@@ -49,7 +58,8 @@ require(['backbone', 'marionette', 'app', 'vent',
 
             vent.on('janre:selected', function(janre) {
                 movieListController.show(janre);
-                app.sectionTitleRegion.show(janre);
+                console.log('vent on janre:selected', janre);
+                headerController.show(janre);
             });
 
             // Movie details
@@ -107,7 +117,6 @@ require(['backbone', 'marionette', 'app', 'vent',
             });
 
             userDetailsController.show();
-
 
         });
 
