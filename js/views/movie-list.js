@@ -8,12 +8,6 @@ define(['marionette', 'views/movie-item'], function(Marionette, MovieItemView) {
 
         initialize: function(options) {
             this.region = options.region;
-
-            /*if (!this.collection.length) {
-                this.collection.fetch();
-            } else {
-                this.show();
-            }*/
         },
 
         collectionEvents: {

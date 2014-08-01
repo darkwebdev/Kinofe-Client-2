@@ -7,4 +7,11 @@
 		width: 100%;
 		text-align: center;
 	}
+	.janreControls {
+		visibility: hidden;
+
+		&.active {
+			visibility: visible;
+		}
+	}
 }

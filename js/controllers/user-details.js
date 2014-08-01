@@ -41,9 +41,9 @@ define(['marionette', 'models/user-details', 'views/user-details'],
                 }
             },
 
-            ignoreJanre: function(id) {
+            ignoreJanre: function(name) {
                 if (this.user) {
-                    this.user.ignoreJanre(id);
+                    this.user.ignoreJanre(name);
                     this.user.save(null, { patch: true });
                 }
             },

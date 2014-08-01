@@ -58,8 +58,8 @@ define(['underscore', 'backbone', 'config'], function(_, Backbone, config) {
             this._addToList('ignorelist', 'movie', id);
         },
 
-        ignoreJanre: function(id) {
-            this._addToList('ignorelist', 'janre', id);
+        ignoreJanre: function(name) {
+            this._addToList('ignorelist', 'janre', name);
         }
 
     });

@@ -59,7 +59,7 @@ require(['backbone', 'marionette', 'app', 'vent',
             vent.on('janre:selected', function(janre) {
                 movieListController.show(janre);
                 console.log('vent on janre:selected', janre);
-                headerController.show(janre);
+                headerController.showJanre(janre);
             });
 
             // Movie details
@@ -110,6 +110,10 @@ require(['backbone', 'marionette', 'app', 'vent',
             vent.on('movie:hidden', function(id) {
                 console.log('vent:movie:hidden', id);
                 userDetailsController.ignoreMovie(id);
+            });
+            vent.on('janre:hidden', function(name) {
+                console.log('vent on janre:hidden', name);
+                userDetailsController.ignoreJanre(name);
             });
             vent.on('movie:watchlisted', function(id) {
                 console.log('vent:movie:watchlisted', id);

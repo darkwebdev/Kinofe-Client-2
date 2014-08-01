@@ -1,17 +1,19 @@
-define(['marionette', 'handlebars', 'text!templates/user-details.hbs'],
-    function(Marionette, Handlebars, html) {
+define(['marionette', 'backbone', 'handlebars', 'config', 'text!templates/user-details.hbs', 'views/movie-list', 'collections/movie-list'],
+    function(Marionette, Backbone, Handlebars, config, html, MovieListView, MovieList) {
 
         var View = Marionette.Layout.extend({
             template: Handlebars.compile(html),
 
             regions: {
-                watchRegion: '.detailsWatchList',
-                ignoreRegion: '.detailsIgnoreList'
+                watchlistRegion: '.detailsWatchList',
+                ignorelistRegion: '.detailsIgnoreList'
             },
 
             events: {
                 'click .login': 'login',
-                'click .logout': 'logout'
+                'click .logout': 'logout',
+                'click .showWatchlist': 'showWatchlist',
+                'click .showIgnorelist': 'showIgnorelist'
             },
 
             modelEvents: {
@@ -28,19 +30,28 @@ define(['marionette', 'handlebars', 'text!templates/user-details.hbs'],
             },
 
             show: function() {
-                console.log('UserDetailsView:show', this.model.toJSON());
+                console.log('UserDetailsView:show', this.model.toJSON(), MovieListView);
                 this.region.show(this);
 
                 /*(new MovieListView({
-                    region: this.directedRegion,
-                    collection: new MovieList(this.model.get('directed'))
-                })).show();
-
-                (new MovieListView({
                     region: this.playedRegion,
                     collection: new MovieList(this.model.get('played'))
                 })).show();*/
             },
+
+            showWatchlist: function() {
+                var view = new MovieListView({
+                    region: this.watchlistRegion,
+                    collection: new MovieList.extend({
+                        url: function() {
+                            return config.apiUrl + '/user/1/watchlist';
+                        }
+                    })
+                });
+                view.show();
+            },
+
+            showIgnorelist: function() {},
 
             login: function() {},
 
