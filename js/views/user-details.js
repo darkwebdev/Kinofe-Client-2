@@ -1,12 +1,15 @@
-define(['marionette', 'backbone', 'handlebars', 'config', 'text!templates/user-details.hbs', 'views/movie-list', 'collections/movie-list'],
-    function(Marionette, Backbone, Handlebars, config, html, MovieListView, MovieList) {
+define(['marionette', 'backbone', 'handlebars', 'config', 'text!templates/user-details.hbs',
+        'views/movie-list', 'views/janre-list', 'collections/movie-list', 'collections/janre-list'],
+    function(Marionette, Backbone, Handlebars, config, html,
+         MovieListView, JanreListView, MovieList, JanreList) {
 
         var View = Marionette.Layout.extend({
             template: Handlebars.compile(html),
 
             regions: {
                 watchlistRegion: '.detailsWatchList',
-                ignorelistRegion: '.detailsIgnoreList'
+                ignorelistJanreRegion: '.detailsIgnoreListJanre',
+                ignorelistMovieRegion: '.detailsIgnoreListMovie'
             },
 
             events: {
@@ -50,17 +53,26 @@ define(['marionette', 'backbone', 'handlebars', 'config', 'text!templates/user-d
             },
 
             showIgnorelist: function() {
-                var view = new MovieListView({
-                    region: this.ignorelistRegion,
+                var movieListView = new MovieListView({
+                    region: this.ignorelistMovieRegion,
                     collection: new MovieList()
                 });
-                view.collection.fetch({ ignorelistUser: 1 });
+                movieListView.collection.fetch({ ignorelistUser: 1 });
+
+                var ignoredJanrelist = this.model.get('ignorelist').janre;
+                console.log('showIgnorelist', ignoredJanrelist, this);
+
+                var janreListView = new JanreListView({
+                    region: this.ignorelistJanreRegion,
+                    collection: new JanreList(ignoredJanrelist)
+                });
+                janreListView.show();
 
                 this.hideWatchlist();
             },
 
             hideIgnorelist: function() {
-                $(this.ignorelistRegion.el).empty();
+                $(this.ignorelistJanreRegion.el).add(this.ignorelistMovieRegion.el).empty();
             },
 
             login: function() {},

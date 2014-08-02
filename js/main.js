@@ -111,9 +111,17 @@ require(['backbone', 'marionette', 'app', 'vent',
                 console.log('vent:movie:hidden', id);
                 userDetailsController.ignoreMovie(id);
             });
+            vent.on('movie:restored', function(id) {
+                console.log('vent:movie:restored', id);
+                userDetailsController.restoreMovie(id);
+            });
             vent.on('janre:hidden', function(name) {
                 console.log('vent on janre:hidden', name);
                 userDetailsController.ignoreJanre(name);
+            });
+            vent.on('janre:restored', function(name) {
+                console.log('vent on janre:restored', name);
+                userDetailsController.restoreJanre(name);
             });
             vent.on('movie:watchlisted', function(id) {
                 console.log('vent:movie:watchlisted', id);

@@ -9,7 +9,8 @@ define(['marionette', 'handlebars', 'text!templates/movie-item.hbs'], function(M
         events: {
             'click .hide': 'hideMovie',
             'click .watchlist': 'toggleWatchlistedMovie',
-            'click .select': 'selectMovie'
+            'click .select': 'selectMovie',
+            'click .restore': 'restoreMovie'
         },
 
         modelEvents: {
@@ -44,6 +45,10 @@ define(['marionette', 'handlebars', 'text!templates/movie-item.hbs'], function(M
         hideMovie: function() {
             console.log('movie view:hideMovie');
             this.model.hide();
+        },
+        restoreMovie: function() {
+            console.log('movie view:restoreMovie');
+            this.model.restore();
         },
 
         toggleWatchlistedMovie: function() {

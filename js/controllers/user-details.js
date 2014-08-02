@@ -41,9 +41,24 @@ define(['marionette', 'models/user-details', 'views/user-details'],
                 }
             },
 
+            restoreMovie: function(id) {
+                if (this.user) {
+                    this.user.restoreMovie(id);
+                    console.log('user controller:restore movie', id, this.user);
+                    this.user.save(null, { patch: true });
+                }
+            },
+
             ignoreJanre: function(name) {
                 if (this.user) {
                     this.user.ignoreJanre(name);
+                    this.user.save(null, { patch: true });
+                }
+            },
+
+            restoreJanre: function(name) {
+                if (this.user) {
+                    this.user.restoreJanre(name);
                     this.user.save(null, { patch: true });
                 }
             },

@@ -11,6 +11,10 @@ define(['backbone'], function(Backbone) {
             this.set({ hidden: true }).collection.hideMovie(this);
         },
 
+        restore: function() {
+            this.set({ hidden: false }).collection.restoreMovie(this);
+        },
+
         toggleWatchlisted: function() {
             this.set({ watchlisted: !this.get('watchlisted') }).collection.toggleWatchlistedMovie(this);
         }
