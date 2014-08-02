@@ -4,7 +4,20 @@ define(['backbone', 'config', '../models/movie-item', 'vent'], function(Backbone
         model: Movie,
 
         url: function() {
-            return config.apiUrl + '/movies' + (this.janre ? '/' + this.janre : '');
+            var url = config.apiUrl + '/movies';
+
+            if (this.janre) {
+                url += '/' + this.janre;
+            }
+            if (this.watchlistUser) {
+                url = config.apiUrl + '/users/' + this.watchlistUser + '/watchlist'
+            }
+            if (this.ignorelistUser) {
+                url = config.apiUrl + '/users/' + this.ignorelistUser + '/ignorelist'
+            }
+            console.log('movieList:url', url, this);
+
+            return url;
         },
 //            url: 'data/movie-list.json',
 
@@ -17,6 +30,9 @@ define(['backbone', 'config', '../models/movie-item', 'vent'], function(Backbone
         fetch: function(options) {
             options = options || {};
             this.janre = options.janre;
+            this.watchlistUser = options.watchlistUser;
+            this.ignorelistUser = options.ignorelistUser;
+            console.log('movieList:fetch', options, this);
 
             return Backbone.Collection.prototype.fetch.call(this, options);
         },

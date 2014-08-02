@@ -32,26 +32,36 @@ define(['marionette', 'backbone', 'handlebars', 'config', 'text!templates/user-d
             show: function() {
                 console.log('UserDetailsView:show', this.model.toJSON(), MovieListView);
                 this.region.show(this);
-
-                /*(new MovieListView({
-                    region: this.playedRegion,
-                    collection: new MovieList(this.model.get('played'))
-                })).show();*/
             },
 
             showWatchlist: function() {
                 var view = new MovieListView({
                     region: this.watchlistRegion,
-                    collection: new MovieList.extend({
-                        url: function() {
-                            return config.apiUrl + '/user/1/watchlist';
-                        }
-                    })
+                    collection: new MovieList()
                 });
-                view.show();
+                view.collection.fetch({ watchlistUser: 1 });
+
+                this.hideIgnorelist();
+                console.log('userDetailsView:showWatchlist:collection', view.collection)
             },
 
-            showIgnorelist: function() {},
+            hideWatchlist: function() {
+                $(this.watchlistRegion.el).empty();
+            },
+
+            showIgnorelist: function() {
+                var view = new MovieListView({
+                    region: this.ignorelistRegion,
+                    collection: new MovieList()
+                });
+                view.collection.fetch({ ignorelistUser: 1 });
+
+                this.hideWatchlist();
+            },
+
+            hideIgnorelist: function() {
+                $(this.ignorelistRegion.el).empty();
+            },
 
             login: function() {},
 
