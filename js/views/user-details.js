@@ -64,7 +64,7 @@ define(['marionette', 'backbone', 'handlebars', 'config', 'text!templates/user-d
 
                 var janreListView = new JanreListView({
                     region: this.ignorelistJanreRegion,
-                    collection: new JanreList(ignoredJanrelist)
+                    collection: new JanreList(_.map(ignoredJanrelist, function(janre) { return { name: janre }; }))
                 });
                 janreListView.show();
 
