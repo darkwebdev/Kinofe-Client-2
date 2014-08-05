@@ -39,7 +39,7 @@ require(['backbone', 'marionette', 'app', 'vent',
                 vent: vent
             });
 
-            headerController.show('Best Movies');
+            headerController.show({ sectionTitle: 'Best Movies' });
 
             // Movie list
 

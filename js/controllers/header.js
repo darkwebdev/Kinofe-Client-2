@@ -2,39 +2,34 @@ define(['underscore', 'marionette', 'views/header-layout'], function(_, Marionet
 
     var Controller = Marionette.Controller.extend({
 
-        modelDefaults: null,
-
         initialize: function(options) {
             this.vent = options.vent;
             this.region = options.region;
         },
 
         showJanre: function(name) {
-            console.log('headerController:showJanre', this.view);
+            console.log('headerController:showJanre', name);
 
-            this.modelDefaults = {
-                sectionTitle: name,
-                hideJanre: _.bind(function() {
-                    console.log('headerController:hideJanre', name);
-                    this.vent.trigger('janre:hidden', name);
-                }, this)
-            };
+            this.show({ sectionTitle: name });
 
-            this.show();
+            this.view.model.hideJanre = _.bind(function() {
+                console.log('headerController:hideJanre', name);
+                this.vent.trigger('janre:hidden', name);
+            }, this);
+
             this.view.showJanreControls();
         },
 
-        show: function(title) {
-            var modelOptions = this.modelDefaults || {
-                sectionTitle: title || ''
-            };
+        show: function(options) {
+            var model = new Backbone.Model(options);
+            model.getJanre = function() {};
 
             this.view = new HeaderView({
                 region: this.region,
-                model: new Backbone.Model(modelOptions)
+                model: model
             });
 
-            console.log('headerController:show', title, modelOptions, this.view);
+            console.log('headerController:show', options, this.view);
         }
     });
 

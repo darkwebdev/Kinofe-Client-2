@@ -49,7 +49,7 @@ gulp.task('scripts', function () {
         .pipe(jshint(o))
         .pipe(jshint.reporter('jshint-stylish'))
 //        .pipe(lintReporter())
-        .pipe(notify('scripts ok'));
+        .pipe(notify('<%= file.relative %>, script ok'));
 });
 
 gulp.task('styles', function () {

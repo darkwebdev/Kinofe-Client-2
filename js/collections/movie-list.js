@@ -10,10 +10,10 @@ define(['backbone', 'config', '../models/movie-item', 'vent'], function(Backbone
                 url += '/' + this.janre;
             }
             if (this.watchlistUser) {
-                url = config.apiUrl + '/users/' + this.watchlistUser + '/watchlist'
+                url = config.apiUrl + '/users/' + this.watchlistUser + '/watchlist';
             }
             if (this.ignorelistUser) {
-                url = config.apiUrl + '/users/' + this.ignorelistUser + '/ignorelist'
+                url = config.apiUrl + '/users/' + this.ignorelistUser + '/ignorelist';
             }
             console.log('movieList:url', url, this);
 

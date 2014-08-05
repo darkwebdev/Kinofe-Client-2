@@ -1,21 +1,20 @@
-@import "normalize";
-@import "foundation/components/type";
-@import "foundation/components/buttons";
-@import "foundation/components/labels";
-@import "foundation/components/thumbs";
+//Vars
 
-@import "type";
-@import "components/button";
-@import "components/list-item";
+$star-color: #ccc;
+$star-color-active: #c00;
 
-@import "modules/header";
-@import "modules/main";
-@import "modules/details";
-@import "modules/user";
+@import 'normalize';
+@import 'foundation/components/type';
+@import 'foundation/components/buttons';
+@import 'foundation/components/labels';
+@import 'foundation/components/thumbs';
 
-.movieList {
-}
+@import 'type';
+@import 'components/button';
+@import 'components/list-item';
 
-.directorList,
-.actorList {
-}
+@import 'modules/header';
+@import 'modules/main';
+@import 'modules/details';
+@import 'modules/user';
+@import 'modules/movie-list';

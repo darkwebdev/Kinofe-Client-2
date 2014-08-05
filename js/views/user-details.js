@@ -45,7 +45,7 @@ define(['marionette', 'backbone', 'handlebars', 'config', 'text!templates/user-d
                 view.collection.fetch({ watchlistUser: 1 });
 
                 this.hideIgnorelist();
-                console.log('userDetailsView:showWatchlist:collection', view.collection)
+                console.log('userDetailsView:showWatchlist:collection', view.collection);
             },
 
             hideWatchlist: function() {

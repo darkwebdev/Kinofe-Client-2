@@ -1,0 +1,18 @@
+.movieList {
+	.listItem {
+		position: relative;
+	}
+	.icon-star {
+		position: absolute;
+		top: 0;
+		right: 0;
+		color: $star-color;
+	}
+	.listItem.watchlisted .icon-star,
+	.detailsWatchList & .icon-star {
+		color: $star-color-active;
+	}
+	.detailsIgnoreListMovie & .icon-star {
+		display: none;
+	}
+}

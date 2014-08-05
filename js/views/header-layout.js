@@ -24,7 +24,7 @@ define(['marionette', 'handlebars', 'text!templates/header.hbs'],
             },
 
             hideJanre: function() {
-                console.log('click hideJanre');
+                console.log('click hideJanre', this.model);
                 this.model.hideJanre();
             }
         });
