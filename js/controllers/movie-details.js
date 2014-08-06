@@ -1,5 +1,5 @@
-define(['marionette', 'models/movie-details', 'views/movie-details'],
-    function(Marionette, MovieDetails, MovieDetailsView) {
+define(['marionette', 'models/movie-details', 'views/movie-details', 'collections/person-list'],
+    function(Marionette, MovieDetails, MovieDetailsView, PersonList) {
 
         var Controller = Marionette.Controller.extend({
 
@@ -12,9 +12,15 @@ define(['marionette', 'models/movie-details', 'views/movie-details'],
             show: function(id) {
                 console.log('movieDetailsController:show', id);
 
+                var model = new MovieDetails({ id: id });
+                var directorList = model.get('director') || [];
+                var actorList = model.get('actor') || [];
+
                 new MovieDetailsView({
                     region: this.region,
-                    model: new MovieDetails({ id: id })
+                    directorList: new PersonList(directorList, { vent: this.vent }),
+                    actorList: new PersonList(actorList, { vent: this.vent }),
+                    model: model
                 });
 
                 this.router.navigate('movie/' + id); // update url

@@ -1,7 +1,7 @@
 define(['marionette', 'handlebars', 'text!templates/header.hbs'],
     function(Marionette, Handlebars, html) {
 
-        var View = Marionette.Layout.extend({
+        var View = Marionette.LayoutView.extend({
             template: Handlebars.compile(html),
 
             regions: {

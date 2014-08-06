@@ -1,7 +1,7 @@
 define(['marionette', 'handlebars', 'text!templates/person-details.hbs', 'collections/movie-list', 'views/movie-list'],
     function(Marionette, Handlebars, html, MovieList, MovieListView) {
 
-        var View = Marionette.Layout.extend({
+        var View = Marionette.LayoutView.extend({
             template: Handlebars.compile(html),
 
             regions: {
@@ -15,6 +15,9 @@ define(['marionette', 'handlebars', 'text!templates/person-details.hbs', 'collec
 
             initialize: function(options) {
                 this.region = options.region;
+                this.directedList = options.directedList;
+                this.playedList = options.playedList;
+
                 this.model.fetch();
             },
 
@@ -25,12 +28,12 @@ define(['marionette', 'handlebars', 'text!templates/person-details.hbs', 'collec
 
                 (new MovieListView({
                     region: this.directedRegion,
-                    collection: new MovieList(this.model.get('directed'))
+                    collection: this.directedList
                 })).show();
 
                 (new MovieListView({
                     region: this.playedRegion,
-                    collection: new MovieList(this.model.get('played'))
+                    collection: this.playedList
                 })).show();
             },
 

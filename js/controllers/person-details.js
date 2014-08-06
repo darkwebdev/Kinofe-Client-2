@@ -10,9 +10,13 @@ define(['marionette', 'models/person-details', 'views/person-details'],
             },
 
             show: function(id) {
+                var model = new PersonDetails({ id: id });
+
                 new PersonDetailsView({
                     region: this.region,
-                    model: new PersonDetails({ id: id })
+                    directedList: new MovieList(model.get('directed'), { vent: this.vent }),
+                    playedList: new MovieList(model.get('played'), { vent: this.vent }),
+                    model: model
                 });
                 this.router.navigate('person/' + id); // update url
             }

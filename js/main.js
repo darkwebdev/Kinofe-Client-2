@@ -1,12 +1,12 @@
 require.config({
     paths: {
-        jquery: '../bower_components/jquery/dist/jquery',
+        jquery: '../node_modules/jquery/dist/jquery',
         underscore: '../node_modules/lodash/dist/lodash',
-        backbone: '../bower_components/backbone/backbone',
-        marionette: '../bower_components/marionette/lib/backbone.marionette',
-        'backbone.wreqr': '../bower_components/backbone.wreqr/lib/backbone.wreqr',
-        handlebars: '../bower_components/handlebars/handlebars',
-        text: '../bower_components/requirejs-text/text'
+        backbone: '../node_modules/backbone/backbone',
+        marionette: '../node_modules/backbone.marionette/lib/backbone.marionette',
+        'backbone.radio': '../node_modules/backbone.radio/build/backbone.radio',
+        handlebars: '../node_modules/handlebars/dist/handlebars',
+        text: '../node_modules/text/text'
     },
 
     shim: {
@@ -24,19 +24,22 @@ require.config({
     }
 });
 
-require(['backbone', 'marionette', 'app', 'vent',
+require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
         'controllers/movie-list', 'controllers/movie-details', 'controllers/person-details', 'controllers/user-details', 'controllers/header'
-    ], function(Backbone, Marionette, app, vent,
+    ], function(Backbone, Marionette, Radio, app, config,
         MovieListController, MovieDetailsController, PersonDetailsController, UserDetailsController, HeaderController
     ) {
 
         app.addInitializer(function() {
 
+            var vent;
+
             // Header
 
             var headerController = new HeaderController({
                 region: app.headerRegion,
-                vent: vent
+                vent: vent,
+                user: config.user
             });
 
             headerController.show({ sectionTitle: 'Best Movies' });
@@ -100,7 +103,8 @@ require(['backbone', 'marionette', 'app', 'vent',
             var userDetailsController = new UserDetailsController({
                 region: app.userRegion,
                 vent: vent,
-                router: router
+                router: router,
+                user: config.user
             });
 
             vent.on('user:requested', function() {
@@ -126,6 +130,10 @@ require(['backbone', 'marionette', 'app', 'vent',
             vent.on('movie:watchlisted', function(id) {
                 console.log('vent:movie:watchlisted', id);
                 userDetailsController.toggleWatchlistedMovie(id);
+            });
+            vent.on('user:getDetails', function() {
+                console.log('vent on user:details');
+//                return userDetailsController.getDetails();
             });
 
             userDetailsController.show();

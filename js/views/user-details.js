@@ -1,9 +1,7 @@
-define(['marionette', 'backbone', 'handlebars', 'config', 'text!templates/user-details.hbs',
-        'views/movie-list', 'views/janre-list', 'collections/movie-list', 'collections/janre-list'],
-    function(Marionette, Backbone, Handlebars, config, html,
-         MovieListView, JanreListView, MovieList, JanreList) {
+define(['marionette', 'backbone', 'handlebars', 'text!templates/user-details.hbs', 'views/movie-list', 'views/janre-list'],
+    function(Marionette, Backbone, Handlebars, html, MovieListView, JanreListView) {
 
-        var View = Marionette.Layout.extend({
+        var View = Marionette.LayoutView.extend({
             template: Handlebars.compile(html),
 
             regions: {
@@ -25,6 +23,10 @@ define(['marionette', 'backbone', 'handlebars', 'config', 'text!templates/user-d
 
             initialize: function(options) {
                 this.region = options.region;
+                this.watchlist = options.watchlist;
+                this.ignorelist = options.ignorelist;
+                this.janrelist = options.janrelist;
+
                 if (this.model) {
                     this.model.fetch();
                 } else {
@@ -40,9 +42,9 @@ define(['marionette', 'backbone', 'handlebars', 'config', 'text!templates/user-d
             showWatchlist: function() {
                 var view = new MovieListView({
                     region: this.watchlistRegion,
-                    collection: new MovieList()
+                    collection: this.watchlist
                 });
-                view.collection.fetch({ watchlistUser: 1 });
+                view.collection.fetch({ watchlistUser: this.model.get('id') });
 
                 this.hideIgnorelist();
                 console.log('userDetailsView:showWatchlist:collection', view.collection);
@@ -55,16 +57,13 @@ define(['marionette', 'backbone', 'handlebars', 'config', 'text!templates/user-d
             showIgnorelist: function() {
                 var movieListView = new MovieListView({
                     region: this.ignorelistMovieRegion,
-                    collection: new MovieList()
+                    collection: this.ignorelist
                 });
                 movieListView.collection.fetch({ ignorelistUser: 1 });
 
-                var ignoredJanrelist = this.model.get('ignorelist').janre;
-                console.log('showIgnorelist', ignoredJanrelist, this);
-
                 var janreListView = new JanreListView({
                     region: this.ignorelistJanreRegion,
-                    collection: new JanreList(_.map(ignoredJanrelist, function(janre) { return { name: janre }; }))
+                    collection: this.janrelist
                 });
                 janreListView.show();
 

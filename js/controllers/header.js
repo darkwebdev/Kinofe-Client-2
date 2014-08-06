@@ -5,6 +5,7 @@ define(['underscore', 'marionette', 'views/header-layout'], function(_, Marionet
         initialize: function(options) {
             this.vent = options.vent;
             this.region = options.region;
+            this.user = options.user;
         },
 
         showJanre: function(name) {
@@ -17,7 +18,11 @@ define(['underscore', 'marionette', 'views/header-layout'], function(_, Marionet
                 this.vent.trigger('janre:hidden', name);
             }, this);
 
-            this.view.showJanreControls();
+            this.vent.trigger('user:getDetails');
+
+//            if (janreIgnored()) {
+                this.view.showJanreControls();
+//            }
         },
 
         show: function(options) {

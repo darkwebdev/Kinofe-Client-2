@@ -1,5 +1,5 @@
-define(['marionette', 'models/user-details', 'views/user-details'],
-    function(Marionette, UserDetails, UserDetailsView) {
+define(['marionette', 'models/user-details', 'views/user-details', 'collections/movie-list', 'collections/janre-list'],
+    function(Marionette, UserDetails, UserDetailsView, MovieList, JanreList) {
 
         var Controller = Marionette.Controller.extend({
 
@@ -7,14 +7,13 @@ define(['marionette', 'models/user-details', 'views/user-details'],
                 this.vent = options.vent;
                 this.router = options.router;
                 this.region = options.region;
-                this.user = null;
 
-                this.checkAuth();
+                this.checkAuth(options.user);
             },
 
-            checkAuth: function() {
+            checkAuth: function(user) {
                 // if authenticated:
-                this.user = new UserDetails({ id: 1 });
+                this.user = new UserDetails({ id: user.id });
                 // else:
                 // login
             },
@@ -26,9 +25,16 @@ define(['marionette', 'models/user-details', 'views/user-details'],
             },
 
             show: function() {
+                var ignoredJanrelist = this.user.get('ignorelist').janre;
+                var janreModels = _.map(ignoredJanrelist, function(janre) { return { name: janre }; });
+                console.log('showIgnorelist', ignoredJanrelist, janreModels, this);
+
                 new UserDetailsView({
                     region: this.region,
-                    model: this.user
+                    model: this.user,
+                    watchlist: new MovieList({ vent: this.vent }),
+                    ignorelist: new MovieList({ vent: this.vent }),
+                    janrelist: new JanreList(janreModels, { vent: this.vent })
                 });
 //                this.router.navigate('person/' + id); // update url
             },

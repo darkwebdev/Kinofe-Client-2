@@ -56,7 +56,7 @@ gulp.task('styles', function () {
     var o = {
 //        sourceComments: 'map',
         errLogToConsole: true,
-        includePaths: ['bower_components/foundation/scss/']
+        includePaths: ['node_modules/foundation/scss/']
     };
 
     watch({ glob: 'scss/**/*.scss' })

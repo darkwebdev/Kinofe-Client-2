@@ -1,4 +1,4 @@
-define(['backbone', 'config', '../models/movie-item', 'vent'], function(Backbone, config, Movie, vent) {
+define(['backbone', 'config', '../models/movie-item'], function(Backbone, config, Movie) {
     var MovieList = Backbone.Collection.extend({
         total: null,
         model: Movie,
@@ -37,28 +37,29 @@ define(['backbone', 'config', '../models/movie-item', 'vent'], function(Backbone
             return Backbone.Collection.prototype.fetch.call(this, options);
         },
 
-        initialize: function() {
+        initialize: function(options) {
             console.log('movie-list collection:init');
+            this.vent = options.vent;
         },
 
         selectMovie: function(movie) {
             console.log('collection::movie:selected', movie.get('id'));
-            vent.trigger('movie:selected', movie.get('id'));
+            this.vent.trigger('movie:selected', movie.get('id'));
         },
 
         hideMovie: function(movie) {
             console.log('collection::movie:hidden', movie.get('id'));
-            vent.trigger('movie:hidden', movie.get('id'));
+            this.vent.trigger('movie:hidden', movie.get('id'));
         },
 
         restoreMovie: function(movie) {
             console.log('collection::movie:restored', movie.get('id'));
-            vent.trigger('movie:restored', movie.get('id'));
+            this.vent.trigger('movie:restored', movie.get('id'));
         },
 
         toggleWatchlistedMovie: function(movie) {
             console.log('collection::movie:toggleWatchlistedMovie', movie.get('id'));
-            vent.trigger('movie:watchlisted', movie.get('id'));
+            this.vent.trigger('movie:watchlisted', movie.get('id'));
         }
     });
 

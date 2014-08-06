@@ -5,7 +5,7 @@ define(['marionette', 'collections/movie-list', 'views/movie-list'],
 
         initialize: function(options) {
             this.vent = options.vent;
-            this.collection = new MovieList();
+            this.collection = new MovieList({ vent: this.vent });
 
             new MovieListView({
                 region: options.region,
