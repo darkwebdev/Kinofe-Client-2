@@ -4,7 +4,7 @@ define(['marionette', 'views/janre-item'], function(Marionette, JanreItemView) {
 
         tagName: 'ul',
         className: 'janreList',
-        itemView: JanreItemView,
+        childView: JanreItemView,
 
         initialize: function(options) {
             console.log('janreList view:init', options);

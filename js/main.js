@@ -3,6 +3,7 @@ require.config({
         jquery: '../node_modules/jquery/dist/jquery',
         underscore: '../node_modules/lodash/dist/lodash',
         backbone: '../node_modules/backbone/backbone',
+//        marionette: '../node_modules/backbone.marionette/lib/core/backbone.marionette', // no wreqr, no babysitter
         marionette: '../node_modules/backbone.marionette/lib/backbone.marionette',
         'backbone.radio': '../node_modules/backbone.radio/build/backbone.radio',
         handlebars: '../node_modules/handlebars/dist/handlebars',
@@ -32,13 +33,13 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
 
         app.addInitializer(function() {
 
-            var vent;
+            var radio = Radio.channel('main');
 
             // Header
 
             var headerController = new HeaderController({
                 region: app.headerRegion,
-                vent: vent,
+                vent: radio,
                 user: config.user
             });
 
@@ -48,7 +49,7 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
 
             var movieListController = new MovieListController({
                 region: app.movieListRegion,
-                vent: vent
+                vent: radio
             });
 
             var router = new Marionette.AppRouter({
@@ -59,9 +60,9 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
                 }
             });
 
-            vent.on('janre:selected', function(janre) {
+            radio.on('janre:selected', function(janre) {
                 movieListController.show(janre);
-                console.log('vent on janre:selected', janre);
+                console.log('radio on janre:selected', janre);
                 headerController.showJanre(janre);
             });
 
@@ -69,12 +70,12 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
 
             var movieDetailsController = new MovieDetailsController({
                 region: app.detailsRegion,
-                vent: vent,
+                vent: radio,
                 router: router
             });
 
-            vent.on('movie:selected', function(id) {
-                console.log('vent:movie:selected', id);
+            radio.on('movie:selected', function(id) {
+                console.log('radio:movie:selected', id);
                 movieDetailsController.show(id);
             });
 
@@ -82,7 +83,7 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
 
             var personDetailsController = new PersonDetailsController({
                 region: app.detailsRegion,
-                vent: vent,
+                vent: radio,
                 router: router
             });
 
@@ -93,8 +94,8 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
                 }
             });
 
-            vent.on('person:selected', function(id) {
-                console.log('vent:person:selected', id);
+            radio.on('person:selected', function(id) {
+                console.log('radio:person:selected', id);
                 personDetailsController.show(id);
             });
 
@@ -102,37 +103,37 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
 
             var userDetailsController = new UserDetailsController({
                 region: app.userRegion,
-                vent: vent,
+                vent: radio,
                 router: router,
                 user: config.user
             });
 
-            vent.on('user:requested', function() {
-                console.log('vent:user:requested');
+            radio.on('user:requested', function() {
+                console.log('radio:user:requested');
                 userDetailsController.show();
             });
-            vent.on('movie:hidden', function(id) {
-                console.log('vent:movie:hidden', id);
+            radio.on('movie:hidden', function(id) {
+                console.log('radio:movie:hidden', id);
                 userDetailsController.ignoreMovie(id);
             });
-            vent.on('movie:restored', function(id) {
-                console.log('vent:movie:restored', id);
+            radio.on('movie:restored', function(id) {
+                console.log('radio:movie:restored', id);
                 userDetailsController.restoreMovie(id);
             });
-            vent.on('janre:hidden', function(name) {
-                console.log('vent on janre:hidden', name);
+            radio.on('janre:hidden', function(name) {
+                console.log('radio on janre:hidden', name);
                 userDetailsController.ignoreJanre(name);
             });
-            vent.on('janre:restored', function(name) {
-                console.log('vent on janre:restored', name);
+            radio.on('janre:restored', function(name) {
+                console.log('radio on janre:restored', name);
                 userDetailsController.restoreJanre(name);
             });
-            vent.on('movie:watchlisted', function(id) {
-                console.log('vent:movie:watchlisted', id);
+            radio.on('movie:watchlisted', function(id) {
+                console.log('radio:movie:watchlisted', id);
                 userDetailsController.toggleWatchlistedMovie(id);
             });
-            vent.on('user:getDetails', function() {
-                console.log('vent on user:details');
+            radio.on('user:getDetails', function() {
+                console.log('radio on user:details');
 //                return userDetailsController.getDetails();
             });
 

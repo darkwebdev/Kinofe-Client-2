@@ -1,7 +1,7 @@
 //Vars
 
-$star-color: #ccc;
-$star-color-active: #c00;
+$star-color: #ccc !default;
+$star-color-active: #c00 !default;
 
 @import 'normalize';
 @import 'foundation/components/global';
@@ -9,6 +9,7 @@ $star-color-active: #c00;
 @import 'foundation/components/buttons';
 @import 'foundation/components/labels';
 @import 'foundation/components/thumbs';
+@import 'variables';
 
 @import 'type';
 @import 'components/button';
