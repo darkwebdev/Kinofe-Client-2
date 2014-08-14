@@ -7,9 +7,10 @@
 		<title>Kinofé</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta name="description" content="">
-		<link rel="stylesheet" href="css/main.css">
 
-		<script data-main="js/main" src="bower_components/requirejs/require.js"></script>
+		<!-- build:css css/main.css -->
+		<link rel="stylesheet" href="css/main.css">
+		<!-- endbuild -->
 	</head>
 	<body>
 		<header class="mainHeader">
@@ -24,5 +25,11 @@
 		<section class="user">
 		</section>
 
+		<!-- build:js js/require.js -->
+		<script></script>
+		<!-- endbuild -->
+		<!-- build:js js/main.js -->
+		<script data-main="js/main" src="node_modules/requirejs/require.js"></script>
+		<!-- endbuild -->
 	</body>
 </html>

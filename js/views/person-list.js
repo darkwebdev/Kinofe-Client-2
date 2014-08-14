@@ -4,8 +4,10 @@ define(['marionette', 'views/person-item'], function(Marionette, PersonView) {
         className: 'personList',
         childView: PersonView,
 
-        initialize: function() {
-
+        initialize: function(options) {
+            console.log('view person-list:init', options);
+            options = options || {};
+            this.collection = options.collection;
         },
 
         onShow: function() {

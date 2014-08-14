@@ -4,7 +4,7 @@ define(['backbone', 'models/person-item'], function(Backbone, Person) {
 
         initialize: function(models, options) {
             console.log('collection person-list:init', options);
-            this.vent = options.vent;
+//            this.vent = options.vent;
         },
 
         selectPerson: function(person) {

@@ -20,7 +20,7 @@ define(['marionette', 'handlebars', 'text!templates/movie-item.hbs'], function(M
         },
 
         initialize: function() {
-            console.log('MovieItemView:init', this.model);
+//            console.log('MovieItemView:init', this.model);
             this.checkWatchlisted(); // set the proper watchlisted icon
         },
 

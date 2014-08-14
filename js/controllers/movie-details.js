@@ -12,15 +12,11 @@ define(['marionette', 'models/movie-details', 'views/movie-details', 'collection
             show: function(id) {
                 console.log('movieDetailsController:show', id);
 
-                var model = new MovieDetails({ id: id });
-                var directorList = model.get('director') || [];
-                var actorList = model.get('actor') || [];
-
                 new MovieDetailsView({
                     region: this.region,
-                    directorList: new PersonList(directorList, { vent: this.vent }),
-                    actorList: new PersonList(actorList, { vent: this.vent }),
-                    model: model
+                    directorList: new PersonList(),
+                    actorList: new PersonList([], { vent: this.vent }),
+                    model: new MovieDetails({ id: id })
                 });
 
                 this.router.navigate('movie/' + id); // update url

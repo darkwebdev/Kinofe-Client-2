@@ -23,18 +23,21 @@ define(['marionette', 'handlebars', 'text!templates/movie-details.hbs', 'views/p
             },
 
             show: function() {
-                console.log('view movie-details:show', this.model, this.region);
-
                 this.region.show(this);
                 this.scrollTop();
 
+//                debugger;
+                var directorList = this.directorList.reset(this.model.get('director'));
+
+                console.log('view movie-details:show', this.model, this.region, directorList);
+
                 var directorListView = new PersonListView({
-                    collection: this.directorList
+                    collection: directorList
                 });
                 this.director.show(directorListView);
 
                 var actorListView = new PersonListView({
-                    collection: this.actorList
+                    collection: this.actorList.reset(this.model.get('actor'))
                 });
                 this.actor.show(actorListView);
             },
