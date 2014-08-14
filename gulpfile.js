@@ -35,12 +35,12 @@ gulp.task('scripts:build', function() {
         out: 'js/main.js',
         mainConfigFile: 'js/main.js'
     })
-    .pipe(uglify({ drop_console: true }))
+    .pipe(uglify({ compress: { drop_console: true } }))
     .pipe(gulp.dest('dist'));
 });
 gulp.task('scripts:copy', function() {
     return gulp.src([ 'node_modules/requirejs/require.js' ])
-        .pipe(uglify({ drop_console: true }))
+        .pipe(uglify({ compress: { drop_console: true } }))
         .pipe(gulp.dest('dist/js/'));
 
 });
