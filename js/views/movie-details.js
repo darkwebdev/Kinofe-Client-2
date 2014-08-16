@@ -5,8 +5,8 @@ define(['marionette', 'handlebars', 'text!templates/movie-details.hbs', 'views/p
             template: Handlebars.compile(html),
 
             regions: {
-                actor: '.details-actorList',
-                director: '.details-directorList'
+                actorRegion: '.details-actorList',
+                directorRegion: '.details-directorList'
             },
 
             modelEvents: {
@@ -23,23 +23,20 @@ define(['marionette', 'handlebars', 'text!templates/movie-details.hbs', 'views/p
             },
 
             show: function() {
+                console.log('view movie-details:show');
+
                 this.region.show(this);
                 this.scrollTop();
 
-//                debugger;
-                var directorList = this.directorList.reset(this.model.get('director'));
-
-                console.log('view movie-details:show', this.model, this.region, directorList);
-
                 var directorListView = new PersonListView({
-                    collection: directorList
+                    collection: this.directorList(this.model.get('director'))
                 });
-                this.director.show(directorListView);
+                this.directorRegion.show(directorListView);
 
                 var actorListView = new PersonListView({
-                    collection: this.actorList.reset(this.model.get('actor'))
+                    collection: this.actorList(this.model.get('actor'))
                 });
-                this.actor.show(actorListView);
+                this.actorRegion.show(actorListView);
             },
 
             scrollTop: function() {

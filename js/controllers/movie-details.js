@@ -14,8 +14,12 @@ define(['marionette', 'models/movie-details', 'views/movie-details', 'collection
 
                 new MovieDetailsView({
                     region: this.region,
-                    directorList: new PersonList(),
-                    actorList: new PersonList([], { vent: this.vent }),
+                    directorList: function(modelList) {
+                        return new PersonList(modelList);
+                    },
+                    actorList: function(modelList) {
+                        return new PersonList(modelList);
+                    },
                     model: new MovieDetails({ id: id })
                 });
 

@@ -8,6 +8,8 @@ define(['marionette', 'views/person-item'], function(Marionette, PersonView) {
             console.log('view person-list:init', options);
             options = options || {};
             this.collection = options.collection;
+
+            this.listenTo(this, 'before:render:collection', function() { console.log('before:render:collection')});
         },
 
         onShow: function() {
