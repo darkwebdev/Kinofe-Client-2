@@ -6,47 +6,49 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     htmlhint = require('gulp-htmlhint'),
     watch = require('gulp-watch'),
+    rename = require('gulp-rename'),
     _if = require('gulp-if'),
     reload = require('gulp-reload'),
     mocha = require('gulp-mocha'),
     mochaPhantomJS = require('gulp-mocha-phantomjs'),
-//    browserify = require('gulp-browserify'),
     rjs = require('gulp-requirejs'),
     csso = require('gulp-csso'),
     uglify = require('gulp-uglify'),
     useref = require('gulp-useref');
 
 gulp.task('clean', function (cb) {
-    return require('del')([ 'dist' ], { force: true }, cb);
+    require('del')([ 'dist' ], { force: true }, cb);
 });
 
 gulp.task('scripts', function () {
-    watch({ glob: 'js/**/*.js' })
+    watch({ glob: 'js/**/*.js', name: 'Scripts' })
+//        .pipe(_if(/\.js/, ))
         .pipe(plumber())
         .pipe(jshint({ debug: true }))
         .pipe(jshint.reporter('jshint-stylish'))
 //        .pipe(lintReporter())
-        .pipe(notify('<%= file.relative %>, script ok'));
+        .pipe(notify('<%= file.relative %>, script ok'))
+        ;
 });
 gulp.task('scripts:build', function() {
-    return rjs({
+    rjs({
         name: 'main',
         baseUrl: 'js',
-        out: 'js/main.js',
+        out: 'js/main.min.js',
         mainConfigFile: 'js/main.js'
     })
     .pipe(uglify({ compress: { drop_console: true } }))
     .pipe(gulp.dest('dist'));
 });
 gulp.task('scripts:copy', function() {
-    return gulp.src([ 'node_modules/requirejs/require.js' ])
+    gulp.src([ 'node_modules/requirejs/require.js' ])
         .pipe(uglify({ compress: { drop_console: true } }))
+        .pipe(rename('require.min.js'))
         .pipe(gulp.dest('dist/js/'));
-
 });
 
 gulp.task('styles', function () {
-    watch({ glob: 'scss/**/*.scss' })
+    watch({ glob: 'scss/**/*.scss', name: 'Styles' })
         .pipe(plumber())
         .pipe(sass({
 //              sourceComments: 'map', // causes bugs
@@ -55,18 +57,20 @@ gulp.task('styles', function () {
         }))
         .pipe(autoprefixer())
         .pipe(gulp.dest('css'))
-        .pipe(notify('styles ok'));
+        .pipe(notify('styles ok'))
+        ;
 });
 gulp.task('styles:build', function() {
-    return gulp.src('scss/main.scss')
+    gulp.src('scss/main.scss')
         .pipe(sass({ includePaths: ['node_modules/foundation/scss/'] }))
         .pipe(autoprefixer())
         .pipe(csso())
+        .pipe(rename('main.min.css'))
         .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('html', function() {
-    watch({ glob: '*.html' })
+    watch({ glob: '*.html', name: 'Html' })
         .pipe(plumber())
         .pipe(htmlhint())
         .pipe(htmlhint.reporter())
@@ -96,20 +100,20 @@ gulp.task('auto-reload', function() {
     }
 
     gulp.src('gulpfile.js')
-        .pipe(watch({ passThrough: false }))
+        .pipe(watch({ name:'Gulp', passThrough: false }))
         .pipe(restart());
 //    restart();
 });
 
 gulp.task('gulp-reload', function() {
-    gulp.src('gulpfile.js')
-        .pipe(watch({ passThrough: false }))
-        .pipe(reload());
+    gulp.src('gulpfile.js', { read: false })
+        .pipe(watch({ name:'Gulp',  passThrough: false }))
+        .pipe(_if(/gulpfile.js/, reload()));
 
 });
 
 gulp.task('default', [/*pre-tasks*/], function() {
-    gulp.start('gulp-reload', 'styles', 'scripts', 'html');
+    gulp.start( 'gulp-reload', 'styles', 'scripts', 'html' );
 });
 
 gulp.task('build', [ 'clean' ], function() {

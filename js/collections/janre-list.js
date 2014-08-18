@@ -1,16 +1,16 @@
-define(['backbone', '../models/janre-item'], function(Backbone, Janre) {
+define(['backbone', 'backbone.radio', '../models/janre-item'], function(Backbone, Radio, Janre) {
     var JanreList = Backbone.Collection.extend({
         total: null,
         model: Janre,
 
         initialize: function(models, options) {
             console.log('ignoreList collection:init');
-            this.vent = options.vent;
+            this.radio = Radio.channel('app');
         },
 
         restoreJanre: function(janre) {
             console.log('collection::janre:restored', janre.get('name'));
-            this.vent.trigger('janre:restored', janre.get('name'));
+            this.radio.trigger('janre:restored', janre.get('name'));
         }
     });
 

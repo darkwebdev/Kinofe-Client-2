@@ -1,12 +1,11 @@
-define(['marionette', 'models/user-details', 'views/user-details', 'collections/movie-list', 'collections/janre-list'],
-    function(Marionette, UserDetails, UserDetailsView, MovieList, JanreList) {
+define(['marionette', 'backbone.radio', 'models/user-details', 'views/user-details', 'collections/movie-list', 'collections/janre-list'],
+    function(Marionette, Radio, UserDetails, UserDetailsView, MovieList, JanreList) {
 
         var Controller = Marionette.Controller.extend({
 
             initialize: function(options) {
-                this.vent = options.vent;
-                this.router = options.router;
                 this.region = options.region;
+                this.radio = Radio.channel('app');
 
                 this.checkAuth(options.user);
             },
@@ -32,11 +31,10 @@ define(['marionette', 'models/user-details', 'views/user-details', 'collections/
                 new UserDetailsView({
                     region: this.region,
                     model: this.user,
-                    watchlist: new MovieList({ vent: this.vent }),
-                    ignorelist: new MovieList({ vent: this.vent }),
-                    janrelist: new JanreList(janreModels, { vent: this.vent })
+                    watchlist: new MovieList(),
+                    ignorelist: new MovieList(),
+                    janrelist: new JanreList(janreModels)
                 });
-//                this.router.navigate('person/' + id); // update url
             },
 
             ignoreMovie: function(id) {

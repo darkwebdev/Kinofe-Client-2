@@ -1,12 +1,11 @@
-define(['marionette', 'models/person-details', 'views/person-details'],
-    function(Marionette, PersonDetails, PersonDetailsView) {
+define(['marionette', 'backbone.radio', 'collections/movie-list', 'models/person-details', 'views/person-details'],
+    function(Marionette, Radio, MovieList, PersonDetails, PersonDetailsView) {
 
         var Controller = Marionette.Controller.extend({
 
             initialize: function(options) {
-                this.vent = options.vent;
-                this.router = options.router;
                 this.region = options.region;
+                this.radio = Radio.channel('app');
             },
 
             show: function(id) {
@@ -14,11 +13,14 @@ define(['marionette', 'models/person-details', 'views/person-details'],
 
                 new PersonDetailsView({
                     region: this.region,
-                    directedList: new MovieList(model.get('directed'), { vent: this.vent }),
-                    playedList: new MovieList(model.get('played'), { vent: this.vent }),
+                    directedList: function(models) {
+                        return new MovieList(models);
+                    },
+                    playedList: function(models) {
+                        return new MovieList(models);
+                    },
                     model: model
                 });
-                this.router.navigate('person/' + id); // update url
             }
         });
 

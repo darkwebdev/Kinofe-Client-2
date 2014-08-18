@@ -1,4 +1,4 @@
-define(['backbone', 'config', '../models/movie-item'], function(Backbone, config, Movie) {
+define(['backbone', 'backbone.radio', 'config', '../models/movie-item'], function(Backbone, Radio, config, Movie) {
     var MovieList = Backbone.Collection.extend({
         total: null,
         model: Movie,
@@ -39,27 +39,27 @@ define(['backbone', 'config', '../models/movie-item'], function(Backbone, config
 
         initialize: function(options) {
             console.log('movie-list collection:init');
-            this.vent = options.vent;
+            this.radio = Radio.channel('app');
         },
 
         selectMovie: function(movie) {
             console.log('collection::movie:selected', movie.get('id'));
-            this.vent.trigger('movie:selected', movie.get('id'));
+            this.radio.trigger('movie:selected', movie.get('id'));
         },
 
         hideMovie: function(movie) {
             console.log('collection::movie:hidden', movie.get('id'));
-            this.vent.trigger('movie:hidden', movie.get('id'));
+            this.radio.trigger('movie:hidden', movie.get('id'));
         },
 
         restoreMovie: function(movie) {
             console.log('collection::movie:restored', movie.get('id'));
-            this.vent.trigger('movie:restored', movie.get('id'));
+            this.radio.trigger('movie:restored', movie.get('id'));
         },
 
         toggleWatchlistedMovie: function(movie) {
             console.log('collection::movie:toggleWatchlistedMovie', movie.get('id'));
-            this.vent.trigger('movie:watchlisted', movie.get('id'));
+            this.radio.trigger('movie:watchlisted', movie.get('id'));
         }
     });
 

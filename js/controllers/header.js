@@ -1,11 +1,11 @@
-define(['underscore', 'marionette', 'views/header-layout'], function(_, Marionette, HeaderView) {
+define(['underscore', 'marionette', 'backbone.radio', 'views/header-layout'], function(_, Marionette, Radio, HeaderView) {
 
     var Controller = Marionette.Controller.extend({
 
         initialize: function(options) {
-            this.vent = options.vent;
             this.region = options.region;
             this.user = options.user;
+            this.radio = Radio.channel('app');
         },
 
         showJanre: function(name) {
@@ -15,10 +15,10 @@ define(['underscore', 'marionette', 'views/header-layout'], function(_, Marionet
 
             this.view.model.hideJanre = _.bind(function() {
                 console.log('headerController:hideJanre', name);
-                this.vent.trigger('janre:hidden', name);
+                this.radio.trigger('janre:hidden', name);
             }, this);
 
-            this.vent.trigger('user:getDetails');
+            this.radio.trigger('user:getDetails');
 
 //            if (janreIgnored()) {
                 this.view.showJanreControls();

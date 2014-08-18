@@ -33,13 +33,15 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
 
         app.addInitializer(function() {
 
-            var radio = Radio.channel('main');
+            var radio = Radio.channel('app');
+            Radio.tuneIn('app');
+            Radio.DEBUG = true;
+
 
             // Header
 
             var headerController = new HeaderController({
                 region: app.headerRegion,
-                vent: radio,
                 user: config.user
             });
 
@@ -48,8 +50,7 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
             // Movie list
 
             var movieListController = new MovieListController({
-                region: app.movieListRegion,
-                vent: radio
+                region: app.movieListRegion
             });
 
             var router = new Marionette.AppRouter({
@@ -57,34 +58,33 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
                 appRoutes: {
                     'movie/:id': 'selectMovie',
                     'janre/:name': 'selectJanre'
+                },
+                onRoute: function() {
+                    debugger;
+                    console.log('onRoute', arguments);
                 }
             });
 
             radio.on('janre:selected', function(janre) {
                 movieListController.show(janre);
-                console.log('radio on janre:selected', janre);
                 headerController.showJanre(janre);
             });
 
             // Movie details
 
             var movieDetailsController = new MovieDetailsController({
-                region: app.detailsRegion,
-                vent: radio,
-                router: router
+                region: app.detailsRegion
             });
 
             radio.on('movie:selected', function(id) {
-                console.log('radio:movie:selected', id);
                 movieDetailsController.show(id);
+                router.navigate('movie/' + id);
             });
 
             // Person details
 
             var personDetailsController = new PersonDetailsController({
-                region: app.detailsRegion,
-                vent: radio,
-                router: router
+                region: app.detailsRegion
             });
 
             new Marionette.AppRouter({
@@ -95,49 +95,31 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
             });
 
             radio.on('person:selected', function(id) {
-                console.log('radio:person:selected', id);
                 personDetailsController.show(id);
+                router.navigate('person/' + id);
             });
 
             // User details
 
             var userDetailsController = new UserDetailsController({
                 region: app.userRegion,
-                vent: radio,
-                router: router,
+//                router: router,
                 user: config.user
             });
 
-            radio.on('user:requested', function() {
-                console.log('radio:user:requested');
-                userDetailsController.show();
-            });
-            radio.on('movie:hidden', function(id) {
-                console.log('radio:movie:hidden', id);
-                userDetailsController.ignoreMovie(id);
-            });
-            radio.on('movie:restored', function(id) {
-                console.log('radio:movie:restored', id);
-                userDetailsController.restoreMovie(id);
-            });
-            radio.on('janre:hidden', function(name) {
-                console.log('radio on janre:hidden', name);
-                userDetailsController.ignoreJanre(name);
-            });
-            radio.on('janre:restored', function(name) {
-                console.log('radio on janre:restored', name);
-                userDetailsController.restoreJanre(name);
-            });
-            radio.on('movie:watchlisted', function(id) {
-                console.log('radio:movie:watchlisted', id);
-                userDetailsController.toggleWatchlistedMovie(id);
-            });
+            radio.on('user:requested', userDetailsController.show);
+            radio.on('movie:hidden', userDetailsController.ignoreMovie);
+            radio.on('movie:restored', userDetailsController.restoreMovie);
+            radio.on('janre:hidden', userDetailsController.ignoreJanre);
+            radio.on('janre:restored', userDetailsController.restoreJanre);
+            radio.on('movie:watchlisted', userDetailsController.toggleWatchlistedMovie);
             radio.on('user:getDetails', function() {
-                console.log('radio on user:details');
 //                return userDetailsController.getDetails();
             });
 
             userDetailsController.show();
+
+            Backbone.history.start({ /*pushState: true*/ });
 
         });
 

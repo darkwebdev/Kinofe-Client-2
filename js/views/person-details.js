@@ -28,12 +28,12 @@ define(['marionette', 'handlebars', 'text!templates/person-details.hbs', 'collec
 
                 (new MovieListView({
                     region: this.directedRegion,
-                    collection: this.directedList
+                    collection: this.directedList(this.model.get('directed'))
                 })).show();
 
                 (new MovieListView({
                     region: this.playedRegion,
-                    collection: this.playedList
+                    collection: this.playedList(this.model.get('played'))
                 })).show();
             },
 
