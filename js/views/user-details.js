@@ -21,6 +21,9 @@ define(['marionette', 'backbone', 'handlebars', 'text!templates/user-details.hbs
                 sync: 'show'
             },
 
+            watchlistVisible: false,
+            ignorelistVisible: false,
+
             initialize: function(options) {
                 this.region = options.region;
                 this.watchlist = options.watchlist;
@@ -37,6 +40,14 @@ define(['marionette', 'backbone', 'handlebars', 'text!templates/user-details.hbs
             show: function() {
                 console.log('UserDetailsView:show', this.model.toJSON(), MovieListView);
                 this.region.show(this);
+
+                // update lists if required
+                if (this.watchlistVisible) {
+                    this.showWatchlist();
+                }
+                if (this.ignorelistVisible) {
+                    this.showIgnorelist();
+                }
             },
 
             showWatchlist: function() {
@@ -46,12 +57,14 @@ define(['marionette', 'backbone', 'handlebars', 'text!templates/user-details.hbs
                 });
                 view.collection.fetch({ watchlistUser: this.model.get('id') });
 
+                this.watchlistVisible = true;
                 this.hideIgnorelist();
                 console.log('userDetailsView:showWatchlist:collection', view.collection);
             },
 
             hideWatchlist: function() {
                 $(this.watchlistRegion.el).empty();
+                this.watchlistVisible = false;
             },
 
             showIgnorelist: function() {
@@ -67,11 +80,13 @@ define(['marionette', 'backbone', 'handlebars', 'text!templates/user-details.hbs
                 });
                 janreListView.show();
 
+                this.ignorelistVisible = true;
                 this.hideWatchlist();
             },
 
             hideIgnorelist: function() {
                 $(this.ignorelistJanreRegion.el).add(this.ignorelistMovieRegion.el).empty();
+                this.ignorelistVisible = false;
             },
 
             login: function() {},

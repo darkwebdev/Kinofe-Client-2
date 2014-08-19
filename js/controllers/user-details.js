@@ -8,6 +8,8 @@ define(['marionette', 'backbone.radio', 'models/user-details', 'views/user-detai
                 this.radio = Radio.channel('app');
 
                 this.checkAuth(options.user);
+
+                _.bindAll(this);
             },
 
             checkAuth: function(user) {

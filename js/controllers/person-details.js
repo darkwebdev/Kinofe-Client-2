@@ -21,6 +21,8 @@ define(['marionette', 'backbone.radio', 'collections/movie-list', 'models/person
                     },
                     model: model
                 });
+
+                this.radio.command('movieList:show');
             }
         });
 

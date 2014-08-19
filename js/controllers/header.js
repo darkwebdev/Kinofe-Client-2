@@ -18,15 +18,15 @@ define(['underscore', 'marionette', 'backbone.radio', 'views/header-layout'], fu
                 this.radio.trigger('janre:hidden', name);
             }, this);
 
-            this.radio.trigger('user:getDetails');
+            this.radio.request('user:getDetails'); //request-response
 
 //            if (janreIgnored()) {
                 this.view.showJanreControls();
 //            }
         },
 
-        show: function(options) {
-            var model = new Backbone.Model(options);
+        show: function(modelOptions) {
+            var model = new Backbone.Model(modelOptions);
             model.getJanre = function() {};
 
             this.view = new HeaderView({
@@ -34,7 +34,7 @@ define(['underscore', 'marionette', 'backbone.radio', 'views/header-layout'], fu
                 model: model
             });
 
-            console.log('headerController:show', options, this.view);
+            console.log('headerController:show', modelOptions, this.view);
         }
     });
 
