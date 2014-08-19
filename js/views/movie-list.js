@@ -7,6 +7,7 @@ define(['marionette', 'views/movie-item'], function(Marionette, MovieItemView) {
         childView: MovieItemView,
 
         initialize: function(options) {
+            console.log('MovieListView:init');
             this.region = options.region;
         },
 
@@ -15,7 +16,7 @@ define(['marionette', 'views/movie-item'], function(Marionette, MovieItemView) {
         },
 
         show: function() {
-            console.log('MovieCollectionView:show', this.collection, this.region);
+            console.log('MovieListView:show', this.collection, this.region);
             this.region.show(this);
             this.scrollTop();
         },

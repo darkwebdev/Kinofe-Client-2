@@ -37,15 +37,15 @@ define(['backbone', 'backbone.radio', 'config', '../models/movie-item'], functio
             return Backbone.Collection.prototype.fetch.call(this, options);
         },
 
-        initialize: function(options) {
+        initialize: function() {
             console.log('movie-list collection:init');
             this.radio = Radio.channel('app');
         },
 
-        selectMovie: function(movie) {
-            console.log('collection::movie:selected', movie.get('id'));
-            this.radio.trigger('movie:selected', movie.get('id'));
-        },
+//        selectMovie: function(movie) {
+//            console.log('collection::movie:selected', movie.get('id'));
+//            this.radio.trigger('movie:selected', movie.get('id'));
+//        },
 
         hideMovie: function(movie) {
             console.log('collection::movie:hidden', movie.get('id'));

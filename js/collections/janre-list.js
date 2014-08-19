@@ -3,7 +3,7 @@ define(['backbone', 'backbone.radio', '../models/janre-item'], function(Backbone
         total: null,
         model: Janre,
 
-        initialize: function(models, options) {
+        initialize: function() {
             console.log('ignoreList collection:init');
             this.radio = Radio.channel('app');
         },

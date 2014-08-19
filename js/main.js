@@ -58,16 +58,13 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
                 appRoutes: {
                     'movie/:id': 'selectMovie',
                     'janre/:name': 'selectJanre'
-                },
-                onRoute: function() {
-                    debugger;
-                    console.log('onRoute', arguments);
                 }
             });
 
             radio.on('janre:selected', function(janre) {
                 movieListController.show(janre);
                 headerController.showJanre(janre);
+                router.navigate('janre/' + janre);
             });
 
             // Movie details
@@ -103,7 +100,6 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
 
             var userDetailsController = new UserDetailsController({
                 region: app.userRegion,
-//                router: router,
                 user: config.user
             });
 

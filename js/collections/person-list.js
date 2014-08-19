@@ -2,14 +2,14 @@ define(['backbone', 'backbone.radio', 'models/person-item'], function(Backbone, 
     var PersonList = Backbone.Collection.extend({
         model: Person,
 
-        initialize: function(models, options) {
-            console.log('collection person-list:init', options);
+        initialize: function() {
+            console.log('collection person-list:init');
             this.radio = Radio.channel('app');
-        },
+        }//,
 
-        selectPerson: function(person) {
-            this.radio.trigger('person:selected', person.get('id'));
-        }
+//        selectPerson: function(person) {
+//            this.radio.trigger('person:selected', person.get('id'));
+//        }
     });
 
     return PersonList;

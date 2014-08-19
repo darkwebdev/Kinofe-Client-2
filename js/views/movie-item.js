@@ -9,7 +9,7 @@ define(['marionette', 'handlebars', 'text!templates/movie-item.hbs'], function(M
         events: {
             'click .hide': 'hideMovie',
             'click .watchlist': 'toggleWatchlistedMovie',
-            'click .select': 'selectMovie',
+//            'click .select': 'selectMovie',
             'click .restore': 'restoreMovie'
         },
 
@@ -37,10 +37,10 @@ define(['marionette', 'handlebars', 'text!templates/movie-item.hbs'], function(M
             $(this.el).toggleClass('watchlisted', this.model.get('watchlisted'));
         },
 
-        selectMovie: function() {
-            console.log('movie view:selectMovie');
-            this.model.select();
-        },
+//        selectMovie: function() {
+//            console.log('movie view:selectMovie');
+//            this.model.select();
+//        },
 
         hideMovie: function() {
             console.log('movie view:hideMovie');

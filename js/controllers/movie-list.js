@@ -8,7 +8,7 @@ define(['marionette', 'backbone.radio', 'collections/movie-list', 'views/movie-l
             this.radio = Radio.channel('app');
             this.collection = new MovieList();
 
-            new MovieListView({
+            this.view = new MovieListView({
                 region: options.region,
                 collection: this.collection
             });
@@ -17,12 +17,12 @@ define(['marionette', 'backbone.radio', 'collections/movie-list', 'views/movie-l
         },
 
         selectMovie: function(id) {
-            console.log('movieListController:selectMovie', id);
-            var movie = this.collection.get(id);
+//            console.log('movieListController:selectMovie', id);
+//            var movie = this.collection.get(id);
 
-            if (movie) {
-                movie.select();
-            }
+//            if (movie) {
+//                movie.select();
+//            }
 
             this.radio.trigger('movie:selected', id);
         },
@@ -32,7 +32,7 @@ define(['marionette', 'backbone.radio', 'collections/movie-list', 'views/movie-l
         },
 
         show: function(janre) {
-            this.collection.fetch(janre ? { janre: janre }: {});
+            this.collection.fetch(janre ? { janre: janre } : {});
         }
     });
 

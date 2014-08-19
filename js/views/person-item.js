@@ -7,7 +7,7 @@ define(['marionette', 'handlebars', 'text!templates/person-item.hbs'],
             template: Handlebars.compile(html),
 
             events: {
-                'click': 'selectPerson'
+//                'click': 'selectPerson'
             },
 
             initialize: function() {
@@ -17,12 +17,12 @@ define(['marionette', 'handlebars', 'text!templates/person-item.hbs'],
 
             highlight: function(model, selected) {
                 $(this.el).toggleClass('active', selected).siblings().removeClass('active');
-            },
+            }//,
 
-            selectPerson: function() {
-                console.log('view:selectPerson');
-                this.model.select();
-            }
+//            selectPerson: function() {
+//                console.log('view:selectPerson');
+//                this.model.select();
+//            }
         });
 
         return View;
