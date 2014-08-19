@@ -13,6 +13,10 @@ define(['marionette', 'handlebars', 'text!templates/movie-details.hbs', 'views/p
                 change: 'show'
             },
 
+            events: {
+                'click .watchlist': 'toggleWatchlistedMovie'
+            },
+
             initialize: function(options) {
                 console.log('view movie-details:init', options);
                 this.region = options.region;
@@ -41,6 +45,11 @@ define(['marionette', 'handlebars', 'text!templates/movie-details.hbs', 'views/p
 
             scrollTop: function() {
                 this.region.$el[0].scrollTop = 0;
+            },
+
+            toggleWatchlistedMovie: function() {
+                console.log('movieDetails view:toggleWatchlistedMovie');
+                this.model.toggleWatchlisted();
             }
 
         });
