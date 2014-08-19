@@ -56,13 +56,16 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
             var router = new Marionette.AppRouter({
                 controller: movieListController,
                 appRoutes: {
-                    '': 'showTop',
+                    '': 'update',
                     'movie/:id': 'selectMovie',
                     'janre/:name': 'selectJanre'
                 }
             });
 
-            radio.comply('movieList:show', movieListController.show);
+            radio.comply({
+                'movieList:show': movieListController.show,
+                'movieList:update': movieListController.update
+            });
 
             radio.on('janre:selected', function(janre) {
                 movieListController.showJanre(janre);

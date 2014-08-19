@@ -15,7 +15,7 @@ define(['marionette', 'backbone.radio', 'collections/movie-list', 'views/movie-l
                 collection: this.collection
             });
 
-            _.bindAll(this, [ 'show' ]);
+            _.bindAll(this);
         },
 
         selectMovie: function(id) {
@@ -44,7 +44,7 @@ define(['marionette', 'backbone.radio', 'collections/movie-list', 'views/movie-l
             }
         },
 
-        showTop: function() {
+        update: function() {
             this.show({ force: true });
         },
 

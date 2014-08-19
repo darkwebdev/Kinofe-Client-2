@@ -7,6 +7,13 @@ define(['marionette', 'backbone.radio', 'models/user-details', 'views/user-detai
                 this.region = options.region;
                 this.radio = Radio.channel('app');
 
+                this.userSaveOptions = {
+                    patch: true,
+                    success: _.bind(function() {
+                        this.radio.command('movieList:update');
+                    }, this)
+                };
+
                 this.checkAuth(options.user);
 
                 _.bindAll(this);
@@ -43,7 +50,7 @@ define(['marionette', 'backbone.radio', 'models/user-details', 'views/user-detai
                 if (this.user) {
                     this.user.ignoreMovie(id);
                     console.log('user controller:ignore movie', id, this.user);
-                    this.user.save(null, { patch: true });
+                    this.user.save(null, this.userSaveOptions);
                 }
             },
 
@@ -51,21 +58,21 @@ define(['marionette', 'backbone.radio', 'models/user-details', 'views/user-detai
                 if (this.user) {
                     this.user.restoreMovie(id);
                     console.log('user controller:restore movie', id, this.user);
-                    this.user.save(null, { patch: true });
+                    this.user.save(null, this.userSaveOptions);
                 }
             },
 
             ignoreJanre: function(name) {
                 if (this.user) {
                     this.user.ignoreJanre(name);
-                    this.user.save(null, { patch: true });
+                    this.user.save(null, this.userSaveOptions);
                 }
             },
 
             restoreJanre: function(name) {
                 if (this.user) {
                     this.user.restoreJanre(name);
-                    this.user.save(null, { patch: true });
+                    this.user.save(null, this.userSaveOptions);
                 }
             },
 
@@ -73,7 +80,7 @@ define(['marionette', 'backbone.radio', 'models/user-details', 'views/user-detai
                 if (this.user) {
                     this.user.toggleWatchlistedMovie(id);
                     console.log('user controller:toggleWatchlistedMovie', id, this.user);
-                    this.user.save(null, { patch: true });
+                    this.user.save(null, this.userSaveOptions);
                 }
             }
         });
