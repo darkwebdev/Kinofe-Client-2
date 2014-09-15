@@ -1,5 +1,41 @@
-<h1 class="mainHeader-logo"><a href="./">Kinofé</a></h1>
-<h2 class="sectionTitle">{{ sectionTitle }}
-	<button class="button tiny hideJanre janreControls">never show</button>
-</h2>
-<nav class="mainNav"></nav>
+<div class="fixed">
+	<nav class="top-bar" data-topbar role="navigation" data-options="is_hover: false">
+		<section class="title-area">
+			<span class="name">
+				<h1 class="mainHeader-logo"><a href="./">Kinofé</a></h1>
+			</span>
+			<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+			<span class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></span>
+		</section>
+
+		<section class="top-bar-section">
+			<ul class="mainNav navTabList">
+				<!--<li class="divider"></li>-->
+				<!--<li class="sectionTitle">{{ sectionTitle }}-->
+					<!--<button class="button tiny hideJanre janreControls">never show</button>-->
+				<!--</li>-->
+				<li rel="releases" class="navTab">Releases</li>
+				<li rel="watchlist" class="navTab">Watchlist</li>
+				<li rel="theaters" class="navTab">Theaters</li>
+			</ul>
+
+			<div class="user-area">
+				<span>Username</span>
+			</div>
+
+			<ul class="searchForm">
+				<li class="has-form">
+					<div class="row collapse">
+						<div class="large-8 small-9 columns">
+							<input type="text" placeholder="Movie title">
+						</div>
+						<div class="large-4 small-3 columns">
+							<a href="#" class="alert button expand">Find!</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</section>
+
+	</nav>
+</div>

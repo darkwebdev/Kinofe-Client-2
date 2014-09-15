@@ -1,11 +1,15 @@
 .user {
 	position: absolute;
 	overflow: auto;
-	top: 60px;
+	top: 45px;
 	right: 0;
-	bottom: 0;
+	height: 200px;
 	width: 33%;
 	background: #ddd;
+
+	h2 {
+		display: inline-block;
+	}
 }
 .detailsIgnoreListMovie {
 	.button.hide {

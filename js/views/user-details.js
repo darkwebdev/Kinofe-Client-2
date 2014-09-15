@@ -5,7 +5,6 @@ define(['marionette', 'backbone', 'handlebars', 'text!templates/user-details.hbs
             template: Handlebars.compile(html),
 
             regions: {
-                watchlistRegion: '.detailsWatchList',
                 ignorelistJanreRegion: '.detailsIgnoreListJanre',
                 ignorelistMovieRegion: '.detailsIgnoreListMovie'
             },
@@ -13,7 +12,6 @@ define(['marionette', 'backbone', 'handlebars', 'text!templates/user-details.hbs
             events: {
                 'click .login': 'login',
                 'click .logout': 'logout',
-                'click .showWatchlist': 'showWatchlist',
                 'click .showIgnorelist': 'showIgnorelist'
             },
 
@@ -26,7 +24,6 @@ define(['marionette', 'backbone', 'handlebars', 'text!templates/user-details.hbs
 
             initialize: function(options) {
                 this.region = options.region;
-                this.watchlist = options.watchlist;
                 this.ignorelist = options.ignorelist;
                 this.janrelist = options.janrelist;
 
@@ -42,29 +39,9 @@ define(['marionette', 'backbone', 'handlebars', 'text!templates/user-details.hbs
                 this.region.show(this);
 
                 // update lists if required
-                if (this.watchlistVisible) {
-                    this.showWatchlist();
-                }
                 if (this.ignorelistVisible) {
                     this.showIgnorelist();
                 }
-            },
-
-            showWatchlist: function() {
-                var view = new MovieListView({
-                    region: this.watchlistRegion,
-                    collection: this.watchlist
-                });
-                view.collection.fetch({ watchlistUser: this.model.get('id') });
-
-                this.watchlistVisible = true;
-                this.hideIgnorelist();
-                console.log('userDetailsView:showWatchlist:collection', view.collection);
-            },
-
-            hideWatchlist: function() {
-                $(this.watchlistRegion.el).empty();
-                this.watchlistVisible = false;
             },
 
             showIgnorelist: function() {

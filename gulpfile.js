@@ -27,7 +27,7 @@ gulp.task('scripts', function () {
         .pipe(jshint({ debug: true }))
         .pipe(jshint.reporter('jshint-stylish'))
 //        .pipe(lintReporter())
-        .pipe(notify('<%= file.relative %>, script ok'))
+//        .pipe(notify('<%= file.relative %>, script ok'))
         ;
 });
 gulp.task('scripts:build', function() {
@@ -57,7 +57,7 @@ gulp.task('styles', function () {
         }))
         .pipe(autoprefixer())
         .pipe(gulp.dest('css'))
-        .pipe(notify('styles ok'))
+        //.pipe(notify('styles ok'))
         ;
 });
 gulp.task('styles:build', function() {
@@ -74,7 +74,7 @@ gulp.task('html', function() {
         .pipe(plumber())
         .pipe(htmlhint())
         .pipe(htmlhint.reporter())
-        .pipe(notify('html ok'));
+        //.pipe(notify('html ok'));
 });
 gulp.task('html:build', function() {
 //    var assets = useref.assets();
@@ -86,25 +86,6 @@ gulp.task('html:build', function() {
         .pipe(gulp.dest('dist'));
 });
 
-var spawn = require('child_process').spawn;
-
-gulp.task('auto-reload', function() {
-    var process;
-
-    function restart() {
-        if (process) {
-            process.kill();
-        }
-
-        process = spawn('gulp', ['default'], {stdio: 'inherit'});
-    }
-
-    gulp.src('gulpfile.js')
-        .pipe(watch({ name:'Gulp', passThrough: false }))
-        .pipe(restart());
-//    restart();
-});
-
 gulp.task('gulp-reload', function() {
     gulp.src('gulpfile.js', { read: false })
         .pipe(watch({ name:'Gulp',  passThrough: false }))
@@ -113,7 +94,7 @@ gulp.task('gulp-reload', function() {
 });
 
 gulp.task('default', [/*pre-tasks*/], function() {
-    gulp.start( 'gulp-reload', 'styles', 'scripts', 'html' );
+    gulp.start('styles', 'scripts', 'html' );
 });
 
 gulp.task('build', [ 'clean' ], function() {

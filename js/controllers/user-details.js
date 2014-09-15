@@ -10,7 +10,7 @@ define(['marionette', 'backbone.radio', 'models/user-details', 'views/user-detai
                 this.userSaveOptions = {
                     patch: true,
                     success: _.bind(function() {
-                        this.radio.command('movieList:update');
+                        this.radio.command('releases:update');
                     }, this)
                 };
 

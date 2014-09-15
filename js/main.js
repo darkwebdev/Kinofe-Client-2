@@ -3,6 +3,7 @@ require.config({
         jquery: '../node_modules/jquery/dist/jquery',
         underscore: '../node_modules/lodash/dist/lodash',
         backbone: '../node_modules/backbone/backbone',
+//        backbone: '../bower_components/backbone/backbone',
 //        marionette: '../node_modules/backbone.marionette/lib/core/backbone.marionette', // no wreqr, no babysitter
         marionette: '../node_modules/backbone.marionette/lib/backbone.marionette',
         'backbone.radio': '../node_modules/backbone.radio/build/backbone.radio',
@@ -26,9 +27,9 @@ require.config({
 });
 
 require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
-        'controllers/movie-list', 'controllers/movie-details', 'controllers/person-details', 'controllers/user-details', 'controllers/header'
+        'controllers/movie-list', 'controllers/movie-details', 'controllers/person-details', 'controllers/user-details', 'controllers/nav'
     ], function(Backbone, Marionette, Radio, app, config,
-        MovieListController, MovieDetailsController, PersonDetailsController, UserDetailsController, HeaderController
+        MovieListController, MovieDetailsController, PersonDetailsController, UserDetailsController, NavController
     ) {
 
         app.addInitializer(function() {
@@ -40,37 +41,53 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
 
             // Header
 
-            var headerController = new HeaderController({
+            var navController = new NavController({
                 region: app.headerRegion,
                 user: config.user
             });
 
-            headerController.show({ sectionTitle: 'Best Movies' });
+            //navController.show({ activeView: 'releases' });
+            navController.show();
 
-            // Movie list
-
-            var movieListController = new MovieListController({
-                region: app.movieListRegion
-            });
-
-            var router = new Marionette.AppRouter({
-                controller: movieListController,
+            new Marionette.AppRouter({
+                controller: navController,
                 appRoutes: {
-                    '': 'update',
-                    'movie/:id': 'selectMovie',
-                    'janre/:name': 'selectJanre'
+                    '': 'showDefault',
+                    'movie/:id': 'showMovie',
+                    'janre/:name': 'showJanre'
                 }
             });
 
-            radio.comply({
-                'movieList:show': movieListController.show,
-                'movieList:update': movieListController.update
+            radio.on('janre:selected', function(janre) {
+                navController.showJanre(janre);
+                Backbone.history.navigate('janre/' + janre);
             });
 
-            radio.on('janre:selected', function(janre) {
-                movieListController.showJanre(janre);
-                headerController.showJanre(janre);
-                router.navigate('janre/' + janre);
+            // Releases list
+
+            var releasesController = new MovieListController({
+                region: app.movieListRegion
+            });
+
+            radio.comply({
+                "releases:show": releasesController.show,
+                "releases:update": releasesController.update
+            });
+
+            // Watchlist
+
+            var watchlistController = new MovieListController({
+                region: app.movieListRegion,
+                watchlistUserId: config.user.id
+            });
+
+            new Marionette.AppRouter({
+                controller: watchlistController
+            });
+
+            radio.comply({
+                "watchlist:show": watchlistController.show,
+                "watchlist:update": watchlistController.update
             });
 
             // Movie details
@@ -81,7 +98,7 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
 
             radio.on('movie:selected', function(id) {
                 movieDetailsController.show(id);
-                router.navigate('movie/' + id);
+                Backbone.history.navigate('movie/' + id);
             });
 
             // Person details
@@ -99,7 +116,7 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
 
             radio.on('person:selected', function(id) {
                 personDetailsController.show(id);
-                router.navigate('person/' + id);
+                Backbone.history.navigate('person/' + id);
             });
 
             // User details

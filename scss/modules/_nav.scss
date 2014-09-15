@@ -1,0 +1,14 @@
+.navTabList {
+
+	.navTab {
+		padding: 2px 15px 0;
+		line-height: 43px;
+		color: #fff;
+		cursor: pointer;
+
+		&.active {
+			cursor: default;
+			background: #008CBA;
+		}
+	}
+}

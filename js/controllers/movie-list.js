@@ -6,9 +6,12 @@ define(['marionette', 'backbone.radio', 'collections/movie-list', 'views/movie-l
         shown: false,
 
         initialize: function(options) {
-            console.log('movieListController:init', this);
+            console.log('movieListController:init', options);
+
+            options = options || {};
             this.radio = Radio.channel('app');
             this.collection = new MovieList();
+            this.watchlistUserId = options.watchlistUserId;
 
             this.view = new MovieListView({
                 region: options.region,
@@ -36,12 +39,19 @@ define(['marionette', 'backbone.radio', 'collections/movie-list', 'views/movie-l
 
         show: function(options) {
             options = options || {};
-            var janre = options.janre;
 
-            if (options.force || janre || !this.shown) {
+            options.watchlistUser = this.watchlistUserId;
+
+            if (options.janre || options.watchlistUser) {
                 this.shown = true;
-                this.collection.fetch(janre ? { janre: janre } : {});
+                this.collection.fetch(options);
             }
+
+            if (options.force || !this.shown) {
+                this.shown = true;
+                this.collection.fetch({});
+            }
+
         },
 
         update: function() {

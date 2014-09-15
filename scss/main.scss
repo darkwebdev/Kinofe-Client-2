@@ -3,20 +3,25 @@
 $star-color: #ccc !default;
 $star-color-active: #c00 !default;
 
+@import 'variables';
+
 @import 'normalize';
 @import 'foundation/components/global';
+@import 'foundation/components/grid';
 @import 'foundation/components/type';
 @import 'foundation/components/buttons';
 @import 'foundation/components/labels';
 @import 'foundation/components/thumbs';
-@import 'variables';
+@import "foundation/components/top-bar";
 
 @import 'type';
 @import 'components/button';
 @import 'components/list-item';
 
 @import 'modules/header';
+@import 'modules/search';
 @import 'modules/main';
+@import 'modules/nav';
 @import 'modules/details';
 @import 'modules/user';
 @import 'modules/movie-list';

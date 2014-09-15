@@ -1,0 +1,605 @@
+{
+    "total": 130,
+    "movies": [
+        {
+            "id": "771311818",
+            "title": "Guardians of the Galaxy",
+            "year": 2014,
+            "mpaa_rating": "PG-13",
+            "runtime": 121,
+            "critics_consensus": "",
+            "release_dates": {"theater": "2014-08-01"},
+            "ratings": {
+                "critics_rating": "Certified Fresh",
+                "critics_score": 92,
+                "audience_rating": "Upright",
+                "audience_score": 95
+            },
+            "synopsis": "From Marvel, the studio that brought you the global blockbuster franchises of Iron Man, Thor, Captain America and The Avengers, comes a new team-the Guardians of the Galaxy. An action-packed, epic space adventure, Marvel's \"Guardians of the Galaxy\" expands the Marvel Cinematic Universe into the cosmos, where brash adventurer Peter Quill finds himself the object of an unrelenting bounty hunt after stealing a mysterious orb coveted by Ronan, a powerful villain with ambitions that threaten the entire universe. To evade the ever-persistent Ronan, Quill is forced into an uneasy truce with a quartet of disparate misfits-Rocket, a gun-toting raccoon, Groot, a tree-like humanoid, the deadly and enigmatic Gamora and the revenge-driven Drax the Destroyer. But when Quill discovers the true power of the orb and the menace it poses to the cosmos, he must do his best to rally his ragtag rivals for a last, desperate stand-with the galaxy's fate in the balance. (C) Walt Disney",
+            "posters": {
+                "thumbnail": "http://content8.flixster.com/movie/11/17/80/11178082_tmb.jpg",
+                "profile": "http://content8.flixster.com/movie/11/17/80/11178082_tmb.jpg",
+                "detailed": "http://content8.flixster.com/movie/11/17/80/11178082_tmb.jpg",
+                "original": "http://content8.flixster.com/movie/11/17/80/11178082_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Chris Pratt", "id": "770692298", "characters": ["Peter Quill/Star-Lord"]},
+                {"name": "Zoe Saldana", "id": "162660050", "characters": ["Gamora"]},
+                {"name": "David Bautista", "id": "770737809", "characters": ["Drax the Destroyer"]},
+                {"name": "Lee Pace", "id": "493815806", "characters": ["Ronan the Accuser"]},
+                {"name": "Bradley Cooper", "id": "351525448", "characters": ["Rocket Raccoon"]}
+            ],
+            "alternate_ids": {"imdb": "2015381"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771311818.json",
+                "alternate": "http://www.rottentomatoes.com/m/guardians_of_the_galaxy/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771311818/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771311818/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771311818/similar.json"
+            }
+        },
+        {
+            "id": "771191433",
+            "title": "Teenage Mutant Ninja Turtles",
+            "year": 2014,
+            "mpaa_rating": "PG-13",
+            "runtime": 101,
+            "critics_consensus": "",
+            "release_dates": {"theater": "2014-08-08"},
+            "ratings": {
+                "critics_rating": "Rotten",
+                "critics_score": 19,
+                "audience_rating": "Spilled",
+                "audience_score": 59
+            },
+            "synopsis": "The city needs heroes. Darkness has settled over New York City as Shredder and his evil Foot Clan have an iron grip on everything from the police to the politicians. The future is grim until four unlikely outcast brothers rise from the sewers and discover their destiny as Teenage Mutant Ninja Turtles. The Turtles must work with fearless reporter April O'Neil (Megan Fox) and her wise-cracking cameraman Vern Fenwick (Will Arnett) to save the city and unravel Shredder's diabolical plan. Based on the Teenage Mutant Ninja Turtles Characters Created by PETER LAIRD and KEVIN EASTMAN with a Screenplay by JOSH APPELBAUM & ANDRE NEMEC and EVAN DAUGHERTY, Teenage Mutant Ninja Turtles is produced by MICHAEL BAY (director and executive producer of the blockbuster Transformers franchise), Andrew Form, Brad Fuller, Galen Walker, Scott Mednick and Ian Bryce, and directed by JONATHAN LIEBESMAN (Wrath of the Titans).(c) Paramount",
+            "posters": {
+                "thumbnail": "http://content7.flixster.com/movie/11/17/95/11179597_tmb.jpg",
+                "profile": "http://content7.flixster.com/movie/11/17/95/11179597_tmb.jpg",
+                "detailed": "http://content7.flixster.com/movie/11/17/95/11179597_tmb.jpg",
+                "original": "http://content7.flixster.com/movie/11/17/95/11179597_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Megan Fox", "id": "162665778", "characters": ["April O'Neil"]},
+                {"name": "Alan Ritchson", "id": "770760819", "characters": ["Raphael"]},
+                {"name": "Pete Ploszek", "id": "771441319", "characters": ["Leonardo"]},
+                {"name": "Johnny Knoxville", "id": "162652591", "characters": ["Leonardo (voice)"]},
+                {"name": "Jeremy Howard", "id": "381420643", "characters": ["Donatello"]}
+            ],
+            "alternate_ids": {"imdb": "1291150"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771191433.json",
+                "alternate": "http://www.rottentomatoes.com/m/teenage_mutant_ninja_turtles_2013/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771191433/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771191433/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771191433/similar.json"
+            }
+        },
+        {
+            "id": "771021197",
+            "title": "If I Stay",
+            "year": 2014,
+            "mpaa_rating": "PG-13",
+            "runtime": 106,
+            "critics_consensus": "",
+            "release_dates": {"theater": "2014-08-22"},
+            "ratings": {
+                "critics_rating": "Rotten",
+                "critics_score": 38,
+                "audience_rating": "Upright",
+                "audience_score": 69
+            },
+            "synopsis": "Mia Hall (Chloe Grace Moretz) thought the hardest decision she would ever face would be whether to pursue her musical dreams at Juilliard or follow a different path to be with the love of her life, Adam (Jamie Blackley). But what should have been a carefree family drive changes everything in an instant, and now her own life hangs in the balance. Caught between life and death for one revealing day, Mia has only one decision left, which will not only decide her future but her ultimate fate. \"If I Stay\" is based on the best-selling novel of the same name. (c) Warner Bros",
+            "posters": {
+                "thumbnail": "http://content8.flixster.com/movie/11/17/85/11178574_tmb.jpg",
+                "profile": "http://content8.flixster.com/movie/11/17/85/11178574_tmb.jpg",
+                "detailed": "http://content8.flixster.com/movie/11/17/85/11178574_tmb.jpg",
+                "original": "http://content8.flixster.com/movie/11/17/85/11178574_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Chloe Grace Moretz", "id": "771410621", "characters": ["Mia Hall"]},
+                {"name": "Jamie Blackley", "id": "771080141", "characters": ["Adam"]},
+                {"name": "Lauren Lee Smith", "id": "364625106", "characters": ["Willow"]},
+                {"name": "Mireille Enos", "id": "770770988", "characters": ["Kat"]},
+                {"name": "Stacy Keach", "id": "162678778", "characters": ["Gramps"]}
+            ],
+            "alternate_ids": {"imdb": "1355630"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771021197.json",
+                "alternate": "http://www.rottentomatoes.com/m/if_i_stay/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771021197/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771021197/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771021197/similar.json"
+            }
+        },
+        {
+            "id": "771372963",
+            "title": "Let's Be Cops",
+            "year": 2014,
+            "mpaa_rating": "R",
+            "runtime": 109,
+            "critics_consensus": "",
+            "release_dates": {"theater": "2014-08-13"},
+            "ratings": {
+                "critics_rating": "Rotten",
+                "critics_score": 20,
+                "audience_rating": "Upright",
+                "audience_score": 62
+            },
+            "synopsis": "It's the ultimate buddy cop movie except for one thing: they're not cops. When two struggling pals dress as police officers for a costume party, they become neighborhood sensations. But when these newly-minted \"heroes\" get tangled in a real life web of mobsters and dirty detectives, they must put their fake badges on the line. (c) Fox",
+            "posters": {
+                "thumbnail": "http://content9.flixster.com/movie/11/17/92/11179227_tmb.jpg",
+                "profile": "http://content9.flixster.com/movie/11/17/92/11179227_tmb.jpg",
+                "detailed": "http://content9.flixster.com/movie/11/17/92/11179227_tmb.jpg",
+                "original": "http://content9.flixster.com/movie/11/17/92/11179227_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Damon Wayans Jr.", "id": "770822247", "characters": ["Justin"]},
+                {"name": "Jake M. Johnson", "id": "770827943", "characters": ["Ryan"]},
+                {"name": "Rob Riggle", "id": "770750133", "characters": ["Segars"]},
+                {"name": "Nina Dobrev", "id": "528347792", "characters": ["Josie"]},
+                {"name": "James D'Arcy", "id": "162660361", "characters": ["Mossi"]}
+            ],
+            "alternate_ids": {"imdb": "1924435"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771372963.json",
+                "alternate": "http://www.rottentomatoes.com/m/lets_be_cops/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771372963/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771372963/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771372963/similar.json"
+            }
+        },
+        {
+            "id": "771376214",
+            "title": "The November Man",
+            "year": 2014,
+            "mpaa_rating": "R",
+            "runtime": 108,
+            "critics_consensus": "",
+            "release_dates": {"theater": "2014-08-27"},
+            "ratings": {
+                "critics_rating": "Rotten",
+                "critics_score": 36,
+                "audience_rating": "Upright",
+                "audience_score": 61
+            },
+            "synopsis": "Code named 'The November Man', Peter Devereaux (Pierce Brosnan) is a lethal and highly trained ex-CIA agent, who has been enjoying a quiet life in Switzerland. When Devereaux is lured out of retirement for one last mission, he must protect valuable witness, Alice Fournier, (Olga Kurylenko). He soon uncovers this assignment marks him a target of his former friend and CIA protege David Mason (Luke Bracey). With growing suspicions of a mole in the agency, there is no one Devereaux can trust, no rules and no holds barred. With a screenplay by Michael Finch & Karl Gajdusek based on Bill Granger's novel \"There are No Spies\" from the bestselling November Man book series, THE NOVEMBER MAN is the ultimate cat and mouse game set in the world of international espionage. Directed by Roger Donaldson (The Bank Job, No Way Out, Thirteen Days), the film is produced by Beau St. Clair of Irish DreamTime and Sriram Das of Das Films.(c) Relativity",
+            "posters": {
+                "thumbnail": "http://content9.flixster.com/movie/11/17/95/11179595_tmb.jpg",
+                "profile": "http://content9.flixster.com/movie/11/17/95/11179595_tmb.jpg",
+                "detailed": "http://content9.flixster.com/movie/11/17/95/11179595_tmb.jpg",
+                "original": "http://content9.flixster.com/movie/11/17/95/11179595_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Pierce Brosnan", "id": "162663451", "characters": ["Peter Devereaux"]},
+                {"name": "Luke Bracey", "id": "771373201", "characters": ["David Mason"]},
+                {"name": "Olga Kurylenko", "id": "238450143", "characters": ["Alice Fournier"]},
+                {"name": "Eliza Taylor", "id": "771483496", "characters": ["Sarah"]},
+                {"name": "Catarina Scorsone", "id": "770782847", "characters": ["Celia"]}
+            ],
+            "alternate_ids": {"imdb": "2402157"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771376214.json",
+                "alternate": "http://www.rottentomatoes.com/m/the_november_man/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771376214/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771376214/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771376214/similar.json"
+            }
+        },
+        {
+            "id": "771355196",
+            "title": "When The Game Stands Tall",
+            "year": 2014,
+            "mpaa_rating": "PG",
+            "runtime": 115,
+            "critics_consensus": "",
+            "release_dates": {"theater": "2014-08-22"},
+            "ratings": {
+                "critics_rating": "Rotten",
+                "critics_score": 17,
+                "audience_rating": "Upright",
+                "audience_score": 79
+            },
+            "synopsis": "Inspired by a true story, WHEN THE GAME STANDS TALL tells the remarkable journey of legendary football coach Bob Ladouceur (Jim Caviezel), who took the De La Salle High School Spartans from obscurity to a 151-game winning streak that shattered all records for any American sport. When the streak is broken, and tragedy strikes the team, Coach Lad must teach his players - and the entire town - that it's not about how you fall, but how you get back up. (C) Warner Bros",
+            "posters": {
+                "thumbnail": "http://content7.flixster.com/movie/11/17/88/11178889_tmb.jpg",
+                "profile": "http://content7.flixster.com/movie/11/17/88/11178889_tmb.jpg",
+                "detailed": "http://content7.flixster.com/movie/11/17/88/11178889_tmb.jpg",
+                "original": "http://content7.flixster.com/movie/11/17/88/11178889_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Jim Caviezel", "id": "771395445", "characters": ["Bob Ladouceur"]},
+                {"name": "Michael Chiklis", "id": "162652783", "characters": ["Teddy Eidson"]},
+                {"name": "Alexander Ludwig", "id": "770682403", "characters": ["Chris Ryan"]},
+                {"name": "Laura Dern", "id": "162654251", "characters": ["Bev Ladouceur"]},
+                {"name": "Clancy Brown", "id": "162663805", "characters": ["Mickey Ryan"]}
+            ],
+            "alternate_ids": {"imdb": "2247476"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771355196.json",
+                "alternate": "http://www.rottentomatoes.com/m/when_the_game_stands_tall/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771355196/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771355196/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771355196/similar.json"
+            }
+        },
+        {
+            "id": "771310211",
+            "title": "As Above/So Below",
+            "year": 2014,
+            "mpaa_rating": "R",
+            "runtime": 93,
+            "critics_consensus": "",
+            "release_dates": {"theater": "2014-08-29"},
+            "ratings": {
+                "critics_rating": "Rotten",
+                "critics_score": 28,
+                "audience_rating": "Spilled",
+                "audience_score": 44
+            },
+            "synopsis": "Miles of twisting catacombs lie beneath the streets of Paris, the eternal home to countless souls. When a team of explorers ventures into the uncharted maze of bones, they uncover the secret of what this city of the dead was meant to contain. A journey into madness and terror, As Above, So Below reaches deep into the human psyche to reveal the personal demons that come back to haunt us all. Written by John Erick Dowdle and Drew Dowdle (Quarantine, Devil) and directed by John Erick Dowdle, the psychological thriller is produced by Thomas Tull, Jon Jashni, Drew Dowdle and Patrick Aiello. Alex Hedlund serves as the executive producer. (C)Universal",
+            "posters": {
+                "thumbnail": "http://content7.flixster.com/movie/11/17/76/11177649_tmb.jpg",
+                "profile": "http://content7.flixster.com/movie/11/17/76/11177649_tmb.jpg",
+                "detailed": "http://content7.flixster.com/movie/11/17/76/11177649_tmb.jpg",
+                "original": "http://content7.flixster.com/movie/11/17/76/11177649_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Perdita Weeks", "id": "770672860", "characters": ["Scarlett"]},
+                {"name": "Ben Feldman", "id": "364642224", "characters": ["George"]},
+                {"name": "Edwin Hodge", "id": "770673719", "characters": ["Benji"]},
+                {"name": "Francois Civil", "id": "770871954", "characters": ["Papillon"]},
+                {"name": "Marion Lambert", "id": "771501525", "characters": ["Souxie"]}
+            ],
+            "alternate_ids": {"imdb": "2870612"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771310211.json",
+                "alternate": "http://www.rottentomatoes.com/m/as_aboveso_below/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771310211/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771310211/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771310211/similar.json"
+            }
+        },
+        {
+            "id": "771365263",
+            "title": "The Giver",
+            "year": 2014,
+            "mpaa_rating": "PG-13",
+            "runtime": 100,
+            "critics_consensus": "",
+            "release_dates": {"theater": "2014-08-15", "dvd": "2014-11-24"},
+            "ratings": {
+                "critics_rating": "Rotten",
+                "critics_score": 33,
+                "audience_rating": "Upright",
+                "audience_score": 66
+            },
+            "synopsis": "The haunting story of THE GIVER centers on Jonas (Brenton Thwaites), a young man who lives in a seemingly ideal, if colorless, world of conformity and contentment. Yet as he begins to spend time with The Giver (Jeff Bridges), who is the sole keeper of all the community's memories, Jonas quickly begins to discover the dark and deadly truths of his community's secret past. With this newfound power of knowledge, he realizes that the stakes are higher than imagined - a matter of life and death for himself and those he loves most. At extreme odds, Jonas knows that he must escape their world to protect them all - a challenge that no one has ever succeeded at before. THE GIVER is based on Lois Lowry's beloved young adult novel of the same name, which was the winner the 1994 Newbery Medal and has sold over 10 million copies worldwide. (C) Weinstein",
+            "posters": {
+                "thumbnail": "http://content7.flixster.com/movie/11/17/88/11178893_tmb.jpg",
+                "profile": "http://content7.flixster.com/movie/11/17/88/11178893_tmb.jpg",
+                "detailed": "http://content7.flixster.com/movie/11/17/88/11178893_tmb.jpg",
+                "original": "http://content7.flixster.com/movie/11/17/88/11178893_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Jeff Bridges", "id": "162655890", "characters": ["The Giver"]},
+                {"name": "Meryl Streep", "id": "162654900", "characters": ["Chief Elder"]},
+                {"name": "Brenton Thwaites", "id": "771420717", "characters": ["Jonas"]},
+                {"name": "Alexander Skarsgard", "id": "770674271", "characters": ["Father"]},
+                {"name": "Katie Holmes", "id": "162652648", "characters": ["Mother"]}
+            ],
+            "alternate_ids": {"imdb": "0435651"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771365263.json",
+                "alternate": "http://www.rottentomatoes.com/m/the_giver/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771365263/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771365263/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771365263/similar.json"
+            }
+        },
+        {
+            "id": "771359009",
+            "title": "The Hundred-Foot Journey",
+            "year": 2014,
+            "mpaa_rating": "PG",
+            "runtime": 122,
+            "critics_consensus": "",
+            "release_dates": {"theater": "2014-08-08"},
+            "ratings": {
+                "critics_rating": "Fresh",
+                "critics_score": 67,
+                "audience_rating": "Upright",
+                "audience_score": 84
+            },
+            "synopsis": "In \"The Hundred-Foot Journey,\" Hassan Kadam (Manish Dayal) is a culinary ingenue with the gastronomic equivalent of perfect pitch. Displaced from their native India, the Kadam family, led by Papa (Om Puri), settles in the quaint village of Saint-Antonin-Noble-Val in the south of France. Filled with charm, it is both picturesque and elegant - the ideal place to settle down and open an Indian restaurant, the Maison Mumbai. That is, until the chilly chef proprietress of Le Saule Pleureur, a Michelin starred, classical French restaurant run by Madame Mallory (Academy Award (R)-winner Helen Mirren), gets wind of it. Her icy protests against the new Indian restaurant a hundred feet from her own, escalate to all out war between the two establishments - until Hassan's passion for French haute cuisine and for Mme. Mallory's enchanting sous chef, Marguerite (Charlotte Le Bon), combine with his mysteriously delicious talent to weave magic between their two cultures and imbue Saint-Antonin with the flavors of life that even Mme. Mallory cannot ignore. At first Mme. Mallory's culinary rival, she eventually recognizes Hassan's gift as a chef and takes him under her wing. (c) Disney",
+            "posters": {
+                "thumbnail": "http://content8.flixster.com/movie/11/17/88/11178838_tmb.jpg",
+                "profile": "http://content8.flixster.com/movie/11/17/88/11178838_tmb.jpg",
+                "detailed": "http://content8.flixster.com/movie/11/17/88/11178838_tmb.jpg",
+                "original": "http://content8.flixster.com/movie/11/17/88/11178838_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Helen Mirren", "id": "162662871", "characters": ["Madame Mallory"]},
+                {"name": "Manish Dayal", "id": "770779441", "characters": ["Hassan Kadam"]},
+                {"name": "Om Puri", "id": "162705440", "characters": ["Papa"]},
+                {"name": "Charlotte Le Bon", "id": "771426955", "characters": ["Marguerite"]},
+                {"name": "Amit Shah", "id": "770869429", "characters": ["Mansur"]}
+            ],
+            "alternate_ids": {"imdb": "2980648"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771359009.json",
+                "alternate": "http://www.rottentomatoes.com/m/the_hundred_foot_journey/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771359009/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771359009/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771359009/similar.json"
+            }
+        },
+        {
+            "id": "771377587",
+            "title": "The Identical",
+            "year": 2014,
+            "mpaa_rating": "PG",
+            "runtime": 107,
+            "critics_consensus": "",
+            "release_dates": {"theater": "2014-09-05"},
+            "ratings": {
+                "critics_rating": "Rotten",
+                "critics_score": 5,
+                "audience_rating": "Upright",
+                "audience_score": 76
+            },
+            "synopsis": "Identical twin brothers (both played by Blake Rayne) are separated at birth during the Great Depression. Their parents (Brian Geraghty, Amanda Crew) just cannot afford to give them both a life beyond poverty, so one is adopted by loving family. Despite their very different upbringings, the boys' shared passion for music causes their lives to unknowingly intersect as they experience a powerful and mysterious connection often felt by twins. (c) Official Site",
+            "posters": {
+                "thumbnail": "http://content6.flixster.com/movie/11/18/03/11180368_tmb.jpg",
+                "profile": "http://content6.flixster.com/movie/11/18/03/11180368_tmb.jpg",
+                "detailed": "http://content6.flixster.com/movie/11/18/03/11180368_tmb.jpg",
+                "original": "http://content6.flixster.com/movie/11/18/03/11180368_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Ray Liotta", "id": "162669095", "characters": ["Reece Wade"]},
+                {"name": "Ashley Judd", "id": "162662542", "characters": ["Louise Wade"]},
+                {"name": "Seth Green", "id": "162660883", "characters": ["Dino"]},
+                {"name": "Joe Pantoliano", "id": "162686963", "characters": ["Avi Hirshberg"]},
+                {"name": "Blake Rayne", "id": "771503740", "characters": ["Ryan Wade"]}
+            ],
+            "alternate_ids": {"imdb": "2326574"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771377587.json",
+                "alternate": "http://www.rottentomatoes.com/m/the_identical/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771377587/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771377587/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771377587/similar.json"
+            }
+        },
+        {
+            "id": "771320888",
+            "title": "The Expendables 3",
+            "year": 2014,
+            "mpaa_rating": "PG-13",
+            "runtime": 126,
+            "critics_consensus": "",
+            "release_dates": {"theater": "2014-08-15", "dvd": "2014-11-24"},
+            "ratings": {
+                "critics_rating": "Rotten",
+                "critics_score": 33,
+                "audience_rating": "Spilled",
+                "audience_score": 51
+            },
+            "synopsis": "In THE EXPENDABLES 3, Barney (Stallone), Christmas (Statham) and the rest of the team come face-to-face with Conrad Stonebanks (Gibson), who years ago co-founded The Expendables with Barney. Stonebanks subsequently became a ruthless arms trader and someone who Barney was forced to kill... or so he thought. Stonebanks, who eluded death once before, now is making it his mission to end The Expendables -- but Barney has other plans. Barney decides that he has to fight old blood with new blood, and brings in a new era of Expendables team members, recruiting individuals who are younger, faster and more tech-savvy. The latest mission becomes a clash of classic old-school style versus high-tech expertise in the Expendables' most personal battle yet. Lionsgate and Millennium Films present a Nu Image production. (C) Lionsgate",
+            "posters": {
+                "thumbnail": "http://content6.flixster.com/movie/11/17/98/11179872_tmb.jpg",
+                "profile": "http://content6.flixster.com/movie/11/17/98/11179872_tmb.jpg",
+                "detailed": "http://content6.flixster.com/movie/11/17/98/11179872_tmb.jpg",
+                "original": "http://content6.flixster.com/movie/11/17/98/11179872_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Sylvester Stallone", "id": "162664630", "characters": ["Barney Ross"]},
+                {"name": "Jason Statham", "id": "162653720", "characters": ["Lee Christmas"]},
+                {"name": "Antonio Banderas", "id": "162654885", "characters": ["Galgo"]},
+                {"name": "Jet Li", "id": "162652223", "characters": ["Yin Yang"]},
+                {"name": "Wesley Snipes", "id": "162662526", "characters": ["Doc"]}
+            ],
+            "alternate_ids": {"imdb": "2333784"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771320888.json",
+                "alternate": "http://www.rottentomatoes.com/m/the_expendables_3/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771320888/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771320888/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771320888/similar.json"
+            }
+        },
+        {
+            "id": "771365264",
+            "title": "Into The Storm",
+            "year": 2014,
+            "mpaa_rating": "PG-13",
+            "runtime": 89,
+            "critics_consensus": "",
+            "release_dates": {"theater": "2014-08-08"},
+            "ratings": {
+                "critics_rating": "Rotten",
+                "critics_score": 21,
+                "audience_rating": "Spilled",
+                "audience_score": 49
+            },
+            "synopsis": "In the span of a single day, the town of Silverton is ravaged by an unprecedented onslaught of tornadoes. The entire town is at the mercy of the erratic and deadly cyclones, even as storm trackers predict the worst is yet to come. Most people seek shelter, while others run towards the vortex, testing how far a storm chaser will go for that once-in-a-lifetime shot. Told through the eyes and lenses of professional storm chasers, thrill-seeking amateurs, and courageous townspeople, \"Into the Storm\" throws you directly into the eye of the storm to experience Mother Nature at her most extreme. (C) Warner Bros",
+            "posters": {
+                "thumbnail": "http://content9.flixster.com/movie/11/17/71/11177155_tmb.jpg",
+                "profile": "http://content9.flixster.com/movie/11/17/71/11177155_tmb.jpg",
+                "detailed": "http://content9.flixster.com/movie/11/17/71/11177155_tmb.jpg",
+                "original": "http://content9.flixster.com/movie/11/17/71/11177155_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Richard Armitage", "id": "546952855", "characters": ["Gary"]},
+                {"name": "Sarah Wayne Callies", "id": "326299358", "characters": ["Allison"]},
+                {"name": "Alycia Debnam-Carey", "id": "771030282", "characters": ["Kaitlyn"]},
+                {"name": "Matt Walsh", "id": "364651482", "characters": ["Pete"]},
+                {"name": "Nathan Kress", "id": "770804123", "characters": ["Trey"]}
+            ],
+            "alternate_ids": {"imdb": "2106361"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771365264.json",
+                "alternate": "http://www.rottentomatoes.com/m/into_the_storm_2014/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771365264/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771365264/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771365264/similar.json"
+            }
+        },
+        {
+            "id": "771360863",
+            "title": "Lucy",
+            "year": 2014,
+            "mpaa_rating": "R",
+            "runtime": 89,
+            "critics_consensus": "",
+            "release_dates": {"theater": "2014-07-25"},
+            "ratings": {
+                "critics_rating": "Fresh",
+                "critics_score": 66,
+                "audience_rating": "Spilled",
+                "audience_score": 48
+            },
+            "synopsis": "From La Femme Nikita and The Professional to The Fifth Element, writer/director Luc Besson has created some of the toughest, most memorable female action heroes in cinematic history. Now, Besson directs Scarlett Johansson in Lucy, an action-thriller that tracks a woman accidentally caught in a dark deal who turns the tables on her captors and transforms into a merciless warrior evolved beyond human logic. (C) Universal",
+            "posters": {
+                "thumbnail": "http://content6.flixster.com/movie/11/17/83/11178332_tmb.jpg",
+                "profile": "http://content6.flixster.com/movie/11/17/83/11178332_tmb.jpg",
+                "detailed": "http://content6.flixster.com/movie/11/17/83/11178332_tmb.jpg",
+                "original": "http://content6.flixster.com/movie/11/17/83/11178332_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Scarlett Johansson", "id": "162652872", "characters": ["Lucy"]},
+                {"name": "Morgan Freeman", "id": "162652224", "characters": ["Professor Norman"]},
+                {"name": "Min-sik Choi", "id": "162695879", "characters": ["Mr. Jang"]},
+                {"name": "Amr Waked", "id": "326393104", "characters": ["Pierre Del Rio"]},
+                {"name": "Julian Rhind-Tutt", "id": "288356077", "characters": ["The Limey"]}
+            ],
+            "alternate_ids": {"imdb": "2872732"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771360863.json",
+                "alternate": "http://www.rottentomatoes.com/m/lucy_2014/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771360863/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771360863/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771360863/similar.json"
+            }
+        },
+        {
+            "id": "771373348",
+            "title": "Boyhood",
+            "year": 2014,
+            "mpaa_rating": "R",
+            "runtime": 165,
+            "critics_consensus": "",
+            "release_dates": {"theater": "2014-07-11"},
+            "ratings": {
+                "critics_rating": "Certified Fresh",
+                "critics_score": 99,
+                "audience_rating": "Upright",
+                "audience_score": 90
+            },
+            "synopsis": "Filmed over 12 years with the same cast, Richard Linklater's BOYHOOD is a groundbreaking story of growing up as seen through the eyes of a child named Mason (a breakthrough performance by Ellar Coltrane), who literally grows up on screen before our eyes. Starring Ethan Hawke and Patricia Arquette as Mason's parents and newcomer Lorelei Linklater as his sister Samantha, BOYHOOD charts the rocky terrain of childhood like no other film has before. Snapshots of adolescence from road trips and family dinners to birthdays and graduations and all the moments in between become transcendent, set to a soundtrack spanning the years from Coldplay's Yellow to Arcade Fire's Deep Blue. BOYHOOD is both a nostalgic time capsule of the recent past and an ode to growing up and parenting. It's impossible to watch Mason and his family without thinking about our own journey. (c) Sundance Film Fest",
+            "posters": {
+                "thumbnail": "http://content6.flixster.com/movie/11/17/84/11178476_tmb.jpg",
+                "profile": "http://content6.flixster.com/movie/11/17/84/11178476_tmb.jpg",
+                "detailed": "http://content6.flixster.com/movie/11/17/84/11178476_tmb.jpg",
+                "original": "http://content6.flixster.com/movie/11/17/84/11178476_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Patricia Arquette", "id": "162670129", "characters": ["Mom"]},
+                {"name": "Ethan Hawke", "id": "162660464", "characters": ["Dad"]},
+                {"name": "Coltrane, Ellar", "id": "771478993", "characters": ["Mason"]},
+                {"name": "Lorelei Linklater", "id": "771017690", "characters": ["Samantha"]},
+                {"name": "Elijah Smith", "id": "771497481", "characters": ["Tommy"]}
+            ],
+            "alternate_ids": {"imdb": "1065073"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771373348.json",
+                "alternate": "http://www.rottentomatoes.com/m/boyhood/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771373348/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771373348/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771373348/similar.json"
+            }
+        },
+        {
+            "id": "771269858",
+            "title": "Transformers: Age of Extinction",
+            "year": 2014,
+            "mpaa_rating": "PG-13",
+            "runtime": 157,
+            "critics_consensus": "",
+            "release_dates": {"theater": "2014-06-27", "dvd": "2014-09-30"},
+            "ratings": {
+                "critics_rating": "Rotten",
+                "critics_score": 18,
+                "audience_rating": "Spilled",
+                "audience_score": 54
+            },
+            "synopsis": "TRANSFORMERS: AGE OF EXTINCTION begins after an epic battle left a great city torn, but with the world saved. As humanity picks up the pieces, a shadowy group reveals itself in an attempt to control the direction of history...while an ancient, powerful new menace sets Earth in its crosshairs. With help from a new cast of humans (led by Mark Wahlberg), Optimus Prime and the Autobots rise to meet their most fearsome challenge yet. In an incredible adventure, they are swept up in a war of good and evil, ultimately leading to a climactic battle across the world. (C) Paramount",
+            "posters": {
+                "thumbnail": "http://content9.flixster.com/movie/11/17/81/11178175_tmb.png",
+                "profile": "http://content9.flixster.com/movie/11/17/81/11178175_tmb.png",
+                "detailed": "http://content9.flixster.com/movie/11/17/81/11178175_tmb.png",
+                "original": "http://content9.flixster.com/movie/11/17/81/11178175_tmb.png"
+            },
+            "abridged_cast": [
+                {"name": "Mark Wahlberg", "id": "162653181", "characters": ["Cade Yeager"]},
+                {"name": "Jack Reynor", "id": "771403543", "characters": ["Shane Dyson"]},
+                {"name": "Nicola Peltz", "id": "770833458", "characters": ["Tessa Yeager"]},
+                {"name": "Stanley Tucci", "id": "162661152", "characters": ["Joshua Joyce"]},
+                {"name": "Abigail Klein", "id": "771407347", "characters": ["Joshua's Assistant"]}
+            ],
+            "alternate_ids": {"imdb": "2109248"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771269858.json",
+                "alternate": "http://www.rottentomatoes.com/m/transformers_age_of_extinction/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771269858/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771269858/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771269858/similar.json"
+            }
+        },
+        {
+            "id": "771040382",
+            "title": "How to Train Your Dragon 2",
+            "year": 2014,
+            "mpaa_rating": "PG",
+            "runtime": 105,
+            "critics_consensus": "",
+            "release_dates": {"theater": "2014-06-13", "dvd": "2014-11-11"},
+            "ratings": {
+                "critics_rating": "Certified Fresh",
+                "critics_score": 92,
+                "audience_rating": "Upright",
+                "audience_score": 92
+            },
+            "synopsis": "DreamWorks Animation returns to the world of dragons and Vikings in this sequel to their successful 2010 outing How to Train Your Dragon. The original film followed the exploits of a Viking chief's son, who must capture a dragon in order to mark his passage into manhood and prove his worthiness to the tribe. ~ Jeremy Wheeler, Rovi",
+            "posters": {
+                "thumbnail": "http://content6.flixster.com/movie/11/17/84/11178428_tmb.jpg",
+                "profile": "http://content6.flixster.com/movie/11/17/84/11178428_tmb.jpg",
+                "detailed": "http://content6.flixster.com/movie/11/17/84/11178428_tmb.jpg",
+                "original": "http://content6.flixster.com/movie/11/17/84/11178428_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Jay Baruchel", "id": "259260120", "characters": ["Hiccup"]},
+                {"name": "Gerard Butler", "id": "162659102", "characters": ["Stoick"]},
+                {"name": "America Ferrera", "id": "162652611", "characters": ["Astrid"]},
+                {"name": "Jonah Hill", "id": "326297850", "characters": ["Snotlout"]},
+                {"name": "Christopher Mintz-Plasse", "id": "770679139", "characters": ["Fishlegs"]}
+            ],
+            "alternate_ids": {"imdb": "1646971"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771040382.json",
+                "alternate": "http://www.rottentomatoes.com/m/how_to_train_your_dragon_2/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771040382/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771040382/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771040382/similar.json"
+            }
+        }
+    ],
+    "links": {
+        "self": "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?page_limit=16&country=us&page=1",
+        "next": "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?page_limit=16&country=us&page=2",
+        "alternate": "http://www.rottentomatoes.com/movie/in_theaters"
+    },
+    "link_template": "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?page_limit={results_per_page}&page={page_number}&country={country-code}"
+}
+
+

@@ -1,12 +1,17 @@
 .mainHeader {
-	height: 60px;
-	background: #eee;
 
-	&-logo {
-		position: absolute;
-		width: 100%;
-		text-align: center;
+	.top-bar {
+		margin-bottom: 0;
 	}
+
+	.title-area {
+	}
+
+	.user-area {
+		position: absolute;
+		right: 300px;
+	}
+
 	.janreControls {
 		visibility: hidden;
 

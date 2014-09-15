@@ -22,7 +22,7 @@ define(['marionette', 'backbone.radio', 'models/movie-details', 'views/movie-det
                     model: new MovieDetails({ id: id })
                 });
 
-                this.radio.command('movieList:show');
+                this.radio.command('releases:show');
             }
         });
 

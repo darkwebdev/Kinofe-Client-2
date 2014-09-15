@@ -1,0 +1,502 @@
+{
+    "total": 20,
+    "movies": [
+        {
+            "id": "771372032",
+            "title": "The Guest",
+            "year": 2014,
+            "mpaa_rating": "R",
+            "runtime": 97,
+            "critics_consensus": "",
+            "release_dates": {"theater": "2014-09-17"},
+            "ratings": {"critics_rating": "Fresh", "critics_score": 92, "audience_score": 94},
+            "synopsis": "From the director of YOU'RE NEXT and featuring a standout, badass performance from Dan Stevens (\"Downton Abbey\"), comes THE GUEST: a tense, action-packed and unpredictable film like everything and nothing you've ever seen before. Empire Magazine called it \"a demented action-horror hybrid of sci-fi conspiracy thriller and gore-fest\", and Vanity Fair said, \"THE GUEST is big, it's bold, it's badass, full of flavor Hollywood wishes it could pour over its vanilla blockbusters.\" (c) Picturehouse",
+            "posters": {
+                "thumbnail": "http://content7.flixster.com/movie/11/18/02/11180201_tmb.jpg",
+                "profile": "http://content7.flixster.com/movie/11/18/02/11180201_tmb.jpg",
+                "detailed": "http://content7.flixster.com/movie/11/18/02/11180201_tmb.jpg",
+                "original": "http://content7.flixster.com/movie/11/18/02/11180201_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Dan Stevens (IV)", "id": "770698532", "characters": ["David"]},
+                {"name": "Leland Orser", "id": "514730854"},
+                {"name": "Lance Reddick", "id": "770703264"},
+                {"name": "Sheila Kelley", "id": "301418698"},
+                {"name": "Maika Monroe", "id": "771420019"}
+            ],
+            "alternate_ids": {"imdb": "2980592"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771372032.json",
+                "alternate": "http://www.rottentomatoes.com/m/the_guest_2014/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771372032/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771372032/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771372032/similar.json"
+            }
+        },
+        {
+            "id": "771372069",
+            "title": "20,000 Days on Earth",
+            "year": 2014,
+            "mpaa_rating": "Unrated",
+            "runtime": 97,
+            "critics_consensus": "",
+            "release_dates": {"theater": "2014-09-17"},
+            "ratings": {"critics_rating": "Fresh", "critics_score": 95, "audience_score": 78},
+            "synopsis": "Drama and reality combine in a fictitious 24 hours in the life of musician and international cultural icon, Nick Cave. With startlingly frank insights and an intimate portrayal of the artistic process, the film examines what makes us who we are, and celebrates the transformative power of the creative spirit. (c) Drafthouse",
+            "posters": {
+                "thumbnail": "http://content7.flixster.com/movie/11/17/97/11179793_tmb.jpg",
+                "profile": "http://content7.flixster.com/movie/11/17/97/11179793_tmb.jpg",
+                "detailed": "http://content7.flixster.com/movie/11/17/97/11179793_tmb.jpg",
+                "original": "http://content7.flixster.com/movie/11/17/97/11179793_tmb.jpg"
+            },
+            "abridged_cast": [{"name": "Nick Cave", "id": "178823727"}],
+            "alternate_ids": {"imdb": "2920540"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771372069.json",
+                "alternate": "http://www.rottentomatoes.com/m/20000_days_on_earth/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771372069/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771372069/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771372069/similar.json"
+            }
+        },
+        {
+            "id": "771349837",
+            "title": "The Maze Runner",
+            "year": 2014,
+            "mpaa_rating": "PG-13",
+            "runtime": 114,
+            "release_dates": {"theater": "2014-09-19"},
+            "ratings": {"critics_rating": "Rotten", "critics_score": 56, "audience_score": 98},
+            "synopsis": "When Thomas wakes up trapped in a massive maze with a group of other boys, he has no memory of the outside world other than strange dreams about a mysterious organization known as W.C.K.D. Only by piecing together fragments of his past with clues he discovers in the maze can Thomas hope to uncover his true purpose and a way to escape. Based upon the best-selling novel by James Dashner. (c) Fox",
+            "posters": {
+                "thumbnail": "http://content7.flixster.com/movie/11/17/97/11179705_tmb.jpg",
+                "profile": "http://content7.flixster.com/movie/11/17/97/11179705_tmb.jpg",
+                "detailed": "http://content7.flixster.com/movie/11/17/97/11179705_tmb.jpg",
+                "original": "http://content7.flixster.com/movie/11/17/97/11179705_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Dylan O'Brien", "id": "771375271"},
+                {"name": "Kaya Scodelario", "id": "770803276"},
+                {"name": "Will Poulter", "id": "770791291"},
+                {"name": "Thomas Sangster", "id": "162710614"},
+                {"name": "Aml Ameen", "id": "364640368"}
+            ],
+            "alternate_ids": {"imdb": "1790864"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771349837.json",
+                "alternate": "http://www.rottentomatoes.com/m/the_maze_runner/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771349837/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771349837/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771349837/similar.json"
+            }
+        },
+        {
+            "id": "771351531",
+            "title": "This Is Where I Leave You",
+            "year": 2014,
+            "mpaa_rating": "R",
+            "runtime": 103,
+            "release_dates": {"theater": "2014-09-19"},
+            "ratings": {"critics_rating": "Rotten", "critics_score": 54, "audience_score": 97},
+            "synopsis": "The dramatic comedy \"This is Where I Leave You\" is directed by Shawn Levy, and based on the hilarious and poignant best-selling novel by Jonathan Tropper. It features a starring ensemble cast including Golden Globe winner Jason Bateman (\"Arrested Development\"); Golden Globe and Emmy Award winner Tina Fey (\"30 Rock\"); and two-time Oscar (R) winner, multiple Golden Globe honoree and 2013 Emmy Award nominee Jane Fonda (\"Klute,\" \"Coming Home,\" HBO's \"The Newsroom\"). (c) Warner Bros",
+            "posters": {
+                "thumbnail": "http://content9.flixster.com/movie/11/17/91/11179187_tmb.jpg",
+                "profile": "http://content9.flixster.com/movie/11/17/91/11179187_tmb.jpg",
+                "detailed": "http://content9.flixster.com/movie/11/17/91/11179187_tmb.jpg",
+                "original": "http://content9.flixster.com/movie/11/17/91/11179187_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Jason Bateman", "id": "326298973", "characters": ["Judd Altman"]},
+                {"name": "Tina Fey", "id": "427823878", "characters": ["Wendy Altman"]},
+                {"name": "Jane Fonda", "id": "162652168", "characters": ["Hilary Altman"]},
+                {"name": "Corey Stoll", "id": "770875086", "characters": ["Penny Moore"]},
+                {"name": "Adam Driver", "id": "771387369", "characters": ["Phillip Altman"]}
+            ],
+            "alternate_ids": {"imdb": "1371150"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771351531.json",
+                "alternate": "http://www.rottentomatoes.com/m/this_is_where_i_leave_you/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771351531/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771351531/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771351531/similar.json"
+            }
+        },
+        {
+            "id": "771367644",
+            "title": "A Walk Among the Tombstones",
+            "year": 2014,
+            "mpaa_rating": "R",
+            "runtime": 114,
+            "release_dates": {"theater": "2014-09-19"},
+            "ratings": {"critics_score": -1, "audience_score": 97},
+            "synopsis": "Based on Lawrence Block's bestselling series of mystery novels, A Walk among the Tombstones stars Liam Neeson as Matt Scudder, an ex-NYPD cop who now works as an unlicensed private investigator operating just outside the law. When Scudder reluctantly agrees to help a heroin trafficker (Dan Stevens) hunt down the men who kidnapped and then brutally murdered his wife, the PI learns that this is not the first time these men have committed this sort of twisted crime...nor will it be the last. Blurring the lines between right and wrong, Scudder races to track the deviants through the backstreets of New York City before they kill again. (C) Universal",
+            "posters": {
+                "thumbnail": "http://content9.flixster.com/movie/11/17/85/11178575_tmb.jpg",
+                "profile": "http://content9.flixster.com/movie/11/17/85/11178575_tmb.jpg",
+                "detailed": "http://content9.flixster.com/movie/11/17/85/11178575_tmb.jpg",
+                "original": "http://content9.flixster.com/movie/11/17/85/11178575_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Liam Neeson", "id": "162652242", "characters": ["Matt Scudder"]},
+                {"name": "Dan Stevens (IV)", "id": "770698532"},
+                {"name": "David Harbour", "id": "770772702"},
+                {"name": "Robert Boyd Holbrook", "id": "771061616"},
+                {"name": "Ruth Wilson", "id": "598551543"}
+            ],
+            "alternate_ids": {"imdb": "0365907"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771367644.json",
+                "alternate": "http://www.rottentomatoes.com/m/a_walk_among_the_tombstones/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771367644/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771367644/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771367644/similar.json"
+            }
+        },
+        {
+            "id": "771362045",
+            "title": "Tracks",
+            "year": 2014,
+            "mpaa_rating": "PG-13",
+            "runtime": 110,
+            "critics_consensus": "",
+            "release_dates": {"theater": "2014-09-19"},
+            "ratings": {"critics_rating": "Certified Fresh", "critics_score": 83, "audience_score": 87},
+            "synopsis": "Director John Curran (THE PAINTED VEIL, WE DON'T LIVE HERE ANYMORE) and the producers of THE KINGS SPEECH bring you the film TRACKS, which tells the remarkable true story of Robyn Davidson (Wasikowska), a young woman who leaves her life in the city to make a solo trek through almost 2,000 miles of sprawling Australian desert. Accompanied by only her dog and four unpredictable camels, she sets off on a life-changing journey of self-discovery. Along the way, she meets National Geographic photographer Rick Smolan (Driver) who begins to photograph her voyage. (C) Weinstein",
+            "posters": {
+                "thumbnail": "http://content9.flixster.com/movie/11/17/73/11177311_tmb.jpg",
+                "profile": "http://content9.flixster.com/movie/11/17/73/11177311_tmb.jpg",
+                "detailed": "http://content9.flixster.com/movie/11/17/73/11177311_tmb.jpg",
+                "original": "http://content9.flixster.com/movie/11/17/73/11177311_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Mia Wasikowska", "id": "770688391", "characters": ["Robyn Davidson"]},
+                {"name": "Adam Driver", "id": "771387369", "characters": ["Rick Smolan"]},
+                {"name": "Rainer Bock", "id": "770869647", "characters": ["Kurt Posel"]},
+                {"name": "Rolley Mintuma", "id": "771469257", "characters": ["Mr. Eddy"]},
+                {"name": "John Flaus", "id": "770703175", "characters": ["Sallay"]}
+            ],
+            "alternate_ids": {"imdb": "2167266"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771362045.json",
+                "alternate": "http://www.rottentomatoes.com/m/tracks_2013/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771362045/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771362045/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771362045/similar.json"
+            }
+        },
+        {
+            "id": "771372255",
+            "title": "Tusk",
+            "year": 2014,
+            "mpaa_rating": "R",
+            "runtime": 102,
+            "release_dates": {"theater": "2014-09-19"},
+            "ratings": {"critics_rating": "Fresh", "critics_score": 64, "audience_score": 91},
+            "synopsis": "Red State director Kevin Smith takes the helm for this horror film starring Justin Long as a podcaster who is targeted by a sadistic killer while attempting to land an interview with a misanthropic adventurer (Michael Parks). Genesis Rodriguez and Haley Joel Osment co-star. ~ Jason Buchanan, Rovi",
+            "posters": {
+                "thumbnail": "http://content9.flixster.com/movie/11/17/91/11179191_tmb.jpg",
+                "profile": "http://content9.flixster.com/movie/11/17/91/11179191_tmb.jpg",
+                "detailed": "http://content9.flixster.com/movie/11/17/91/11179191_tmb.jpg",
+                "original": "http://content9.flixster.com/movie/11/17/91/11179191_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Justin Long", "id": "162652679"},
+                {"name": "Genesis Rodriguez", "id": "770770383"},
+                {"name": "Haley Joel Osment", "id": "162656804"},
+                {"name": "Michael Parks", "id": "364631038"}
+            ],
+            "alternate_ids": {"imdb": "3099498"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771372255.json",
+                "alternate": "http://www.rottentomatoes.com/m/tusk_2014/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771372255/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771372255/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771372255/similar.json"
+            }
+        },
+        {
+            "id": "771360579",
+            "title": "The Zero Theorem",
+            "year": 2014,
+            "mpaa_rating": "R",
+            "runtime": 107,
+            "critics_consensus": "",
+            "release_dates": {"theater": "2014-09-19"},
+            "ratings": {"critics_rating": "Rotten", "critics_score": 54, "audience_score": 88},
+            "synopsis": "Terry Gilliam (Brazil, 12 Monkeys, Fear and Loathing in Las Vegas)'s madcap science fiction epic The Zero Theorem stars two- time Academy Award-winner Christoph Waltz as Qohen Leth, an eccentric and reclusive computer genius plagued with existential angst. Living in isolation in a burnt-out church, Qohen is obsessively working on a mysterious project personally delegated to him by Management (Matt Damon) aimed at discovering the meaning of life - or the complete lack of one - once and for all. Increasingly disturbed by unwanted visits from people he doesn't fully trust, including flirtatious Bainsley (Melanie Thierry), Management's wunderkind son Bob (Lucas Hedges), his unpredictable colleague Job (David Thewlis), and would-be digital therapist Dr. Shrink-Rom (Tilda Swinton), it's only when he experiences the power of love and desire that he's able to understand his own reason for being. (c) Amplify",
+            "posters": {
+                "thumbnail": "http://content7.flixster.com/movie/11/17/99/11179941_tmb.jpg",
+                "profile": "http://content7.flixster.com/movie/11/17/99/11179941_tmb.jpg",
+                "detailed": "http://content7.flixster.com/movie/11/17/99/11179941_tmb.jpg",
+                "original": "http://content7.flixster.com/movie/11/17/99/11179941_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Christoph Waltz", "id": "770738334"},
+                {"name": "Melanie Thierry", "id": "770669351"},
+                {"name": "David Thewlis", "id": "162656526"},
+                {"name": "Lucas Hedges", "id": "771043533"},
+                {"name": "Tilda Swinton", "id": "162654047"}
+            ],
+            "alternate_ids": {"imdb": "2333804"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771360579.json",
+                "alternate": "http://www.rottentomatoes.com/m/the_zero_theorem/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771360579/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771360579/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771360579/similar.json"
+            }
+        },
+        {
+            "id": "771379440",
+            "title": "Hector And The Search For Happiness",
+            "year": 2014,
+            "mpaa_rating": "R",
+            "runtime": 120,
+            "critics_consensus": "",
+            "release_dates": {"theater": "2014-09-19"},
+            "ratings": {"critics_rating": "Rotten", "critics_score": 25, "audience_score": 86},
+            "synopsis": "Hector (Simon Pegg) is a quirky psychiatrist who has become increasingly tired of his humdrum life. As he tells his girlfriend, Clara (Rosamund Pike), he feels like a fraud: he hasn't really tasted life, and yet he's offering advice to patients who are just not getting any happier. So Hector decides to break out of his deluded and routine driven life. Armed with buckets of courage and child-like curiosity, he embarks on a global quest in hopes of uncovering the elusive secret formula for true happiness. And so begins a larger than life adventure with riotously funny results. Based on the world-wide best-selling novel of the same name, Hector and the Search for Happiness is a rich, exhilarating, and hilarious tale from director Peter Chelsom, starring Simon Pegg, Toni Collette, Rosamund Pike, Stellan Skarsgard, Jean Reno and Christopher Plummer. (c) Relativity Media",
+            "posters": {
+                "thumbnail": "http://content7.flixster.com/movie/11/17/95/11179593_tmb.jpg",
+                "profile": "http://content7.flixster.com/movie/11/17/95/11179593_tmb.jpg",
+                "detailed": "http://content7.flixster.com/movie/11/17/95/11179593_tmb.jpg",
+                "original": "http://content7.flixster.com/movie/11/17/95/11179593_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Simon Pegg", "id": "162684057", "characters": ["Hector"]},
+                {"name": "Toni Collette", "id": "162654444", "characters": ["Agnes"]},
+                {"name": "Rosamund Pike", "id": "162654705", "characters": ["Clara"]},
+                {"name": "Stellan Skarsgard", "id": "162684205", "characters": ["Edward"]},
+                {"name": "Jean Reno", "id": "162653166", "characters": ["Diego"]}
+            ],
+            "alternate_ids": {"imdb": "1626146"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771379440.json",
+                "alternate": "http://www.rottentomatoes.com/m/hector_and_the_search_for_happiness/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771379440/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771379440/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771379440/similar.json"
+            }
+        },
+        {
+            "id": "771377313",
+            "title": "Space Station 76",
+            "year": 2014,
+            "mpaa_rating": "R",
+            "runtime": 93,
+            "release_dates": {"theater": "2014-09-19", "dvd": "2014-09-30"},
+            "ratings": {"critics_score": -1, "audience_score": 86},
+            "synopsis": "A character-driven, domestic dramedy, which takes place in a 1970's version of the future, where personalities and asteroids collide. (c) Official Facebook",
+            "posters": {
+                "thumbnail": "http://content7.flixster.com/movie/11/17/70/11177037_tmb.jpg",
+                "profile": "http://content7.flixster.com/movie/11/17/70/11177037_tmb.jpg",
+                "detailed": "http://content7.flixster.com/movie/11/17/70/11177037_tmb.jpg",
+                "original": "http://content7.flixster.com/movie/11/17/70/11177037_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Patrick Wilson", "id": "162659104"},
+                {"name": "Matt Bomer", "id": "771077752"},
+                {"name": "Liv Tyler", "id": "162661412"}
+            ],
+            "alternate_ids": {"imdb": "2369317"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771377313.json",
+                "alternate": "http://www.rottentomatoes.com/m/space_station_76/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771377313/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771377313/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771377313/similar.json"
+            }
+        },
+        {
+            "id": "771313085",
+            "title": "The Equalizer",
+            "year": 2014,
+            "mpaa_rating": "R",
+            "runtime": 131,
+            "release_dates": {"theater": "2014-09-26"},
+            "ratings": {"critics_rating": "Fresh", "critics_score": 68, "audience_score": 98},
+            "synopsis": "In The Equalizer, Denzel Washington plays McCall, a man who believes he has put his mysterious past behind him and dedicated himself to beginning a new, quiet life. But when McCall meets Teri (Chloe Grace Moretz), a young girl under the control of ultra-violent Russian gangsters, he can't stand idly by - he has to help her. Armed with hidden skills that allow him to serve vengeance against anyone who would brutalize the helpless, McCall comes out of his self-imposed retirement and finds his desire for justice reawakened. If someone has a problem, if the odds are stacked against them, if they have nowhere else to turn, McCall will help. He is The Equalizer. (c) Sony",
+            "posters": {
+                "thumbnail": "http://content8.flixster.com/movie/11/18/04/11180458_tmb.jpg",
+                "profile": "http://content8.flixster.com/movie/11/18/04/11180458_tmb.jpg",
+                "detailed": "http://content8.flixster.com/movie/11/18/04/11180458_tmb.jpg",
+                "original": "http://content8.flixster.com/movie/11/18/04/11180458_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Denzel Washington", "id": "162661439", "characters": ["Robert McCall"]},
+                {"name": "Marton Csokas", "id": "162653240", "characters": ["Teddy"]},
+                {"name": "Chloe Grace Moretz", "id": "771410621", "characters": ["Teri"]},
+                {"name": "David Harbour", "id": "770772702", "characters": ["Masters"]},
+                {"name": "Bill Pullman", "id": "162654131", "characters": ["Brian Plummer"]}
+            ],
+            "alternate_ids": {"imdb": "0455944"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771313085.json",
+                "alternate": "http://www.rottentomatoes.com/m/the_equalizer_2013/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771313085/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771313085/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771313085/similar.json"
+            }
+        },
+        {
+            "id": "771350092",
+            "title": "The Boxtrolls",
+            "year": 2014,
+            "mpaa_rating": "PG",
+            "runtime": 100,
+            "release_dates": {"theater": "2014-09-26"},
+            "ratings": {"critics_rating": "Fresh", "critics_score": 68, "audience_score": 92},
+            "synopsis": "A family event movie from the creators of \"Coraline\" and \"ParaNorman\" that introduces audiences to a new breed of family - The Boxtrolls, a community of quirky, mischievous creatures who have lovingly raised an orphaned human boy named Eggs (voiced by Isaac Hempstead-Wright) in the amazing cavernous home they've built beneath the streets of Cheesebridge. When the town's villain, Archibald Snatcher (Academy Award winner Ben Kingsley), comes up with a plot to get rid of the Boxtrolls, Eggs decides to venture above ground, \"into the light,\" where he meets and teams up with fabulously feisty Winnifred (Elle Fanning). Together, they devise a daring plan to save Eggs' family. Directors: Anthony Staachi and Graham Annable. (C) Focus",
+            "posters": {
+                "thumbnail": "http://content6.flixster.com/movie/11/17/99/11179940_tmb.jpg",
+                "profile": "http://content6.flixster.com/movie/11/17/99/11179940_tmb.jpg",
+                "detailed": "http://content6.flixster.com/movie/11/17/99/11179940_tmb.jpg",
+                "original": "http://content6.flixster.com/movie/11/17/99/11179940_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Ben Kingsley", "id": "162653703", "characters": ["Archibald Snatcher"]},
+                {"name": "Toni Collette", "id": "162654444"},
+                {"name": "Elle Fanning", "id": "528361349", "characters": ["Winnie"]},
+                {"name": "Hempstead Wright", "id": "771384403", "characters": ["Eggs"]},
+                {"name": "Jared Harris", "id": "162676363"}
+            ],
+            "alternate_ids": {"imdb": "0787474"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771350092.json",
+                "alternate": "http://www.rottentomatoes.com/m/the_boxtrolls/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771350092/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771350092/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771350092/similar.json"
+            }
+        },
+        {
+            "id": "771317918",
+            "title": "The Two Faces of January",
+            "year": 2014,
+            "mpaa_rating": "PG-13",
+            "runtime": 96,
+            "critics_consensus": "",
+            "release_dates": {"theater": "2014-09-26"},
+            "ratings": {"critics_rating": "Fresh", "critics_score": 85, "audience_score": 91},
+            "synopsis": "Screenwriter Hossein Amini (The Wings of the Dove, Drive) makes a stylish directing debut with this sleek thriller set in Greece and Istanbul, 1962, and adapted from Patricia Highsmith's novel. Intrigue begins at the Parthenon when wealthy American tourists Chester MacFarland (Viggo Mortensen) and his young wife Collete (Kirsten Dunst) meet American expat Rydal (Oscar Isaac), a scammer working as a tour guide. Instead of becoming his latest marks, the two befriend him, but a murder at the couple's hotel puts all three on the run together and creates a precarious bond between them as the trio's allegiance is put to the test. (C) Magnolia",
+            "posters": {
+                "thumbnail": "http://content7.flixster.com/movie/11/17/88/11178825_tmb.jpg",
+                "profile": "http://content7.flixster.com/movie/11/17/88/11178825_tmb.jpg",
+                "detailed": "http://content7.flixster.com/movie/11/17/88/11178825_tmb.jpg",
+                "original": "http://content7.flixster.com/movie/11/17/88/11178825_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Viggo Mortensen", "id": "162654541", "characters": ["Chester MacFarland"]},
+                {"name": "Kirsten Dunst", "id": "162654578", "characters": ["Colette MacFarland"]},
+                {"name": "Oscar Isaac", "id": "364655827", "characters": ["Rydal"]}
+            ],
+            "alternate_ids": {"imdb": "1976000"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771317918.json",
+                "alternate": "http://www.rottentomatoes.com/m/the_two_faces_of_january/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771317918/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771317918/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771317918/similar.json"
+            }
+        },
+        {
+            "id": "771371286",
+            "title": "Two Night Stand",
+            "year": 2014,
+            "mpaa_rating": "R",
+            "runtime": 86,
+            "release_dates": {"theater": "2014-09-26"},
+            "ratings": {"critics_score": -1, "audience_score": 90},
+            "synopsis": "A no-strings-attached, online hook-up turns into a morning-after disaster for twenty-something New Yorkers Megan (Analeigh Tipton) and Alec (Miles Teller). When a paralyzing blizzard hits the city trapping them in Alec's cramped Brooklyn apartment, they are forced to get to know each other far beyond the confines of a typical one-night stand. Marking the directorial debut of Max Nichols, Two Night Stand is a sexy, romantic comedy about finding love in the digital age. The film also stars Jessica Szohr and Scott Mescudi (aka Kid Cudi). (C) eOne",
+            "posters": {
+                "thumbnail": "http://content8.flixster.com/movie/11/18/00/11180002_tmb.jpg",
+                "profile": "http://content8.flixster.com/movie/11/18/00/11180002_tmb.jpg",
+                "detailed": "http://content8.flixster.com/movie/11/18/00/11180002_tmb.jpg",
+                "original": "http://content8.flixster.com/movie/11/18/00/11180002_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Miles Teller", "id": "771077409", "characters": ["Alec"]},
+                {"name": "Analeigh Tipton", "id": "770876603", "characters": ["Megan"]},
+                {"name": "Jessica Szohr", "id": "770772064", "characters": ["Faiza"]},
+                {"name": "Scott \"Kid Cudi\" Mescudi", "id": "771354837", "characters": ["Cedric"]},
+                {"name": "Leven Rambin", "id": "770807781", "characters": ["Daisy"]}
+            ],
+            "alternate_ids": {"imdb": "2140619"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771371286.json",
+                "alternate": "http://www.rottentomatoes.com/m/two_night_stand/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771371286/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771371286/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771371286/similar.json"
+            }
+        },
+        {
+            "id": "771306928",
+            "title": "Jimi: All Is by My Side",
+            "year": 2014,
+            "mpaa_rating": "R",
+            "runtime": 116,
+            "release_dates": {"theater": "2014-09-26"},
+            "ratings": {"critics_rating": "Fresh", "critics_score": 91, "audience_score": 92},
+            "synopsis": "OutKast's Andre Benjamin stars as Jimi Hendrix in this revealing biopic from Academy Award-winning writer-director John Ridley (12 Years A Slave). Covering a year in Hendrix's life from 1966-67 as an unknown backup guitarist playing New York's Cheetah Club to making his mark in London's music scene up until his Monterey Pop triumph, the film presents an intimate portrait of the sensitive young musician on the verge of becoming a rock legend.(C) XLRator",
+            "posters": {
+                "thumbnail": "http://content7.flixster.com/movie/11/17/92/11179233_tmb.jpg",
+                "profile": "http://content7.flixster.com/movie/11/17/92/11179233_tmb.jpg",
+                "detailed": "http://content7.flixster.com/movie/11/17/92/11179233_tmb.jpg",
+                "original": "http://content7.flixster.com/movie/11/17/92/11179233_tmb.jpg"
+            },
+            "abridged_cast": [
+                {"name": "Andre Benjamin", "id": "162653182", "characters": ["Jimi Hendrix"]},
+                {"name": "Imogen Poots", "id": "770678493"},
+                {"name": "Ashley Charles", "id": "771412631", "characters": ["Keith Richards"]},
+                {"name": "Hayley Atwell", "id": "417268294", "characters": ["Linda Keith"]},
+                {"name": "Andrew Buckley", "id": "770872407"}
+            ],
+            "alternate_ids": {"imdb": "2402085"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771306928.json",
+                "alternate": "http://www.rottentomatoes.com/m/jimi_all_is_by_my_side/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771306928/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771306928/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771306928/similar.json"
+            }
+        },
+        {
+            "id": "771375825",
+            "title": "Good People",
+            "year": 2014,
+            "mpaa_rating": "R",
+            "runtime": 90,
+            "release_dates": {"theater": "2014-09-26", "dvd": "2014-10-27"},
+            "ratings": {"critics_score": -1, "audience_score": 93},
+            "synopsis": "Young American couple Tom and Anna Reed (James Franco and Kate Hudson) fall into severe debt while renovating Anna's family home in London. As the couple faces the loss of their dream to have a house and start a family, they discover that the tenant in the apartment below them has been murdered and he left behind a stash of cash-$400,000 worth. Though initially hesitant, Tom and Anna decide that the plan is simple: all they have to do is quietly take the money and use only what's necessary to get them out of debt. But when they start spending the money and can't seem to stop, they find themselves the target of a deadly adversary-the thief who stole it-and that's when very bad things start happening to good people. (c) Millenium",
+            "posters": {
+                "thumbnail": "http://content7.flixster.com/movie/11/17/89/11178961_tmb.png",
+                "profile": "http://content7.flixster.com/movie/11/17/89/11178961_tmb.png",
+                "detailed": "http://content7.flixster.com/movie/11/17/89/11178961_tmb.png",
+                "original": "http://content7.flixster.com/movie/11/17/89/11178961_tmb.png"
+            },
+            "abridged_cast": [
+                {"name": "James Franco", "id": "162653202", "characters": ["Tom Reed"]},
+                {"name": "Kate Hudson", "id": "162653218", "characters": ["Anna Reed"]},
+                {"name": "Anna Friel", "id": "162714834"},
+                {"name": "Tom Wilkinson", "id": "162653769"},
+                {"name": "Omar Sy", "id": "595303554"}
+            ],
+            "alternate_ids": {"imdb": "1361318"},
+            "links": {
+                "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771375825.json",
+                "alternate": "http://www.rottentomatoes.com/m/good_people_2014/",
+                "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771375825/cast.json",
+                "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771375825/reviews.json",
+                "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771375825/similar.json"
+            }
+        }
+    ],
+    "links": {
+        "self": "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/upcoming.json?page_limit=16&country=us&page=1",
+        "next": "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/upcoming.json?page_limit=16&country=us&page=2",
+        "alternate": "http://www.rottentomatoes.com/movie/upcoming"
+    },
+    "link_template": "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/upcoming.json?page_limit={results_per_page}&page={page_number}&country={country-code}"
+}

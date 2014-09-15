@@ -4,7 +4,7 @@ define(['backbone', 'backbone.radio', 'config', '../models/movie-item'], functio
         model: Movie,
 
         url: function() {
-            var url = config.apiUrl + '/movies';
+            var url = config.apiUrl + '/movies/?format=json';
 
             if (this.janre) {
                 url += '/' + this.janre;
@@ -32,6 +32,13 @@ define(['backbone', 'backbone.radio', 'config', '../models/movie-item'], functio
             this.janre = options.janre;
             this.watchlistUser = options.watchlistUser;
             this.ignorelistUser = options.ignorelistUser;
+
+            options.success = function() {
+                console.log('Fetch:success', arguments);
+            };
+            options.error = function() {
+                console.log('Fetch:error', arguments);
+            };
             console.log('movieList:fetch', options, this);
 
             return Backbone.Collection.prototype.fetch.call(this, options);
