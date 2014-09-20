@@ -76,6 +76,13 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
                 watchlistUserId: config.user.id
             });
 
+            // Ignorelist
+
+            var ignorelistController = new MovieListController({
+                region: app.movieListRegion,
+                ignorelistUserId: config.user.id
+            });
+
             // Movie details
 
             var movieDetailsController = new MovieDetailsController({
@@ -123,6 +130,7 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
                 })
                 .comply({
                     'releases:show': releasesController.show,
+                    'ignorelist:show': ignorelistController.show,
                     'watchlist:show': watchlistController.show,
                     'watchlist:update': watchlistController.update,
                     'movie:show': movieDetailsController.show,

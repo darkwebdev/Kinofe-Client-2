@@ -40,7 +40,6 @@ define(['marionette', 'backbone.radio', 'models/user-details', 'views/user-detai
                 new UserDetailsView({
                     region: this.region,
                     model: this.user,
-                    watchlist: new MovieList(),
                     ignorelist: new MovieList(),
                     janrelist: new JanreList(janreModels)
                 });

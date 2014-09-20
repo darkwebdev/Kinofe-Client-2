@@ -16,6 +16,7 @@ define(['marionette', 'backbone.radio', 'config', 'collections/movie-list', 'vie
             var collectionOptions = {};
 
             if (options.watchlistUserId) collectionOptions.watchlistUser = options.watchlistUserId;
+            if (options.ignorelistUserId) collectionOptions.ignorelistUser = options.ignorelistUserId;
             this.collection = new MovieList(collectionOptions);
 
             _.bindAll(this);
