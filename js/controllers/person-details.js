@@ -1,5 +1,5 @@
-define(['marionette', 'backbone.radio', 'collections/movie-list', 'models/person-details', 'views/person-details'],
-    function(Marionette, Radio, MovieList, PersonDetails, PersonDetailsView) {
+define(['marionette', 'backbone.radio', 'config', 'collections/movie-list', 'models/person-details', 'views/person-details'],
+    function(Marionette, Radio, config, MovieList, PersonDetails, PersonDetailsView) {
 
         var Controller = Marionette.Controller.extend({
 
@@ -22,7 +22,8 @@ define(['marionette', 'backbone.radio', 'collections/movie-list', 'models/person
                     model: model
                 });
 
-                this.radio.command('releases:show');
+                //this.radio.command('releases:show');
+                Backbone.history.navigate(config.urls.person.replace(':id', id));
             }
         });
 

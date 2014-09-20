@@ -1,5 +1,5 @@
-define(['marionette', 'backbone.radio', 'collections/movie-list', 'views/movie-list'],
-    function(Marionette, Radio, MovieList, MovieListView) {
+define(['marionette', 'backbone.radio', 'config', 'collections/movie-list', 'views/movie-list'],
+    function(Marionette, Radio, config, MovieList, MovieListView) {
 
     var Controller = Marionette.Controller.extend({
 
@@ -10,13 +10,13 @@ define(['marionette', 'backbone.radio', 'collections/movie-list', 'views/movie-l
 
             options = options || {};
             this.radio = Radio.channel('app');
-            this.collection = new MovieList();
-            this.watchlistUserId = options.watchlistUserId;
+            this.autoUrl = options.autoUrl;
+            this.region = options.region;
 
-            this.view = new MovieListView({
-                region: options.region,
-                collection: this.collection
-            });
+            var collectionOptions = {};
+
+            if (options.watchlistUserId) collectionOptions.watchlistUser = options.watchlistUserId;
+            this.collection = new MovieList(collectionOptions);
 
             _.bindAll(this);
         },
@@ -37,30 +37,19 @@ define(['marionette', 'backbone.radio', 'collections/movie-list', 'views/movie-l
             this.radio.trigger('janre:selected', name);
         },
 
-        show: function(options) {
-            options = options || {};
+        show: function() {
+            console.log('movieList:show', this.view);
 
-            options.watchlistUser = this.watchlistUserId;
+            this.view = new MovieListView({
+                region: this.region,
+                collection: this.collection
+            });
 
-            if (options.janre || options.watchlistUser) {
-                this.shown = true;
-                this.collection.fetch(options);
-            }
+            this.collection.fetch();
 
-            if (options.force || !this.shown) {
-                this.shown = true;
-                this.collection.fetch({});
-            }
-
-        },
-
-        update: function() {
-            this.show({ force: true });
-        },
-
-        showJanre: function(name) {
-            this.show({ janre: name });
+            if (this.autoUrl) Backbone.history.navigate(this.autoUrl);
         }
+
     });
 
     return Controller;

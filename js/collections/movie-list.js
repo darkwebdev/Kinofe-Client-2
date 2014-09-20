@@ -30,8 +30,6 @@ define(['backbone', 'backbone.radio', 'config', '../models/movie-item'], functio
         fetch: function(options) {
             options = options || {};
             this.janre = options.janre;
-            this.watchlistUser = options.watchlistUser;
-            this.ignorelistUser = options.ignorelistUser;
 
             options.success = function() {
                 console.log('Fetch:success', arguments);
@@ -44,9 +42,13 @@ define(['backbone', 'backbone.radio', 'config', '../models/movie-item'], functio
             return Backbone.Collection.prototype.fetch.call(this, options);
         },
 
-        initialize: function() {
+        initialize: function(options) {
             console.log('movie-list collection:init');
             this.radio = Radio.channel('app');
+
+            options = options || {};
+            this.watchlistUser = options.watchlistUser;
+            this.ignorelistUser = options.ignorelistUser;
         },
 
 //        selectMovie: function(movie) {

@@ -29,17 +29,31 @@ define(['underscore', 'marionette', 'backbone.radio', 'config', 'models/nav', 'v
         },
 
         showDefault: function() {
-            console.log('navController:showDefault', config);
             this.show({ activeView: config.defaultView });
+        },
+        showReleases: function() {
+            this.show({ activeView: 'releases' });
+        },
+        showWatchlist: function() {
+            this.show({ activeView: 'watchlist' });
+        },
+        showTheaters: function() {
+            this.show({ activeView: 'theaters' });
         },
 
         showMovie: function(id) {
             this.radio.trigger('movie:selected', id);
         },
-
         showJanre: function(name) {
             this.radio.trigger('janre:selected', name);
+        },
+        showPerson: function(id) {
+            this.radio.command('person:show', id);
+        },
+        showUser: function() {
+            this.radio.command('user:show');
         }
+
     });
 
     return Controller;

@@ -46,59 +46,43 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
                 user: config.user
             });
 
-            //navController.show({ activeView: 'releases' });
             navController.show();
+
+            var routes = {};
+
+            _.each(config.urls, function(url, name) {
+                routes[url] = 'show' + name[0].toUpperCase() + name.slice(1);
+            });
+
+            console.log('appRouter', routes);
 
             new Marionette.AppRouter({
                 controller: navController,
-                appRoutes: {
-                    '': 'showDefault',
-                    'movie/:id': 'showMovie',
-                    'janre/:name': 'showJanre'
-                }
-            });
-
-            radio.on('janre:selected', function(janre) {
-                navController.showJanre(janre);
-                Backbone.history.navigate('janre/' + janre);
+                appRoutes: routes
             });
 
             // Releases list
 
             var releasesController = new MovieListController({
-                region: app.movieListRegion
-            });
-
-            radio.comply({
-                "releases:show": releasesController.show,
-                "releases:update": releasesController.update
+                region: app.movieListRegion,
+                autoUrl: config.urls.releases
             });
 
             // Watchlist
 
             var watchlistController = new MovieListController({
                 region: app.movieListRegion,
+                autoUrl: config.urls.watchlist,
                 watchlistUserId: config.user.id
-            });
-
-            new Marionette.AppRouter({
-                controller: watchlistController
-            });
-
-            radio.comply({
-                "watchlist:show": watchlistController.show,
-                "watchlist:update": watchlistController.update
             });
 
             // Movie details
 
             var movieDetailsController = new MovieDetailsController({
-                region: app.detailsRegion
-            });
-
-            radio.on('movie:selected', function(id) {
-                movieDetailsController.show(id);
-                Backbone.history.navigate('movie/' + id);
+                region: app.detailsRegion,
+                appRoutes: {
+                    //'movie/:id': 'show'
+                }
             });
 
             // Person details
@@ -110,13 +94,8 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
             new Marionette.AppRouter({
                 controller: personDetailsController,
                 appRoutes: {
-                    'person/:id': 'show'
+                    //'person/:id': 'show'
                 }
-            });
-
-            radio.on('person:selected', function(id) {
-                personDetailsController.show(id);
-                Backbone.history.navigate('person/' + id);
             });
 
             // User details
@@ -126,20 +105,38 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
                 user: config.user
             });
 
-            radio.on({
-                'user:requested': userDetailsController.show,
-                'movie:hidden': userDetailsController.ignoreMovie,
-                'movie:restored': userDetailsController.restoreMovie,
-                'janre:hidden': userDetailsController.ignoreJanre,
-                'janre:restored': userDetailsController.restoreJanre,
-                'movie:watchlisted': userDetailsController.toggleWatchlistedMovie
-            });
-
-            radio.reply('user:getDetails', function() {
-//                return userDetailsController.getDetails();
-            });
-
             userDetailsController.show();
+
+            // Dispatcher
+
+            radio
+                .on({
+                    'movie:selected': movieDetailsController.show,
+                    //'janre:selected': navController.showJanre,
+                    'person:selected': personDetailsController.show,
+                    //'user:requested': userDetailsController.show,
+                    'movie:hidden': userDetailsController.ignoreMovie,
+                    'movie:restored': userDetailsController.restoreMovie,
+                    'janre:hidden': userDetailsController.ignoreJanre,
+                    'janre:restored': userDetailsController.restoreJanre,
+                    'movie:watchlisted': userDetailsController.toggleWatchlistedMovie
+                })
+                .comply({
+                    'releases:show': releasesController.show,
+                    'watchlist:show': watchlistController.show,
+                    'watchlist:update': watchlistController.update,
+                    'movie:show': movieDetailsController.show,
+                    'person:show': personDetailsController.show,
+                    'user:show': userDetailsController.show
+                })
+                .reply({
+                    'user:getDetails': function() {
+                        //return userDetailsController.getDetails();
+                    }
+                })
+            ;
+
+            // Start
 
             Backbone.history.start({ /*pushState: true*/ });
 
