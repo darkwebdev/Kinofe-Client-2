@@ -13,4 +13,31 @@
 			}
 		}
 	}
+
+	&-link {
+		@include button-base;
+		@include button-size;
+		background: transparent;
+		box-shadow: none;
+		color: $button-font-color;
+		font-weight: normal;
+		text-decoration: underline;
+
+		&:hover,
+		&:focus {
+			color: $anchor-font-color-hover;
+			background: transparent;
+			box-shadow: none;
+		}
+
+		&.large  { @include button-size($padding: 0); }
+		&.small  { @include button-size($padding: 0); }
+		&.tiny   { @include button-size($padding: 0); }
+		&.expand { @include button-size($padding: 0, $full-width: true); }
+
+		&.disabled {
+			cursor: $cursor-default-value;
+			opacity: $button-disabled-opacity;
+		}
+	}
 }

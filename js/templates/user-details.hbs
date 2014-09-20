@@ -1,12 +1,12 @@
 {{#if username }}
 
-	<h2>{{ username }}</h2>
-	<span class="button logout">exit</span>
-	<span class="button showIgnorelist">Ignorelist</span>
+	<span class="user-name">{{ username }}</span>
+	(<span class="button-link small logout">Exit</span>)
+	<span class="button-link small showIgnorelist">Ignorelist</span>
 
 {{else}}
 
-	<h3>Login with</h3>
-	<span class="button disabled login">facebook</span>
+	<span>Login with</span>
+	<span class="button-link disabled login">facebook</span>
 
 {{/if}}

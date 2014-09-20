@@ -10,7 +10,7 @@ define(['backbone', 'marionette'], function(Backbone, Marionette) {
         headerRegion: '.mainHeader',
         movieListRegion: '.movieListContainer',
         detailsRegion: '.details',
-        userRegion: '.user'
+        userRegion: '.user-area'
     });
 
     return app;
