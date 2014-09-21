@@ -42,7 +42,7 @@ define(['underscore', 'marionette', 'backbone.radio', 'config', 'models/nav', 'v
         },
 
         showMovie: function(id) {
-            this.radio.trigger('movie:selected', id);
+            this.radio.command('movie:show', id);
         },
         showJanre: function(name) {
             this.radio.trigger('janre:selected', name);

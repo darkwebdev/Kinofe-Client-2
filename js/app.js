@@ -9,7 +9,7 @@ define(['backbone', 'marionette'], function(Backbone, Marionette) {
     app.addRegions({
         headerRegion: '.mainHeader',
         movieListRegion: '.movieListContainer',
-        detailsRegion: '.details',
+        detailsRegion: '.mainDetails',
         userRegion: '.user-area'
     });
 

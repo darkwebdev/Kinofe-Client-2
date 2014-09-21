@@ -39,7 +39,7 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
             Radio.DEBUG = true;
 
 
-            // Header
+            // Navigation
 
             var navController = new NavController({
                 region: app.headerRegion,
@@ -54,12 +54,21 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
                 routes[url] = 'show' + name[0].toUpperCase() + name.slice(1);
             });
 
-            console.log('appRouter', routes);
+            console.info('appRouter', routes);
 
             new Marionette.AppRouter({
                 controller: navController,
                 appRoutes: routes
             });
+
+            // User details
+
+            var userDetailsController = new UserDetailsController({
+                region: app.userRegion,
+                user: config.user
+            });
+
+            userDetailsController.show();
 
             // Releases list
 
@@ -86,10 +95,7 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
             // Movie details
 
             var movieDetailsController = new MovieDetailsController({
-                region: app.detailsRegion,
-                appRoutes: {
-                    //'movie/:id': 'show'
-                }
+                region: app.detailsRegion
             });
 
             // Person details
@@ -97,22 +103,6 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
             var personDetailsController = new PersonDetailsController({
                 region: app.detailsRegion
             });
-
-            new Marionette.AppRouter({
-                controller: personDetailsController,
-                appRoutes: {
-                    //'person/:id': 'show'
-                }
-            });
-
-            // User details
-
-            var userDetailsController = new UserDetailsController({
-                region: app.userRegion,
-                user: config.user
-            });
-
-            userDetailsController.show();
 
             // Dispatcher
 
@@ -129,6 +119,7 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
                     'movie:watchlisted': userDetailsController.toggleWatchlistedMovie
                 })
                 .comply({
+                    'home:show': releasesController.show,
                     'releases:show': releasesController.show,
                     'ignorelist:show': ignorelistController.show,
                     'watchlist:show': watchlistController.show,

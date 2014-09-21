@@ -1,11 +1,10 @@
-.details {
+.mainDetails {
 	position: absolute;
 	overflow: auto;
-	top: 60px;
+	top: 45px;
 	right: 0;
 	bottom: 0;
-	width: 33%;
-	background: #ddd;
+	width: 50%;
 
 	&-img {
 		max-width: 80%;

@@ -6,10 +6,12 @@ define(['marionette', 'backbone.radio', 'config', 'models/movie-details', 'views
             initialize: function(options) {
                 this.region = options.region;
                 this.radio = Radio.channel('app');
+
+                _.bindAll(this);
             },
 
             show: function(id) {
-                console.log('movieDetailsController:show', id);
+                console.log('movieDetailsController:show', id, this);
 
                 new MovieDetailsView({
                     region: this.region,
@@ -22,7 +24,7 @@ define(['marionette', 'backbone.radio', 'config', 'models/movie-details', 'views
                     model: new MovieDetails({ id: id })
                 });
 
-                //this.radio.command('releases:show');
+                this.radio.command('home:show');
                 Backbone.history.navigate(config.urls.movie.replace(':id', id));
             }
         });
