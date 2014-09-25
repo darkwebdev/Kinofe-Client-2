@@ -1,4 +1,4 @@
-define(['underscore', 'marionette', 'backbone.radio', 'config', 'models/nav', 'views/header-layout'],
+define(['underscore', 'marionette', 'backbone.radio', 'config', 'models/nav', '../views/header'],
     function(_, Marionette, Radio, config, NavModel, HeaderView) {
 
     var Controller = Marionette.Controller.extend({
@@ -16,6 +16,8 @@ define(['underscore', 'marionette', 'backbone.radio', 'config', 'models/nav', 'v
                 region: options.region,
                 model: this.model
             });
+
+            _.bindAll(this);
         },
 
         show: function(options) {

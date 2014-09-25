@@ -17,6 +17,8 @@
 	&-link {
 		@include button-base;
 		@include button-size;
+		padding-left: 0;
+		padding-right: 0;
 		background: transparent;
 		box-shadow: none;
 		color: $button-font-color;

@@ -19,4 +19,14 @@
 			visibility: visible;
 		}
 	}
+	.sideTools {
+		position: absolute;
+		right: 0;
+		color: white;
+		background: none;
+	}
+	.button,
+	.button-link {
+		margin-bottom: 0;
+	}
 }

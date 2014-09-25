@@ -1,12 +1,13 @@
 {{#if username }}
 
-	<span class="user-name">{{ username }}</span>
+	<span class="userName">{{ username }}</span>
 	(<span class="button-link small logout">Exit</span>)
 	<span class="button-link small showIgnorelist">Ignorelist</span>
 
 {{else}}
 
 	<span>Login with</span>
-	<span class="button-link disabled login">facebook</span>
+	<span class="button-link login">facebook</span>
+	<span class="button-link disabled login">google</span>
 
 {{/if}}

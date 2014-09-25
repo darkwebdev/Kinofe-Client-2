@@ -1,17 +1,18 @@
-define(['marionette', 'backbone.radio', 'models/user-details', 'views/user-details', 'collections/movie-list', 'collections/janre-list'],
-    function(Marionette, Radio, UserDetails, UserDetailsView, MovieList, JanreList) {
+define(['marionette', 'backbone.radio', '../models/user', '../views/user', 'collections/movie-list', 'collections/janre-list'],
+    function(Marionette, Radio, User, UserView, MovieList, JanreList) {
+
+        var radio = Radio.channel('app');
 
         var Controller = Marionette.Controller.extend({
 
             initialize: function(options) {
                 this.region = options.region;
-                this.radio = Radio.channel('app');
 
                 this.userSaveOptions = {
                     patch: true,
-                    success: _.bind(function() {
-                        this.radio.command('releases:update');
-                    }, this)
+                    success: function() {
+                        radio.command('releases:update');
+                    }
                 };
 
                 this.checkAuth(options.user);
@@ -21,7 +22,7 @@ define(['marionette', 'backbone.radio', 'models/user-details', 'views/user-detai
 
             checkAuth: function(user) {
                 // if authenticated:
-                this.user = new UserDetails({ id: user.id });
+                this.user = new User({ id: user.id });
                 // else:
                 // login
             },
@@ -35,14 +36,16 @@ define(['marionette', 'backbone.radio', 'models/user-details', 'views/user-detai
             show: function() {
                 var ignoredJanrelist = this.user.get('ignorelist').janre;
                 var janreModels = _.map(ignoredJanrelist, function(janre) { return { name: janre }; });
-                console.log('showIgnorelist', ignoredJanrelist, janreModels, this);
 
-                new UserDetailsView({
+                console.log('UserController:show', ignoredJanrelist, janreModels, this);
+
+                var view = new UserView({
                     region: this.region,
                     model: this.user,
                     ignorelist: new MovieList(),
                     janrelist: new JanreList(janreModels)
                 });
+                view.show();
             },
 
             ignoreMovie: function(id) {

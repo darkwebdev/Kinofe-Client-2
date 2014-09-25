@@ -1,7 +1,10 @@
-define(['marionette', 'backbone', 'handlebars', 'backbone.radio', 'text!templates/user-details.hbs'],
+define(['marionette', 'backbone', 'handlebars', 'backbone.radio', 'text!templates/user.hbs'],
     function(Marionette, Backbone, Handlebars, Radio, html) {
 
         var View = Marionette.LayoutView.extend({
+
+            tagName: 'span',
+
             template: Handlebars.compile(html),
 
             events: {

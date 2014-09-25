@@ -27,9 +27,9 @@ require.config({
 });
 
 require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
-        'controllers/movie-list', 'controllers/movie-details', 'controllers/person-details', 'controllers/user-details', 'controllers/nav'
+        'controllers/movie-list', 'controllers/movie-details', 'controllers/person-details', 'controllers/user', 'controllers/nav'
     ], function(Backbone, Marionette, Radio, app, config,
-        MovieListController, MovieDetailsController, PersonDetailsController, UserDetailsController, NavController
+        MovieListController, MovieDetailsController, PersonDetailsController, UserController, NavController
     ) {
 
         app.addInitializer(function() {
@@ -63,7 +63,7 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
 
             // User details
 
-            var userDetailsController = new UserDetailsController({
+            var userDetailsController = new UserController({
                 region: app.userRegion,
                 user: config.user
             });
@@ -119,7 +119,7 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
                     'movie:watchlisted': userDetailsController.toggleWatchlistedMovie
                 })
                 .comply({
-                    'home:show': releasesController.show,
+                    'home:show': navController.showDefault,
                     'releases:show': releasesController.show,
                     'ignorelist:show': ignorelistController.show,
                     'watchlist:show': watchlistController.show,
