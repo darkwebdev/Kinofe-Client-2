@@ -19,6 +19,8 @@ define(['marionette', 'handlebars', 'text!templates/person-details.hbs', 'collec
                 this.playedList = options.playedList;
 
                 this.model.fetch();
+
+                _.bindAll(this);
             },
 
             show: function() {

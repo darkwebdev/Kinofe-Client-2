@@ -56,16 +56,16 @@ define(['underscore', 'marionette', 'backbone.radio', 'config', 'models/nav', '.
         },
 
         showMovie: function(id) {
-            this.radio.command('movie:show', id);
+            radio.command('movie:show', id);
         },
         showJanre: function(name) {
-            this.radio.trigger('janre:selected', name);
+            radio.trigger('janre:selected', name);
         },
         showPerson: function(id) {
-            this.radio.command('person:show', id);
+            radio.command('person:show', id);
         },
-        showUser: function() {
-            this.radio.command('user:show');
+        showUser: function(id) {
+            radio.command('user:show', id);
         }
 
     });

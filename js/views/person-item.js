@@ -11,7 +11,7 @@ define(['marionette', 'handlebars', 'text!templates/person-item.hbs'],
             },
 
             initialize: function() {
-                console.log('person-item view:init');
+                //console.log('person-item view:init');
                 this.model.on('change:selected', this.highlight, this);
             },
 

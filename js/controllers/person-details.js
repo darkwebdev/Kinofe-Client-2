@@ -4,11 +4,16 @@ define(['marionette', 'backbone.radio', 'config', 'collections/movie-list', 'mod
         var Controller = Marionette.Controller.extend({
 
             initialize: function(options) {
+                console.log('PersonController', options);
+
                 this.region = options.region;
-                this.radio = Radio.channel('app');
+                //this.radio = Radio.channel('app');
+
+                _.bindAll(this);
             },
 
             show: function(id) {
+                console.log('PersonController:show', this);
                 var model = new PersonDetails({ id: id });
 
                 new PersonDetailsView({

@@ -5,7 +5,7 @@ define(['marionette', 'views/person-item'], function(Marionette, PersonView) {
         childView: PersonView,
 
         initialize: function(options) {
-            console.log('view person-list:init', options);
+            //console.log('view person-list:init', options);
             options = options || {};
             this.collection = options.collection;
         },
