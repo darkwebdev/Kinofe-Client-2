@@ -3,19 +3,18 @@ define(['marionette', 'handlebars', 'text!templates/janre-item.hbs'], function(M
     var View = Marionette.ItemView.extend({
 
         tagName: 'li',
-        className: 'listItem',
         template: Handlebars.compile(html),
 
         events: {
-            'click .restore': 'restoreJanre'
+            'click': 'janreClicked'
         },
 
         initialize: function() {
         },
 
-        restoreJanre: function() {
-            console.log('movie view:restoreJanre');
-            this.model.restore();
+        janreClicked: function() {
+            console.log('JanreItemView:clicked');
+            this.model.show();
         }
     });
 

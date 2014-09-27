@@ -17,6 +17,8 @@ define(['marionette', 'backbone.radio', '../models/user', '../views/user', 'coll
 
                 this.checkAuth(options.user);
 
+                console.log('UserController:init', options);
+
                 _.bindAll(this);
             },
 
@@ -45,7 +47,7 @@ define(['marionette', 'backbone.radio', '../models/user', '../views/user', 'coll
                     ignorelist: new MovieList(),
                     janrelist: new JanreList(janreModels)
                 });
-                view.show();
+                view.model.fetch();
             },
 
             ignoreMovie: function(id) {

@@ -1,57 +1,43 @@
 define(['marionette', 'backbone.radio', 'config', 'collections/movie-list', 'views/movie-list'],
     function(Marionette, Radio, config, MovieList, MovieListView) {
 
-    var Controller = Marionette.Controller.extend({
+        var radio = Radio.channel('app');
 
-        shown: false,
+        var Controller = Marionette.Controller.extend({
 
-        initialize: function(options) {
-            console.log('movieListController:init', options);
+            shown: false,
 
-            options = options || {};
-            this.radio = Radio.channel('app');
-            this.autoUrl = options.autoUrl;
-            this.region = options.region;
+            initialize: function(options) {
+                console.log('movieListController:init', options);
 
-            var collectionOptions = {};
+                options = options || {};
+                this.autoUrl = options.autoUrl;
+                this.region = options.region;
 
-            if (options.watchlistUserId) collectionOptions.watchlistUser = options.watchlistUserId;
-            if (options.ignorelistUserId) collectionOptions.ignorelistUser = options.ignorelistUserId;
-            this.collection = new MovieList(collectionOptions);
+                var collectionOptions = {};
 
-            _.bindAll(this);
-        },
+                if (options.watchlistUserId) collectionOptions.watchlistUser = options.watchlistUserId;
+                if (options.ignorelistUserId) collectionOptions.ignorelistUser = options.ignorelistUserId;
+                this.collection = new MovieList(collectionOptions);
 
-        selectMovie: function(id) {
-            this.show();
-//            console.log('movieListController:selectMovie', id);
-//            var movie = this.collection.get(id);
+                _.bindAll(this);
+            },
 
-//            if (movie) {
-//                movie.select();
-//            }
+            show: function(options) {
+                options = options || {};
+                console.log('MovieListController:show', options);
 
-            this.radio.trigger('movie:selected', id);
-        },
+                this.view = new MovieListView({
+                    region: this.region,
+                    collection: this.collection
+                });
 
-        selectJanre: function(name) {
-            this.radio.trigger('janre:selected', name);
-        },
+                this.collection.fetch(options);
 
-        show: function() {
-            console.log('movieList:show', this.view);
+                if (this.autoUrl) Backbone.history.navigate(this.autoUrl);
+            }
 
-            this.view = new MovieListView({
-                region: this.region,
-                collection: this.collection
-            });
+        });
 
-            this.collection.fetch();
-
-            if (this.autoUrl) Backbone.history.navigate(this.autoUrl);
-        }
-
-    });
-
-    return Controller;
+        return Controller;
 });

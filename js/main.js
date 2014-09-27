@@ -74,14 +74,14 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
 
             var releasesController = new MovieListController({
                 region: app.movieListRegion,
-                autoUrl: config.urls.releases
+                autoUrl: config.urls.releases.split('(')[0]
             });
 
             // Watchlist
 
             var watchlistController = new MovieListController({
                 region: app.movieListRegion,
-                autoUrl: config.urls.watchlist,
+                autoUrl: config.urls.watchlist.split('(')[0],
                 watchlistUserId: config.user.id
             });
 
@@ -108,10 +108,6 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
 
             radio
                 .on({
-                    'movie:selected': movieDetailsController.show,
-                    //'janre:selected': navController.showJanre,
-                    'person:selected': personDetailsController.show,
-                    //'user:requested': userDetailsController.show,
                     'movie:hidden': userDetailsController.ignoreMovie,
                     'movie:restored': userDetailsController.restoreMovie,
                     'janre:hidden': userDetailsController.ignoreJanre,
@@ -123,7 +119,7 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
                     'releases:show': releasesController.show,
                     'ignorelist:show': ignorelistController.show,
                     'watchlist:show': watchlistController.show,
-                    'watchlist:update': watchlistController.update,
+                    //'watchlist:update': watchlistController.update,
                     'movie:show': movieDetailsController.show,
                     'person:show': personDetailsController.show,
                     'user:show': userDetailsController.show

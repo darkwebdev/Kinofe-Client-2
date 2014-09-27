@@ -5,13 +5,12 @@ define(function() {
         defaultView: 'releases',
         urls: {
             default: '',
-            releases: 'releases/',
-            watchlist: 'watchlist/',
-            theaters: 'theaters/',
+            releases: 'releases(/:janre)',
+            watchlist: 'watchlist(/:janre)',
+            theaters: 'theaters(/:janre)',
             movie: 'movie/:id',
             person: 'person/:id',
-            janre: 'janre/:name',
-            user: 'user/'
+            user: 'user/:id'
         },
         user: {
             id: 1,

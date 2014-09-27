@@ -1,10 +1,15 @@
-define(['marionette', 'handlebars', 'text!templates/movie-item.hbs'], function(Marionette, Handlebars, html) {
+define(['marionette', 'handlebars', 'text!templates/movie-item.hbs', 'collections/janre-list', 'views/janre-list'],
+    function(Marionette, Handlebars, html, JanreList, JanreListView) {
 
-    var View = Marionette.ItemView.extend({
+    var View = Marionette.LayoutView.extend({
 
         tagName: 'li',
         className: 'listItem',
         template: Handlebars.compile(html),
+
+        regions: {
+            janreRegion: '.janreList'
+        },
 
         events: {
             'click .hide': 'hideMovie',
@@ -14,18 +19,24 @@ define(['marionette', 'handlebars', 'text!templates/movie-item.hbs'], function(M
         },
 
         modelEvents: {
-            'change:selected': 'highlight',
             'change:hidden': 'hide',
             'change:watchlisted': 'checkWatchlisted'
         },
 
         initialize: function() {
-//            console.log('MovieItemView:init', this.model);
+            //console.log('MovieItemView:init', this.model);
             this.checkWatchlisted(); // set the proper watchlisted icon
         },
 
-        highlight: function() {
-            $(this.el).toggleClass('active', this.model.selected).siblings().removeClass('active');
+        onShow: function() {
+            //console.log('MovieItemView:onShow');
+
+            var janreCollection = new JanreList(_.map(this.model.get('janre'), function(name) {
+                return { name: name };
+            }));
+            var janreListView = new JanreListView({ collection: janreCollection });
+
+            this.janreRegion.show(janreListView);
         },
 
         hide: function() {
@@ -36,11 +47,6 @@ define(['marionette', 'handlebars', 'text!templates/movie-item.hbs'], function(M
 //            console.log('movie item view:checkWatchlisted', this.model.get('id'), this.model.get('watchlisted'));
             $(this.el).toggleClass('watchlisted', this.model.get('watchlisted'));
         },
-
-//        selectMovie: function() {
-//            console.log('movie view:selectMovie');
-//            this.model.select();
-//        },
 
         hideMovie: function() {
             console.log('movie view:hideMovie');

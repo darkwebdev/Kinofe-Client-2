@@ -1,5 +1,7 @@
-define(['marionette', 'handlebars', 'text!templates/header.hbs'],
-    function(Marionette, Handlebars, html) {
+define(['marionette', 'handlebars', 'backbone.radio', 'text!templates/header.hbs'],
+    function(Marionette, Handlebars, Radio, html) {
+
+        var radio = Radio.channel('app');
 
         var View = Marionette.LayoutView.extend({
             template: Handlebars.compile(html),
@@ -27,10 +29,11 @@ define(['marionette', 'handlebars', 'text!templates/header.hbs'],
                 this.activateView(sectionName);
             },
 
-            activateView: function(title) {
-                console.log('activate section', title);
-                $('.navTab[rel="' + title +'"]').addClass('active').siblings().removeClass('active');
-                this.model.activateView(title);
+            activateView: function(name, options) {
+                console.log('HeaderView:activateView', name);
+                $('.navTab[rel="' + name +'"]').addClass('active').siblings().removeClass('active');
+
+                radio.command(name + ':show', options);
             },
 
             showJanreControls: function() {

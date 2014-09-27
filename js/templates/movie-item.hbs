@@ -5,11 +5,11 @@
 	[<span>{{ imdb_rating }}</span>]
 	<button class="button button-icon icon-star watchlist"></button>
 	<h4>{{ name }}</h4> <span>{{ year }}</span>
-	<ul>
-		{{#each janre }}
-			<li><a href="#janre/{{ this }}" class="label secondary round">{{ this }}</a></li>
-		{{/each}}
+
+	<ul class="janreList">
+		<!-- Janre Items here -->
 	</ul>
+
 	<footer class="listItem-footer">
 		<a href="#movie/{{ id }}" class="button tiny select">details</a>
 		<span class="button tiny hide">hide</span>

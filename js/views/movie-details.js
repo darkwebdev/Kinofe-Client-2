@@ -10,7 +10,7 @@ define(['marionette', 'handlebars', 'text!templates/movie-details.hbs', 'views/p
             },
 
             modelEvents: {
-                change: 'show'
+                change: 'show' // sync?
             },
 
             events: {
@@ -27,7 +27,7 @@ define(['marionette', 'handlebars', 'text!templates/movie-details.hbs', 'views/p
             },
 
             show: function() {
-                console.log('view movie-details:show');
+                console.log('MovieDetailsView:show');
 
                 this.region.show(this);
                 this.scrollTop();

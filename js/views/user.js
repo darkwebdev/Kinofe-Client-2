@@ -7,6 +7,10 @@ define(['marionette', 'backbone', 'handlebars', 'backbone.radio', 'text!template
 
             template: Handlebars.compile(html),
 
+            modelEvents: {
+                'sync': 'show'
+            },
+
             events: {
                 'click .login': 'login',
                 'click .logout': 'logout',
@@ -19,7 +23,7 @@ define(['marionette', 'backbone', 'handlebars', 'backbone.radio', 'text!template
             },
 
             show: function() {
-                console.log('UserDetailsView:show', this.model.toJSON());
+                console.log('UserView:show', this.model.toJSON());
                 this.region.show(this);
             },
 

@@ -1,22 +1,18 @@
-define(['marionette', 'views/movie-item'], function(Marionette, MovieView) {
+define(['marionette', 'janre-details'], function(Marionette, JanreView) {
 
     var View = Marionette.CollectionView.extend({
 
         tagName: 'ul',
-        className: 'movieList',
-        childView: MovieView,
+        className: 'janreList',
+        childView: JanreView,
 
         initialize: function(options) {
-            console.log('MovieListView:init');
+            console.log('JanreDetailsView:init', options);
             this.region = options.region;
         },
 
-        collectionEvents: {
-            sync: 'show'
-        },
-
         show: function() {
-            console.log('MovieListView:show', this);
+            console.log('JanreDetailsView:show', this.collection);
             this.region.show(this);
             this.scrollTop();
         },

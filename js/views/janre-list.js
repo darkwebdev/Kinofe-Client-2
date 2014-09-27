@@ -1,24 +1,13 @@
-define(['marionette', 'views/janre-item'], function(Marionette, JanreItemView) {
+define(['marionette', 'views/janre-item'], function(Marionette, JanreView) {
 
     var View = Marionette.CollectionView.extend({
 
         tagName: 'ul',
         className: 'janreList',
-        childView: JanreItemView,
+        childView: JanreView,
 
         initialize: function(options) {
-            console.log('janreList view:init', options);
-            this.region = options.region;
-        },
-
-        show: function() {
-            console.log('JanreCollectionView:show', this.collection);
-            this.region.show(this);
-            this.scrollTop();
-        },
-
-        scrollTop: function() {
-            this.region.$el[0].scrollTop = 0;
+            //console.log('JanreListView:init', options);
         }
     });
 

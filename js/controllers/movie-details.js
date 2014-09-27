@@ -24,7 +24,7 @@ define(['marionette', 'backbone.radio', 'config', 'models/movie-details', 'views
                     model: new MovieDetails({ id: id })
                 });
 
-                this.radio.command('home:show');
+                //this.radio.command('home:show');
                 Backbone.history.navigate(config.urls.movie.replace(':id', id));
             }
         });

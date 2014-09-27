@@ -1,6 +1,8 @@
 define(['underscore', 'marionette', 'backbone.radio', 'config', 'models/nav', '../views/header'],
     function(_, Marionette, Radio, config, NavModel, HeaderView) {
 
+    var radio = Radio.channel('app');
+
     var Controller = Marionette.Controller.extend({
 
         model: null,
@@ -8,7 +10,6 @@ define(['underscore', 'marionette', 'backbone.radio', 'config', 'models/nav', '.
         initialize: function(options) {
             options = options || {};
             this.user = options.user;
-            this.radio = Radio.channel('app');
 
             this.model = new NavModel();
 
@@ -24,23 +25,34 @@ define(['underscore', 'marionette', 'backbone.radio', 'config', 'models/nav', '.
             options = options || {};
 
             if (options.activeView) {
-                this.view.activateView(options.activeView);
+                this.view.activateView(options.activeView, { janre: options.janre });
+                //radio.command(options.activeView + ':show', options.janre);
             }
 
-            console.log('navController:show', options);
+            console.log('NavController:show', options);
         },
 
         showDefault: function() {
             this.show({ activeView: config.defaultView });
         },
-        showReleases: function() {
-            this.show({ activeView: 'releases' });
+        showReleases: function(janre) {
+            console.log('NavController:showReleases', janre);
+            this.show({
+                activeView: 'releases',
+                janre: janre
+            });
         },
-        showWatchlist: function() {
-            this.show({ activeView: 'watchlist' });
+        showWatchlist: function(janre) {
+            this.show({
+                activeView: 'watchlist',
+                janre: janre
+            });
         },
-        showTheaters: function() {
-            this.show({ activeView: 'theaters' });
+        showTheaters: function(janre) {
+            this.show({
+                activeView: 'theaters',
+                janre: janre
+            });
         },
 
         showMovie: function(id) {
