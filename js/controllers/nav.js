@@ -1,21 +1,14 @@
-define(['underscore', 'marionette', 'backbone.radio', 'config', 'models/nav', '../views/header'],
-    function(_, Marionette, Radio, config, NavModel, HeaderView) {
-
-    var radio = Radio.channel('app');
+define(['underscore', 'marionette', 'radio', 'config', '../views/header'],
+    function(_, Marionette, radio, config, HeaderView) {
 
     var Controller = Marionette.Controller.extend({
-
-        model: null,
 
         initialize: function(options) {
             options = options || {};
             this.user = options.user;
 
-            this.model = new NavModel();
-
             this.view = new HeaderView({
-                region: options.region,
-                model: this.model
+                region: options.region
             });
 
             _.bindAll(this);
@@ -32,14 +25,15 @@ define(['underscore', 'marionette', 'backbone.radio', 'config', 'models/nav', '.
             console.log('NavController:show', options);
         },
 
-        showDefault: function() {
-            this.show({ activeView: config.defaultView });
+        showHome: function() {
+            this.showReleases();
         },
-        showReleases: function(janre) {
-            console.log('NavController:showReleases', janre);
+
+        showReleases: function(filter) {
+            console.log('NavController:showReleases', filter);
             this.show({
                 activeView: 'releases',
-                janre: janre
+                filter: filter
             });
         },
         showWatchlist: function(janre) {

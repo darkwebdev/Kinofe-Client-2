@@ -1,16 +1,12 @@
-define(['marionette', 'backbone.radio', 'config', 'collections/movie-list', 'views/movie-list'],
-    function(Marionette, Radio, config, MovieList, MovieListView) {
-
-        var radio = Radio.channel('app');
+define(['marionette', 'radio', 'config', 'collections/movie-list', 'views/movie-list'],
+    function(Marionette, radio, config, MovieList, MovieListView) {
 
         var Controller = Marionette.Controller.extend({
 
-            shown: false,
-
             initialize: function(options) {
+                options = options || {};
                 console.log('movieListController:init', options);
 
-                options = options || {};
                 this.autoUrl = options.autoUrl;
                 this.region = options.region;
 
@@ -25,7 +21,7 @@ define(['marionette', 'backbone.radio', 'config', 'collections/movie-list', 'vie
 
             show: function(options) {
                 options = options || {};
-                console.log('MovieListController:show', options);
+                console.log('MovieListController:show', options, this);
 
                 this.view = new MovieListView({
                     region: this.region,
@@ -35,6 +31,12 @@ define(['marionette', 'backbone.radio', 'config', 'collections/movie-list', 'vie
                 this.collection.fetch(options);
 
                 if (this.autoUrl) Backbone.history.navigate(this.autoUrl);
+
+                radio.on('janre:show', this.showJanre, this);
+            },
+
+            showJanre: function(name) {
+                this.show({ janre: name });
             }
 
         });

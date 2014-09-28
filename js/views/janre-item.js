@@ -1,4 +1,5 @@
-define(['marionette', 'handlebars', 'text!templates/janre-item.hbs'], function(Marionette, Handlebars, html) {
+define(['marionette', 'handlebars', 'radio', 'text!templates/janre-item.hbs'],
+    function(Marionette, Handlebars, radio, html) {
 
     var View = Marionette.ItemView.extend({
 
@@ -14,7 +15,7 @@ define(['marionette', 'handlebars', 'text!templates/janre-item.hbs'], function(M
 
         janreClicked: function() {
             console.log('JanreItemView:clicked');
-            this.model.show();
+            radio.trigger('janre:show', this.model.get('name'));
         }
     });
 

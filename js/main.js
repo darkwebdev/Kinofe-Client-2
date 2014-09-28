@@ -26,18 +26,13 @@ require.config({
     }
 });
 
-require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
+require(['backbone', 'radio', 'config', 'app',
         'controllers/movie-list', 'controllers/movie-details', 'controllers/person-details', 'controllers/user', 'controllers/nav'
-    ], function(Backbone, Marionette, Radio, app, config,
+    ], function(Backbone, radio, config, app,
         MovieListController, MovieDetailsController, PersonDetailsController, UserController, NavController
     ) {
 
         app.addInitializer(function() {
-
-            var radio = Radio.channel('app');
-            Radio.tuneIn('app');
-            Radio.DEBUG = true;
-
 
             // Navigation
 
@@ -48,17 +43,9 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
 
             navController.show();
 
-            var routes = {};
-
-            _.each(config.urls, function(url, name) {
-                routes[url] = 'show' + name[0].toUpperCase() + name.slice(1);
-            });
-
-            console.info('appRouter', routes);
-
-            new Marionette.AppRouter({
+            new Backbone.Marionette.AppRouter({
                 controller: navController,
-                appRoutes: routes
+                appRoutes: app.routes
             });
 
             // User details
@@ -74,14 +61,14 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
 
             var releasesController = new MovieListController({
                 region: app.movieListRegion,
-                autoUrl: config.urls.releases.split('(')[0]
+                autoUrl: app.getRoute('releases')
             });
 
             // Watchlist
 
             var watchlistController = new MovieListController({
                 region: app.movieListRegion,
-                autoUrl: config.urls.watchlist.split('(')[0],
+                autoUrl: app.getRoute('watchlist'),
                 watchlistUserId: config.user.id
             });
 
@@ -115,7 +102,7 @@ require(['backbone', 'marionette', 'backbone.radio', 'app', 'config',
                     'movie:watchlisted': userDetailsController.toggleWatchlistedMovie
                 })
                 .comply({
-                    'home:show': navController.showDefault,
+                    //'home:show': navController.showHome,
                     'releases:show': releasesController.show,
                     'ignorelist:show': ignorelistController.show,
                     'watchlist:show': watchlistController.show,
